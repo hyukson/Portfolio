@@ -5,7 +5,7 @@ export const SessionTitleStyled = styled.div`
 
   h1 {
     font-family: "Impact";
-    letter-spacing: 3px;
+    font-weight: 500;
     font-size: 4.3rem;
     color: ${(props) => props.color || props.theme.subColor};
   }

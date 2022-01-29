@@ -9,14 +9,16 @@ interface AboutItemTypes {
 
 const AboutItem = ({ title, content }: AboutItemTypes) => {
   return (
-    <AboutItemStyled>
-      <div>
-        <div className="aboutItemTitle">
-          <div className="circle"></div>
-          <h2>{title}</h2>
-        </div>
+    <AboutItemStyled className="aboutItem">
+      <div className="aboutItemTitle">
+        <div className="circle"></div>
+        <h2>{title}</h2>
+      </div>
 
-        <div className="aboutItemContent">{content}</div>
+      <div className="aboutItemContent">
+        {content?.split("\n").map((item) => (
+          <p>- {item}</p>
+        ))}
       </div>
     </AboutItemStyled>
   );

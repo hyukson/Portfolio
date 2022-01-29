@@ -21,12 +21,23 @@ export const GlobalStyled = createGlobalStyle`
     src: url("/fonts/GmarketSans/GmarketSansBold.otf");
   }
 
+  @font-face {
+    font-family: "PretendardBold";
+    src: url("/fonts/Pretendard/Pretendard-Bold.otf");
+
+  }
+
+  @font-face {
+    font-family: "PretendardReg";
+    src: url("/fonts/Pretendard/Pretendard-Regular.otf");
+  }
+
   * {
     margin: 0;
     padding: 0;
     list-style: none;
     box-sizing: border-box;
-    font-family: "NotoReg";
+    font-family: "PretendardReg";
 
     outline: none;
     letter-spacing: -1px;

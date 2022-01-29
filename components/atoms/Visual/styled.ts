@@ -5,7 +5,7 @@ export const VisualStyled = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: 1060px;
+  height: 970px;
 
   .visual_wrap {
     display: flex;

@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const AboutMeStyled = styled.div`
-  height: 1060px;
+  height: 970px;
 
   .aboutWrap {
     display: flex;
@@ -13,6 +13,12 @@ export const AboutMeStyled = styled.div`
     overflow: hidden;
     border-radius: 15px;
     position: relative;
-    margin-right: 5rem;
+    margin-right: 6rem;
+  }
+
+  .subAbout {
+    width: calc(55rem);
+    display: flex;
+    justify-content: space-between;
   }
 `;

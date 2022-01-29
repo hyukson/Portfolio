@@ -22,13 +22,8 @@ export const LineAniStyled = styled.div`
   }
 
   .rect2 {
-    animation: dash 2.3s linear forwards;
+    animation: dash 3s linear forwards;
     animation-delay: 0.3s;
-  }
-
-  .rect3 {
-    animation: dash 2.5s linear forwards;
-    animation-delay: 1.15s;
   }
 
   @keyframes dash {
