@@ -3,12 +3,13 @@ import Image from "next/image";
 
 import { AboutMeStyled } from "./styled";
 
-import userImage from "../../../assets/images/캬트.png";
+import userImage from "../../../assets/images/화면 캡처 2021-01-25 160229.jpg";
 
+// components
 import SessionTitle from "../../atoms/SessionTitle";
-
 import AboutDetail from "../../molecules/AboutDetail";
 
+// 아이콘
 import profileIcon from "../../../assets/icons/profile.png";
 import careerIcon from "../../../assets/icons/career.png";
 import licencsIcon from "../../../assets/icons/licencs.png";
