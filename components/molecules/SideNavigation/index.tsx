@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from "react";
+import useMoveScroll from "../../../hooks/useMoveScroll";
+import NavItem from "../../atoms/NavItem";
 import { SideNavigationStyled } from "./styled";
 
 interface SideNavigationTypes {
@@ -6,26 +8,21 @@ interface SideNavigationTypes {
 }
 
 const SideNavigation = ({ NavList }: SideNavigationTypes) => {
-  const nowNav: String = "";
+  const [nowNavIdx, setNowNavIdx, color] = useMoveScroll();
 
-  // 스크롤 시 체크
-  const [scrollPosition, setScrollPosition] = useState(0);
+  const moveScroll = (e: any) => {
+    // 현재 클릭한 인덱스 구하기
+    const index = [...e.currentTarget.parentElement.childNodes].indexOf(
+      e.currentTarget
+    );
 
-  const updateScroll = () => {
-    setScrollPosition(window.scrollY || document.documentElement.scrollTop);
+    setNowNavIdx(index);
   };
-
-  useEffect(() => {
-    window.addEventListener("scroll", updateScroll);
-  });
 
   return (
     <SideNavigationStyled>
       {NavList.map((item, i) => (
-        <div>
-          <div className="circle" />
-          <p>Intro</p>
-        </div>
+        <NavItem key={i} color={color} title={item} moveScroll={moveScroll} />
       ))}
     </SideNavigationStyled>
   );
