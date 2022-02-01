@@ -13,7 +13,7 @@ export const AboutDetailStyled = styled.div`
     margin-bottom: 2rem;
 
     h2 {
-      margin-left: 0.6rem;
+      margin-left: 1.2rem;
       font-family: "Impact";
       font-weight: 500;
       font-size: 2.2rem;

@@ -6,7 +6,7 @@ export const NavItemStyled = styled.div`
   cursor: pointer;
   margin-bottom: 0.6rem;
 
-  a {
+  p {
     font-size: 1.2rem;
     color: ${(props) => props.color};
     transition: color 0.3s;
@@ -14,7 +14,8 @@ export const NavItemStyled = styled.div`
     font-weight: bold;
   }
 
-  .circle {
+  &:before {
+    content: "";
     width: 0.8rem;
     height: 0.8rem;
     margin-right: 1rem;

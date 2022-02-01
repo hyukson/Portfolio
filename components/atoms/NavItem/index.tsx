@@ -3,15 +3,19 @@ import { NavItemStyled } from "./styled";
 
 interface NavItemTypes {
   title?: String;
+  isActive: Boolean;
   moveScroll: any;
   color: any;
 }
 
-const NavItem = ({ title, moveScroll, color }: NavItemTypes) => {
+const NavItem = ({ title, isActive, moveScroll, color }: NavItemTypes) => {
   return (
-    <NavItemStyled color={color || "#000"} onClick={moveScroll}>
-      <div className="circle" />
-      <a>{title}</a>
+    <NavItemStyled
+      className={isActive ? "active" : ""}
+      color={color || "#000"}
+      onClick={moveScroll}
+    >
+      <p>{title}</p>
     </NavItemStyled>
   );
 };

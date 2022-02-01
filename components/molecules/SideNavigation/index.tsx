@@ -22,7 +22,13 @@ const SideNavigation = ({ NavList }: SideNavigationTypes) => {
   return (
     <SideNavigationStyled>
       {NavList.map((item, i) => (
-        <NavItem key={i} color={color} title={item} moveScroll={moveScroll} />
+        <NavItem
+          key={i}
+          isActive={i == nowNavIdx}
+          color={color}
+          title={item}
+          moveScroll={moveScroll}
+        />
       ))}
     </SideNavigationStyled>
   );
