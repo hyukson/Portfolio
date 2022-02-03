@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
-export const AboutMeStyled = styled.div`
-  height: 970px;
+export const AboutMeStyled = styled.section`
+  height: 100vh;
 
   .aboutWrap {
     display: flex;

@@ -5,4 +5,5 @@ export const SideNavigationStyled = styled.nav`
   top: 50%;
   right: 2rem;
   transform: translateY(-50%);
+  z-index: 1;
 `;

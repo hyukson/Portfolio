@@ -3,26 +3,28 @@ import React, { useEffect, useState } from "react";
 const useMoveScroll = () => {
   const [nowNavIdx, setNowNavIdx] = useState(0);
   const [color, setColor] = useState("#fff");
+  const [bodyHeight, setBodyHeight] = useState(969);
 
   // 연속되는 휠 페이징 방지
   const [isScroll, setIsScroll] = useState(false);
 
+  // widnow 창 크기 조정
   useEffect(() => {
-    window.scrollTo({ top: nowNavIdx * 970, behavior: "smooth" });
-  }, [nowNavIdx]);
+    windowResize();
+  }, []);
 
+  // 스크롤 시 이동
+  useEffect(() => {
+    window.scrollTo({ top: nowNavIdx * bodyHeight, behavior: "smooth" });
+  }, [nowNavIdx, bodyHeight]);
+
+  // 휠에 따른 다음 페이지 지정
   const moveScroll = (e: any) => {
-    if (isScroll) {
-      return;
-    }
+    const max = document.documentElement.scrollHeight / bodyHeight - 1;
 
-    const max = document.documentElement.scrollHeight / 970 - 1;
+    const NavIdx = nowNavIdx + (e.deltaY > 0 ? 1 : -1);
 
-    const delta = e.deltaY > 0;
-
-    const NavIdx = nowNavIdx + (delta ? 1 : -1);
-
-    if (0 > NavIdx || NavIdx > max) {
+    if (0 > NavIdx || NavIdx > max || isScroll) {
       return;
     }
 
@@ -34,17 +36,24 @@ const useMoveScroll = () => {
   const changeScrollColor = () => {
     setColor(nowNavIdx % 2 == 0 ? "#fff" : "#000");
 
-    setIsScroll(nowNavIdx * 970 != window.scrollY);
+    setIsScroll(nowNavIdx * bodyHeight != window.scrollY);
+  };
+
+  // 윈도우 창 변화
+  const windowResize = () => {
+    setBodyHeight(document.documentElement.offsetHeight);
   };
 
   // 이벤트를 추가하지만 중첩을 방지
   useEffect(() => {
     window.addEventListener("mousewheel", moveScroll);
     window.addEventListener("scroll", changeScrollColor);
+    window.addEventListener("resize", windowResize);
 
     return () => {
       window.removeEventListener("mousewheel", moveScroll);
       window.removeEventListener("scroll", changeScrollColor);
+      window.removeEventListener("resize", windowResize);
     };
   });
 

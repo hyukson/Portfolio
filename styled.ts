@@ -44,9 +44,14 @@ export const GlobalStyled = createGlobalStyle`
     word-break: break-all;
   }
 
+  html {
+    height: 100%;
+  }
+  
   body {
-    height: 970px;
+    height: 100%;
     overflow: hidden;
+    position: relative;
   }
 
   h1,

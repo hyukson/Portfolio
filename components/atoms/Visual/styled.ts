@@ -1,11 +1,11 @@
 import styled from "styled-components";
 
-export const VisualStyled = styled.div`
+export const VisualStyled = styled.section`
   position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: 970px;
+  height: 100vh;
 
   .visual_wrap {
     display: flex;

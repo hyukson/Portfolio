@@ -1,17 +1,29 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import LineAni from "../components/atoms/LineAni";
 
-import Rap from "../components/atoms/Rap";
 import Visual from "../components/atoms/Visual";
 import SideNavigation from "../components/molecules/SideNavigation";
 
 import AboutMe from "../components/organisms/AboutMe";
 
 // 아이콘
-import profileIcon from "../assets/icons/profile.png";
-import careerIcon from "../assets/icons/career.png";
-import licencsIcon from "../assets/icons/licencs.png";
+import profileIcon from "../public/assets/icons/profile.png";
+import careerIcon from "../public/assets/icons/career.png";
+import licencsIcon from "../public/assets/icons/licencs.png";
+
+// SKILLS Icon
+import html from "../public/assets/images/skills/html.png";
+import css from "../public/assets/images/skills/css.png";
+import js from "../public/assets/images/skills/js.png";
+import jquery from "../public/assets/images/skills/jquery.png";
+import sass from "../public/assets/images/skills/sass.png";
+import react from "../public/assets/images/skills/react.png";
+import next_js from "../public/assets/images/skills/next_js.png";
+import php from "../public/assets/images/skills/php.png";
+import mysql from "../public/assets/images/skills/mysql.png";
+import kotlin from "../public/assets/images/skills/kotlin.png";
+import flutter from "../public/assets/images/skills/flutter.png";
+
 import SkillsContent from "../components/molecules/SkillsContent";
 
 const Home: NextPage = () => {
@@ -22,8 +34,6 @@ const Home: NextPage = () => {
       title: "PROFILE",
       icon: {
         src: profileIcon,
-        width: profileIcon.width / 6,
-        height: profileIcon.height / 6,
       },
       list: [
         { title: "이름", content: "장혁수" },
@@ -41,8 +51,6 @@ const Home: NextPage = () => {
       title: "CAREER",
       icon: {
         src: careerIcon,
-        width: careerIcon.width / 10,
-        height: careerIcon.height / 10,
       },
       list: [
         {
@@ -62,8 +70,6 @@ const Home: NextPage = () => {
       title: "LICENCS",
       icon: {
         src: licencsIcon,
-        width: licencsIcon.width / 10,
-        height: licencsIcon.height / 10,
       },
       list: [
         { title: "정보처리 기능사" },
@@ -73,22 +79,34 @@ const Home: NextPage = () => {
     },
   };
 
+  const SkillsData = {
+    front: {
+      title: "Front-end",
+      images: [html, css, js, jquery, sass, react, next_js],
+    },
+    back: {
+      title: "Back-end",
+      images: [php, mysql],
+    },
+    moblie: {
+      title: "Mobile Application",
+      images: [kotlin, flutter],
+    },
+  };
+
   return (
-    <div>
+    <div className="wrap">
       <Head>
         <title>Portfolio</title>
       </Head>
 
       <SideNavigation NavList={NavList} />
 
-      <LineAni />
-      <Rap>
-        <Visual />
+      <Visual isLineAni={true} />
 
-        <AboutMe AboutData={AboutData} />
+      <AboutMe AboutData={AboutData} />
 
-        <SkillsContent />
-      </Rap>
+      <SkillsContent SkillsData={SkillsData} />
     </div>
   );
 };
