@@ -7,21 +7,31 @@ export const SkillsContentStyled = styled.section`
   .flex {
     display: flex;
     flex-wrap: wrap;
+
+    .sb {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      > div:first-child {
+        margin-bottom: 2rem;
+      }
+    }
   }
 
-  .skillsItem {
-    margin-right: 2rem;
-    margin-bottom: 2rem;
-  }
-
-  .artBoard {
+  .infoView {
     width: 25rem;
-    background: #fff;
+    padding: 1rem 2rem 2rem 2rem;
     border-radius: 10px;
-    padding: 1rem 2rem;
+    background: #fff;
     font-size: 1.5rem;
 
-    > div {
+    .title {
+      border-bottom: 1px solid #eee;
+      padding: 1rem 0;
+    }
+
+    .artImage {
       width: 9rem;
       height: 9rem;
       position: relative;

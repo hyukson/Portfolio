@@ -7,17 +7,23 @@ interface SkillsItemTypes {
   title: String;
   items: any;
   setSkill: any;
+  skill: any;
 }
 
-const SkillsItem = ({ title, items, setSkill }: SkillsItemTypes) => {
+const SkillsItem = ({ title, items, setSkill, skill }: SkillsItemTypes) => {
   return (
-    <SkillsItemStyled className="skillsItem">
+    <SkillsItemStyled>
       <div className="title">
         <h2>{title}</h2>
       </div>
       <div className="skillsImage">
         {items.map((item: any, i: any) => (
-          <div className="skillsBlock" onMouseOver={() => setSkill(item)}>
+          <div
+            className={
+              "skillsBlock " + (skill.content == item.content && " active")
+            }
+            onClick={() => setSkill(item)}
+          >
             <Image alt="skills" key={i} src={item.src} layout="fill" />
           </div>
         ))}

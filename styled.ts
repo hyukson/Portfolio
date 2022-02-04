@@ -24,7 +24,6 @@ export const GlobalStyled = createGlobalStyle`
   @font-face {
     font-family: "PretendardBold";
     src: url("/fonts/Pretendard/Pretendard-Bold.otf");
-
   }
 
   @font-face {

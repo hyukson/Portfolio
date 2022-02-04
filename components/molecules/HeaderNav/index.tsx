@@ -18,17 +18,17 @@ const HeaderNav = ({ NavList }: HeaderNavTypes) => {
 
   return (
     <HeaderNavStyled>
-      <div className="logo">
-        <a href="/">
-          <h2>HYUKSON</h2>
-        </a>
-      </div>
-
       <nav>
         {NavList.map((item, i: number) => (
           <NavItem key={i} idx={i} title={item} moveScroll={moveScroll} />
         ))}
       </nav>
+
+      <div className="logo">
+        <a href="/">
+          <h2>HYUKSON</h2>
+        </a>
+      </div>
     </HeaderNavStyled>
   );
 };

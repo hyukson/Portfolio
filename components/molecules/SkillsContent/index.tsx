@@ -1,10 +1,11 @@
-import readt, { useState } from "react";
-
-import Image from "next/image";
+import { useState } from "react";
 
 import Rap from "../../atoms/Rap";
 import SessionTitle from "../../atoms/SessionTitle";
 import SkillsItem from "../../atoms/SkillsItem";
+import CircleChart from "../../atoms/CircleChart";
+
+import Image from "next/image";
 
 import { SkillsContentStyled } from "./styled";
 
@@ -15,20 +16,35 @@ interface SkillsContentTypes {
 const SkillsContent = ({ SkillsData }: SkillsContentTypes) => {
   const [skill, setSkill] = useState(SkillsData.front.items[0]);
 
+  console.log(skill);
+
   return (
     <SkillsContentStyled>
       <Rap>
         <SessionTitle title="SKILLS" />
 
         <div className="flex">
-          <SkillsItem setSkill={setSkill} {...SkillsData.front} />
+          <SkillsItem skill={skill} setSkill={setSkill} {...SkillsData.front} />
 
-          <div>
-            <SkillsItem setSkill={setSkill} {...SkillsData.back} />
-            <SkillsItem setSkill={setSkill} {...SkillsData.moblie} />
+          <div className="sb">
+            <SkillsItem
+              skill={skill}
+              setSkill={setSkill}
+              {...SkillsData.back}
+            />
+            <SkillsItem
+              skill={skill}
+              setSkill={setSkill}
+              {...SkillsData.moblie}
+            />
           </div>
 
-          <div className="artBoard">
+          {/* 클릭 시 상세보기 */}
+          <div className="infoView">
+            <div className="title">
+              <h3>저의 SKILL은...</h3>
+            </div>
+
             <div className="artImage">
               <Image
                 alt="artBoard"
@@ -37,7 +53,10 @@ const SkillsContent = ({ SkillsData }: SkillsContentTypes) => {
                 objectFit="scale-down"
               />
             </div>
-            {skill.content}
+
+            <p>{skill.content}</p>
+
+            <CircleChart {...skill} />
           </div>
         </div>
       </Rap>
