@@ -3,19 +3,19 @@ import { NavItemStyled } from "./styled";
 
 interface NavItemTypes {
   title?: String;
-  isActive: Boolean;
   moveScroll: any;
-  color: any;
+  idx: number;
 }
 
-const NavItem = ({ title, isActive, moveScroll, color }: NavItemTypes) => {
+const NavItem = ({ title, moveScroll, idx }: NavItemTypes) => {
+  const pad = (number: number) => (number > 10 ? number : `0${number}`);
+
   return (
-    <NavItemStyled
-      className={isActive ? "active" : ""}
-      color={color || "#000"}
-      onClick={moveScroll}
-    >
-      <p>{title}</p>
+    <NavItemStyled onClick={() => moveScroll(idx)}>
+      <a>
+        <span>{pad(idx + 1)}.</span>
+        {title}
+      </a>
     </NavItemStyled>
   );
 };

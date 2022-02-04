@@ -37,8 +37,13 @@ export const SkillsItemStyled = styled.div`
     height: 9rem;
     position: relative;
     margin: 0.4rem;
-    box-shadow: 0 0 15px rgb(0 0 0 / 10%);
+    box-shadow: 0 0 15px rgb(0 0 0 / 8%);
     border-radius: 0.8rem;
     cursor: pointer;
+    transition: 0.4s;
+
+    :hover {
+      background: #febf00;
+    }
   }
 `;

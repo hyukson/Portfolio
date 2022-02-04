@@ -2,7 +2,7 @@ import type { NextPage } from "next";
 import Head from "next/head";
 
 import Visual from "../components/atoms/Visual";
-import SideNavigation from "../components/molecules/SideNavigation";
+import HeaderNav from "../components/molecules/HeaderNav";
 
 import AboutMe from "../components/organisms/AboutMe";
 
@@ -11,23 +11,10 @@ import profileIcon from "../public/assets/icons/profile.png";
 import careerIcon from "../public/assets/icons/career.png";
 import licencsIcon from "../public/assets/icons/licencs.png";
 
-// SKILLS Icon
-import html from "../public/assets/images/skills/html.png";
-import css from "../public/assets/images/skills/css.png";
-import js from "../public/assets/images/skills/js.png";
-import jquery from "../public/assets/images/skills/jquery.png";
-import sass from "../public/assets/images/skills/sass.png";
-import react from "../public/assets/images/skills/react.png";
-import next_js from "../public/assets/images/skills/next_js.png";
-import php from "../public/assets/images/skills/php.png";
-import mysql from "../public/assets/images/skills/mysql.png";
-import kotlin from "../public/assets/images/skills/kotlin.png";
-import flutter from "../public/assets/images/skills/flutter.png";
-
 import SkillsContent from "../components/molecules/SkillsContent";
 
 const Home: NextPage = () => {
-  const NavList = ["INTRO", "ABOUT ME", "SKILLS"];
+  const NavList = ["Intro", "About me", "Skills"];
 
   const AboutData = {
     PROFILE: {
@@ -82,15 +69,76 @@ const Home: NextPage = () => {
   const SkillsData = {
     front: {
       title: "Front-end",
-      images: [html, css, js, jquery, sass, react, next_js],
+      items: [
+        {
+          src: "/assets/images/skills/html.png",
+          content: "기능 경기대회를 준비하면서 HTML을 공부하였고, 다양한 ",
+        },
+        {
+          src: "/assets/images/skills/css.png",
+          content:
+            "CSS를 사용한 다양한 반응형 레이아웃 구현이 가능하며, 애니메이션 기능을 구현할 수 있습니다.",
+        },
+        {
+          src: "/assets/images/skills/js.png",
+          content:
+            "ES6 문법을 사용하여 다양한 기능을 구현, 활용할 수 있으며 해당 언어를 통해 기능 경기대회에서 우수한 성적을 거둔 경험이 있습니다.",
+        },
+        {
+          src: "/assets/images/skills/typescript.png",
+          content:
+            "상속과 인터페이스를 사용할 수 있으며, type을 다룰 수 있습니다. 다양한 React, Next.js 프로젝트에서 Typescript 기반으로 기능을 구현한 경험이 있습니다.",
+        },
+        {
+          src: "/assets/images/skills/jquery.png",
+          content:
+            "Jquery를 이용한 다양한 기능, DOM 객체 활용과 이벤트 속성을 관리할 수 있습니다.",
+        },
+        {
+          src: "/assets/images/skills/sass.png",
+          content: "변수 선언과 연산, 상속 등에 대해 이해, 활용할 수 있습니다.",
+        },
+        {
+          src: "/assets/images/skills/react.png",
+          content:
+            "React Hooks, 컴포넌트, state에 대해 이해와 사용한 경험이 있습니다. ",
+        },
+        {
+          src: "/assets/images/skills/next_js.png",
+          content:
+            "Next.js를 활용하여 다양한 페이지를 개발한 경험이 있으며, React로 제작한 프로젝트를 Next.js로 리펙토링한 경험이 있습니다.",
+        },
+      ],
     },
     back: {
       title: "Back-end",
-      images: [php, mysql],
+      items: [
+        {
+          src: "/assets/images/skills/php.png",
+          content:
+            "PHP를 사용하여 Back-end의 기능(데이터베이스 연동, 로그인, 회원가입)등의 기능을 구현할 수 있습니다.",
+        },
+        {
+          src: "/assets/images/skills/mysql.png",
+          content:
+            "MYSQL 활용하여 데이터베이스와 SQL에 대한 이해를 가지고 있으며, SQL를 활용하여 다양한 백엔드 기능을 개발한 경험이 있습니다.",
+        },
+      ],
     },
     moblie: {
       title: "Mobile Application",
-      images: [kotlin, flutter],
+      items: [
+        {
+          src: "/assets/images/skills/kotlin.png",
+          content:
+            "kotlin을 사용하여 리스트 형식의 액티비티를 구성할 수 있으며, API와 연결, 호출이 가능합니다. 라이브러리를 사용하여 다양한 기능 구현을 경험해보았습니다.",
+        },
+        {
+          src: "/assets/images/skills/flutter.png",
+          content:
+            "flutter을 사용하여 리스트 형식의 액티비티를 구성할 수 있으며, 라이브러리를 사용하여 다양한 기능 구현을 경험해보았습니다.",
+        },
+      ],
     },
   };
 
@@ -100,7 +148,7 @@ const Home: NextPage = () => {
         <title>Portfolio</title>
       </Head>
 
-      <SideNavigation NavList={NavList} />
+      <HeaderNav NavList={NavList} />
 
       <Visual isLineAni={true} />
 

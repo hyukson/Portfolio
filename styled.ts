@@ -44,14 +44,9 @@ export const GlobalStyled = createGlobalStyle`
     word-break: break-all;
   }
 
-  html {
-    height: 100%;
-  }
-  
-  body {
-    height: 100%;
-    overflow: hidden;
-    position: relative;
+  a {
+    text-decoration: none;
+    color: inherit;
   }
 
   h1,

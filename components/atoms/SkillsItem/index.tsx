@@ -5,19 +5,20 @@ import { SkillsItemStyled } from "./styled";
 
 interface SkillsItemTypes {
   title: String;
-  images: any;
+  items: any;
+  setSkill: any;
 }
 
-const SkillsItem = ({ title, images }: SkillsItemTypes) => {
+const SkillsItem = ({ title, items, setSkill }: SkillsItemTypes) => {
   return (
     <SkillsItemStyled className="skillsItem">
       <div className="title">
         <h2>{title}</h2>
       </div>
       <div className="skillsImage">
-        {images.map((item: any, i: any) => (
-          <div className="skillsBlock">
-            <Image alt="skills" key={i} src={item} layout="fill" />
+        {items.map((item: any, i: any) => (
+          <div className="skillsBlock" onMouseOver={() => setSkill(item)}>
+            <Image alt="skills" key={i} src={item.src} layout="fill" />
           </div>
         ))}
       </div>
