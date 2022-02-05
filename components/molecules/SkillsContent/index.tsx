@@ -1,11 +1,9 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 import Rap from "../../atoms/Rap";
 import SessionTitle from "../../atoms/SessionTitle";
 import SkillsItem from "../../atoms/SkillsItem";
 import CircleChart from "../../atoms/CircleChart";
-
-import Image from "next/image";
 
 import { SkillsContentStyled } from "./styled";
 
@@ -15,8 +13,6 @@ interface SkillsContentTypes {
 
 const SkillsContent = ({ SkillsData }: SkillsContentTypes) => {
   const [skill, setSkill] = useState(SkillsData.front.items[0]);
-
-  console.log(skill);
 
   return (
     <SkillsContentStyled>
@@ -45,18 +41,11 @@ const SkillsContent = ({ SkillsData }: SkillsContentTypes) => {
               <h3>저의 SKILL은...</h3>
             </div>
 
-            <div className="artImage">
-              <Image
-                alt="artBoard"
-                src={skill.src}
-                layout="fill"
-                objectFit="scale-down"
-              />
+            <div className="chart">
+              <CircleChart {...skill} />
             </div>
 
             <p>{skill.content}</p>
-
-            <CircleChart {...skill} />
           </div>
         </div>
       </Rap>

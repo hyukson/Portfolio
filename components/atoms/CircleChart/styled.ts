@@ -18,14 +18,22 @@ export const CircleChartStyled = styled.div`
     fill: none;
     stroke: ${(props) => props.theme.subColor};
     stroke-linecap: round;
-    animation: ${chartKeyframes} 1.5s reverse;
     transform: rotate(-90deg);
     transform-origin: center;
+
+    &.animate {
+      animation: ${chartKeyframes} 1.5s reverse;
+    }
   }
 
   .chart_text > text {
     text-anchor: middle;
     letter-spacing: 0px;
-    font-size: 0.3rem;
+    font-size: 0.2rem;
+
+    :last-child {
+      font-weight: 700;
+      font-size: 0.22rem;
+    }
   }
 `;

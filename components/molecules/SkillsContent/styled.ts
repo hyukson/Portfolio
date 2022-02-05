@@ -1,7 +1,8 @@
 import styled from "styled-components";
 
 export const SkillsContentStyled = styled.section`
-  height: 100vh;
+  min-height: 100vh;
+  height: 100%;
   background: #061626;
 
   .flex {
@@ -21,20 +22,26 @@ export const SkillsContentStyled = styled.section`
 
   .infoView {
     width: 25rem;
-    padding: 1rem 2rem 2rem 2rem;
+    padding: 1rem 2rem;
     border-radius: 10px;
     background: #fff;
-    font-size: 1.5rem;
 
     .title {
       border-bottom: 1px solid #eee;
       padding: 1rem 0;
+      font-size: 1.2rem;
     }
 
-    .artImage {
-      width: 9rem;
-      height: 9rem;
-      position: relative;
+    .chart {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 1.5rem 0;
+    }
+
+    > p {
+      font-size: 1.2rem;
+      line-height: 1.3;
     }
   }
 `;

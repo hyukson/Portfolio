@@ -11,7 +11,7 @@ const HeaderNav = ({ NavList }: HeaderNavTypes) => {
   const moveScroll = (idx: number) => {
     // 네비게이션 이동
     window.scrollTo({
-      top: idx * document.documentElement.offsetHeight,
+      top: idx * window.innerHeight,
       behavior: "smooth",
     });
   };

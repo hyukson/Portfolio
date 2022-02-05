@@ -12,9 +12,10 @@ import careerIcon from "../public/assets/icons/career.png";
 import licencsIcon from "../public/assets/icons/licencs.png";
 
 import SkillsContent from "../components/molecules/SkillsContent";
+import ProjectContent from "../components/molecules/ProjectContent";
 
 const Home: NextPage = () => {
-  const NavList = ["Intro", "About me", "Skills"];
+  const NavList = ["intro", "about me", "skills", "project"];
 
   const AboutData = {
     PROFILE: {
@@ -134,8 +135,8 @@ const Home: NextPage = () => {
           title: "PHP",
           src: "/assets/images/skills/php.png",
           content:
-            "PHP를 사용하여 Back-end의 기능(데이터베이스 연동, 로그인, 회원가입)등의 기능을 구현할 수 있습니다.",
-          skill: 90,
+            "PHP를 사용하여 Back-end의 기능(데이터베이스 연동, 로그인, 회원가입)등의 기능 구현과 API와 연동, 제작 할 수 있습니다.",
+          skill: 80,
         },
         {
           title: "MySQL",
@@ -167,6 +168,28 @@ const Home: NextPage = () => {
     },
   };
 
+  const projectData = [
+    {
+      title: "포트폴리오",
+      description: "저를 소개하기 위해 제작한 포트폴리오용 사이트입니다.",
+      image: "/assets/images/portfolio.png",
+      mainSkills: [
+        "간단한 인적사항과 자기소개",
+        "진행한 프로젝트 github 링크",
+        "활용 가능한 기술 소개",
+      ],
+      social: [
+        {
+          name: "github",
+          icon: "/assets/icons/github.png",
+          link: "https://github.com/hyukson/portfolio",
+        },
+      ],
+      link: "/",
+      useSkills: ["react", "TypeScript", "SCSS", "JavaScript", "HTML", "CSS"],
+    },
+  ];
+
   return (
     <div className="wrap">
       <Head>
@@ -180,6 +203,8 @@ const Home: NextPage = () => {
       <AboutMe AboutData={AboutData} />
 
       <SkillsContent SkillsData={SkillsData} />
+
+      <ProjectContent projectData={projectData} />
     </div>
   );
 };
