@@ -1,5 +1,4 @@
 import react from "react";
-import Image from "next/image";
 
 import { SkillsItemStyled } from "./styled";
 
@@ -24,7 +23,7 @@ const SkillsItem = ({ title, items, setSkill, skill }: SkillsItemTypes) => {
             }
             onClick={() => setSkill(item)}
           >
-            <Image alt="skills" key={i} src={item.src} layout="fill" />
+            <img alt="skills" key={i} src={item.src} />
           </div>
         ))}
       </div>

@@ -1,6 +1,5 @@
 import React from "react";
 
-import Image from "next/image";
 import { AboutDetailStyled } from "./styled";
 
 import AboutItem from "../../atoms/AboutItem";
@@ -13,7 +12,7 @@ const AboutDetail = ({ item }: AboutDetailTypes) => {
   return (
     <AboutDetailStyled>
       <div className="aboutHeader">
-        <Image alt="aboutIcon" {...item.icon} />
+        <img alt="aboutIcon" {...item.icon} />
         <h2>{item.title}</h2>
       </div>
 

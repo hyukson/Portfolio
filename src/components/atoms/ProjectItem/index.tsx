@@ -1,7 +1,5 @@
 import react from "react";
 
-import Image from "next/image";
-
 import { ProjectItemStyled } from "./styled";
 
 interface ProjectItemTypes {
@@ -26,7 +24,7 @@ const ProjectItem = ({
   return (
     <ProjectItemStyled>
       <div className="projectImage">
-        <Image src={image} layout="fill" alt="projectImage" objectFit="cover" />
+        <img src={image} alt="projectImage" />
       </div>
 
       <div className="projectContent">

@@ -1,5 +1,4 @@
 import React from "react";
-import Image from "next/image";
 
 import { AboutMeStyled } from "./styled";
 
@@ -20,7 +19,7 @@ const AboutMe = ({ AboutData }: AboutMeTypes) => {
 
         <div className="aboutWrap">
           <div className="userImage">
-            <Image src="/assets/images/화면.png" alt="Alt Name" layout="fill" />
+            <img src="/assets/images/화면.png" alt="Alt Name" />
           </div>
 
           <div className="subAbout">

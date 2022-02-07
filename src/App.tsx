@@ -1,21 +1,15 @@
-import type { NextPage } from "next";
-import Head from "next/head";
+import React from "react";
 
-import Visual from "../components/atoms/Visual";
-import HeaderNav from "../components/molecules/HeaderNav";
+import Visual from "./components/atoms/Visual";
+import HeaderNav from "./components/molecules/HeaderNav";
 
-import AboutMe from "../components/organisms/AboutMe";
+import AboutMe from "./components/organisms/AboutMe";
 
-// 아이콘
-import profileIcon from "../public/assets/icons/profile.png";
-import careerIcon from "../public/assets/icons/career.png";
-import licencsIcon from "../public/assets/icons/licencs.png";
+import SkillsContent from "./components/molecules/SkillsContent";
+import ProjectContent from "./components/molecules/ProjectContent";
+import ContactContent from "./components/molecules/ContactContent";
 
-import SkillsContent from "../components/molecules/SkillsContent";
-import ProjectContent from "../components/molecules/ProjectContent";
-import ContactContent from "../components/molecules/ContactContent";
-
-const Home: NextPage = () => {
+function App() {
   const NavList = ["intro", "about me", "skills", "project", "Contact"];
 
   // about
@@ -23,7 +17,7 @@ const Home: NextPage = () => {
     PROFILE: {
       title: "PROFILE",
       icon: {
-        src: profileIcon,
+        src: "/assets/icons/profile.png",
       },
       list: [
         { title: "이름", content: "장혁수" },
@@ -40,7 +34,7 @@ const Home: NextPage = () => {
     CAREER: {
       title: "CAREER",
       icon: {
-        src: careerIcon,
+        src: "/assets/icons/career.png",
       },
       list: [
         {
@@ -59,7 +53,7 @@ const Home: NextPage = () => {
     LICENCS: {
       title: "LICENCS",
       icon: {
-        src: licencsIcon,
+        src: "/assets/icons/licencs.png",
       },
       list: [
         { title: "정보처리 기능사" },
@@ -242,10 +236,6 @@ const Home: NextPage = () => {
 
   return (
     <div className="wrap">
-      <Head>
-        <title>Portfolio</title>
-      </Head>
-
       <HeaderNav NavList={NavList} />
 
       <Visual isLineAni={true} />
@@ -259,6 +249,6 @@ const Home: NextPage = () => {
       <ContactContent ContactData={ContactData} socialData={socialData} />
     </div>
   );
-};
+}
 
-export default Home;
+export default App;

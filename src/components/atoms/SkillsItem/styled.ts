@@ -24,8 +24,11 @@ export const SkillsItemStyled = styled.div`
   .skillsImage {
     display: flex;
     flex-wrap: wrap;
+    position: relative;
 
     img {
+      width: 100%;
+      height: 100%;
       object-fit: scale-down;
     }
   }

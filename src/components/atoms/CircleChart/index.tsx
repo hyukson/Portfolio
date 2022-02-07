@@ -1,7 +1,5 @@
-import { useCallback, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { CircleChartStyled } from "./styled";
-
-import Image from "next/image";
 
 interface CircleChartTypes {
   title: string;
