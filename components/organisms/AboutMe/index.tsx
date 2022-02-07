@@ -4,7 +4,7 @@ import Image from "next/image";
 import { AboutMeStyled } from "./styled";
 
 // components
-import SessionTitle from "../../atoms/SessionTitle";
+import SectionTitle from "../../atoms/SectionTitle";
 import AboutDetail from "../../molecules/AboutDetail";
 import Rap from "../../atoms/Rap";
 
@@ -16,7 +16,7 @@ const AboutMe = ({ AboutData }: AboutMeTypes) => {
   return (
     <AboutMeStyled>
       <Rap>
-        <SessionTitle title="ABOUT ME" color="#444" />
+        <SectionTitle title="ABOUT ME" color="#444" />
 
         <div className="aboutWrap">
           <div className="userImage">

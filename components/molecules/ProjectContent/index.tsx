@@ -2,7 +2,7 @@ import react from "react";
 import ProjectItem from "../../atoms/ProjectItem";
 
 import Rap from "../../atoms/Rap";
-import SessionTitle from "../../atoms/SessionTitle";
+import SectionTitle from "../../atoms/SectionTitle";
 
 import { ProjectContentStyled } from "./styled";
 
@@ -14,7 +14,7 @@ const ProjectContent = ({ projectData }: ProjectContentTypes) => {
   return (
     <ProjectContentStyled>
       <Rap>
-        <SessionTitle title="PROJECT" color="#444" />
+        <SectionTitle title="PROJECT" color="#444" />
 
         {projectData.map((item: any, i: any) => (
           <ProjectItem {...item} key={i} />

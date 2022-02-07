@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 
 import Rap from "../../atoms/Rap";
-import SessionTitle from "../../atoms/SessionTitle";
+import SectionTitle from "../../atoms/SectionTitle";
 import SkillsItem from "../../atoms/SkillsItem";
 import CircleChart from "../../atoms/CircleChart";
 
@@ -17,7 +17,7 @@ const SkillsContent = ({ SkillsData }: SkillsContentTypes) => {
   return (
     <SkillsContentStyled>
       <Rap>
-        <SessionTitle title="SKILLS" />
+        <SectionTitle title="SKILLS" />
 
         <div className="flex">
           <SkillsItem skill={skill} setSkill={setSkill} {...SkillsData.front} />

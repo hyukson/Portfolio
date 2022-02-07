@@ -13,9 +13,10 @@ import licencsIcon from "../public/assets/icons/licencs.png";
 
 import SkillsContent from "../components/molecules/SkillsContent";
 import ProjectContent from "../components/molecules/ProjectContent";
+import ContactContent from "../components/molecules/ContactContent";
 
 const Home: NextPage = () => {
-  const NavList = ["intro", "about me", "skills", "project"];
+  const NavList = ["intro", "about me", "skills", "project", "Contact"];
 
   const AboutData = {
     PROFILE: {
@@ -188,6 +189,34 @@ const Home: NextPage = () => {
       link: "/",
       useSkills: ["react", "TypeScript", "SCSS", "JavaScript", "HTML", "CSS"],
     },
+    {
+      title: "카드 짝 맞추기",
+      description: "카드를 뒤집어 같은 뒷면을 찾아 맞추는 게임입니다.",
+      image: "/assets/images/card-match.png",
+      mainSkills: [
+        "카드를 클릭해 뒷면을 확인",
+        "같은 짝을 맞추는 게임",
+        "난이도를 선택 가능",
+      ],
+      social: [
+        {
+          name: "github",
+          icon: "/assets/icons/github.png",
+          link: "https://github.com/hyukson/match-card",
+        },
+      ],
+      link: "/",
+      useSkills: ["JavaScript", "HTML", "CSS"],
+    },
+  ];
+
+  const CONTACT = [
+    {
+      title: "GitHub",
+      link: "https://github.com/hyukson",
+      content: "",
+      list: [],
+    },
   ];
 
   return (
@@ -205,6 +234,8 @@ const Home: NextPage = () => {
       <SkillsContent SkillsData={SkillsData} />
 
       <ProjectContent projectData={projectData} />
+
+      <ContactContent />
     </div>
   );
 };

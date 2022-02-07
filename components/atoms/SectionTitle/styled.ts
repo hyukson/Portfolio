@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const SessionTitleStyled = styled.div`
+export const SectionTitleStyled = styled.div`
   padding: 5rem 0 2rem 0;
 
   h1 {

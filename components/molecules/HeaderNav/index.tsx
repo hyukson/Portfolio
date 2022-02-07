@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import useMoveScroll from "../../../hooks/useMoveScroll";
+
 import NavItem from "../../atoms/NavItem";
 import { HeaderNavStyled } from "./styled";
 
@@ -9,9 +9,11 @@ interface HeaderNavTypes {
 
 const HeaderNav = ({ NavList }: HeaderNavTypes) => {
   const moveScroll = (idx: number) => {
+    const section = document.querySelectorAll("section");
+
     // 네비게이션 이동
     window.scrollTo({
-      top: idx * window.innerHeight,
+      top: section[idx].offsetTop,
       behavior: "smooth",
     });
   };
