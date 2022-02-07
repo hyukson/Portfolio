@@ -9,50 +9,27 @@ import ContentItem from "../../atoms/ContentItem/inedx";
 
 import { ContactContentStyled } from "./styled";
 
-interface ContactContentTypes {}
+interface ContactContentTypes {
+  ContactData: any;
+  socialData: any;
+}
 
-const ContactContent = ({}: ContactContentTypes) => {
-  const data = [
-    {
-      title: "연락처",
-      icon: "assets/icons/phone.png",
-      content: "010-7255-8076",
-    },
-    {
-      title: "이메일",
-      icon: "assets/icons/email.png",
-      content: "hyuksoo128@gmail.com",
-    },
-  ];
-
-  const social = [
-    {
-      icon: "/assets/icons/github_title.png",
-      link: "https://github.com/hyukson",
-      content: "제작한 소스 코드를 저장하는 주 공간입니다.",
-    },
-    {
-      icon: "/assets/icons/tistory_title.png",
-      link: "https://github.com/hyukson",
-      content: "코드와 관련된 지식 공유 목적의 블로그입니다.",
-    },
-  ];
-
+const ContactContent = ({ ContactData, socialData }: ContactContentTypes) => {
   return (
     <ContactContentStyled>
       <Rap>
         <SectionTitle title="CONTACT" />
 
         <div className="flex">
-          <ContentItem data={data} />
+          <ContentItem data={ContactData} />
 
-          {social.map((item: any, i: number) => (
+          {socialData.map((item: any, i: number) => (
             <SocialItem {...item} key={i} />
           ))}
         </div>
 
         <div className="copyright">
-          <p>COPYRIGHT 2022. 장혁수 ALL RIGHTS RESERVED.</p>
+          <p>Copyright 2022. 장혁수 all rights reserved.</p>
           <p>
             본 페이지는 상업적 목적이 아닌 개인 포트폴리오용으로 제작되었습니다.
           </p>

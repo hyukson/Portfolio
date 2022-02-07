@@ -7,6 +7,11 @@ const chartKeyframes = keyframes`
 `;
 
 export const CircleChartStyled = styled.div`
+  svg {
+    width: 14rem;
+    height: 14rem;
+  }
+
   .chart_outer {
     stroke: #efefef;
     stroke-width: 2;

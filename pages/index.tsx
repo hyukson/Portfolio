@@ -18,6 +18,7 @@ import ContactContent from "../components/molecules/ContactContent";
 const Home: NextPage = () => {
   const NavList = ["intro", "about me", "skills", "project", "Contact"];
 
+  // about
   const AboutData = {
     PROFILE: {
       title: "PROFILE",
@@ -68,6 +69,7 @@ const Home: NextPage = () => {
     },
   };
 
+  // skills
   const SkillsData = {
     front: {
       title: "Front-end",
@@ -169,6 +171,7 @@ const Home: NextPage = () => {
     },
   };
 
+  // Project
   const projectData = [
     {
       title: "포트폴리오",
@@ -210,12 +213,30 @@ const Home: NextPage = () => {
     },
   ];
 
-  const CONTACT = [
+  // Conatct
+  const ContactData = [
     {
-      title: "GitHub",
+      title: "연락처",
+      icon: "assets/icons/phone.png",
+      content: "010-7255-8076",
+    },
+    {
+      title: "이메일",
+      icon: "assets/icons/email.png",
+      content: "hyuksoo128@gmail.com",
+    },
+  ];
+
+  const socialData = [
+    {
+      icon: "/assets/icons/github_title.png",
       link: "https://github.com/hyukson",
-      content: "",
-      list: [],
+      content: "제작한 소스 코드를 저장하는 주 공간입니다.",
+    },
+    {
+      icon: "/assets/icons/tistory_title.png",
+      link: "https://github.com/hyukson",
+      content: "코드와 관련된 지식 공유 목적의 블로그입니다.",
     },
   ];
 
@@ -235,7 +256,7 @@ const Home: NextPage = () => {
 
       <ProjectContent projectData={projectData} />
 
-      <ContactContent />
+      <ContactContent ContactData={ContactData} socialData={socialData} />
     </div>
   );
 };

@@ -1,5 +1,3 @@
-import React, { useEffect, useState } from "react";
-
 import NavItem from "../../atoms/NavItem";
 import { HeaderNavStyled } from "./styled";
 

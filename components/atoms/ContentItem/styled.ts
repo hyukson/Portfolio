@@ -21,4 +21,16 @@ export const ContentItemStyled = styled.div`
       margin-top: 0.6rem;
     }
   }
+
+  // 920px
+  @media only screen and (max-width: 920px) {
+    .box .title {
+      max-width: 9rem;
+    }
+  }
+
+  // 760px
+  @media only screen and (max-width: 760px) {
+    min-width: 28rem;
+  }
 `;

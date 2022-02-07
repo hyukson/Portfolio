@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const ProjectItemStyled = styled.div`
   width: 75vw;
-  height: 70vh;
+  min-height: 70vh;
   display: flex;
   margin-bottom: 5rem;
   box-shadow: 0 0 15px rgba(0 0 0 / 10%);
@@ -11,13 +11,13 @@ export const ProjectItemStyled = styled.div`
 
   .projectImage {
     width: 50%;
-    height: 100%;
+    height: 70vh;
     position: relative;
     transition: 0.5s;
   }
 
   .projectContent {
-    padding: 0 4rem;
+    padding: 2rem 4rem;
     text-transform: capitalize;
 
     display: flex;
@@ -30,7 +30,7 @@ export const ProjectItemStyled = styled.div`
     }
 
     .description {
-      font-size: 1.5rem;
+      font-size: 1.4rem;
     }
 
     // 주요기능
@@ -113,6 +113,34 @@ export const ProjectItemStyled = styled.div`
       font-size: 1rem;
       font-family: "GmarketBold";
       color: ${(props) => props.theme.lineColor};
+    }
+  }
+
+  // 920px
+  @media only screen and (max-width: 950px) {
+    display: block;
+    height: 65rem;
+
+    .projectImage {
+      width: 100%;
+      height: 50%;
+    }
+
+    .projectContent {
+      padding: 2rem 3rem;
+    }
+  }
+
+  // 750px
+  @media only screen and (max-width: 750px) and (min-width: 600px) {
+    width: 70vw;
+  }
+
+  // 600px
+  @media only screen and (max-width: 600px) {
+    // 주요기능
+    .projectContent .mainSkills {
+      font-size: 1.4rem;
     }
   }
 `;

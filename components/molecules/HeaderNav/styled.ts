@@ -38,4 +38,33 @@ export const HeaderNavStyled = styled.header`
       right: 0;
     }
   }
+
+  // 반응형
+  @media only screen and (max-width: 600px) {
+    width: 90%;
+    height: 8%;
+    padding: 0;
+
+    justify-content: center;
+
+    position: fixed;
+    top: 0%;
+    transform: translate(-50%, 0);
+    left: 50%;
+
+    border-radius: 0;
+    border-bottom-left-radius: 4rem;
+    border-bottom-right-radius: 4rem;
+
+    nav {
+      width: 80%;
+      display: flex;
+      justify-content: space-between;
+      margin-top: 1rem;
+    }
+
+    .logo {
+      display: none;
+    }
+  }
 `;

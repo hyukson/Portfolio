@@ -6,6 +6,7 @@ export const SkillsItemStyled = styled.div`
   margin-right: 2rem;
   border-radius: 10px;
   background: #fff;
+  transition: 0.4s;
 
   .title {
     width: 100%;
@@ -46,5 +47,26 @@ export const SkillsItemStyled = styled.div`
     &.active {
       box-shadow: 0 0 0.9rem ${(props) => props.theme.subColor};
     }
+  }
+
+  // 1400px
+  @media only screen and (max-width: 1400px) {
+    margin-bottom: 2rem;
+  }
+
+  // 940px
+  @media only screen and (max-width: 950px) {
+    max-width: 51rem;
+  }
+
+  // 810px
+  @media only screen and (max-width: 630px) {
+    max-width: 38rem;
+    width: 100%;
+  }
+
+  @media only screen and (max-width: 550px) {
+    margin-right: 0;
+    max-width: 34rem;
   }
 `;

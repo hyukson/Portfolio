@@ -44,4 +44,25 @@ export const SkillsContentStyled = styled.section`
       line-height: 1.3;
     }
   }
+
+  // 1400px
+  @media only screen and (max-width: 1400px) {
+    padding-left: 5rem;
+    padding-bottom: 5rem;
+  }
+
+  // 630px
+  @media only screen and (max-width: 630px) {
+    .flex > div {
+      max-width: 38rem;
+      width: 100%;
+    }
+  }
+
+  // 550px
+  @media only screen and (max-width: 550px) {
+    .flex > div {
+      max-width: 34rem;
+    }
+  }
 `;

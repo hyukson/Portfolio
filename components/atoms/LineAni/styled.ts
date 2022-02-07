@@ -6,6 +6,7 @@ export const LineAniStyled = styled.div`
     position: absolute;
     top: 0;
     z-index: -1;
+    transition: 0.4s;
   }
 
   polyline {
@@ -32,6 +33,27 @@ export const LineAniStyled = styled.div`
     }
     to {
       stroke-dashoffset: 0;
+    }
+  }
+
+  // 920px 반응형
+  @media only screen and (max-width: 920px) {
+    .lineSvg {
+      width: 150%;
+    }
+  }
+
+  // 720px
+  @media only screen and (max-width: 720px) {
+    .lineSvg {
+      width: 180%;
+    }
+  }
+
+  // 600px
+  @media only screen and (max-width: 600px) {
+    .lineSvg {
+      width: 230%;
     }
   }
 `;

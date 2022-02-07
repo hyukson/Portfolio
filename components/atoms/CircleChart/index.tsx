@@ -16,8 +16,6 @@ const CircleChart = ({ title, skill, src }: CircleChartTypes) => {
         className="chart"
         viewBox="0 0 32 32"
         xmlns="http://www.w3.org/2000/svg"
-        width="14vw"
-        height="14vw"
       >
         <circle className="chart_outer" cx="16" cy="16" r="15"></circle>
 

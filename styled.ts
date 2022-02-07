@@ -64,4 +64,32 @@ export const GlobalStyled = createGlobalStyle`
   b.G {
     font-family: "GMarketBold";
   }
+
+  // 1150px 반응형
+  @media only screen and (max-width: 1150px) {
+    html, body {
+      font-size: 14px;
+    }
+  }
+
+  // 920px 반응형
+  @media only screen and (max-width: 920px) {
+    html, body {
+      font-size: 12px;
+    }
+  }
+
+  // 720px 반응형
+  @media only screen and (max-width: 720px) {
+    html, body {
+      font-size: 11px;
+    }
+  }
+
+  // 600px 반응형
+  @media only screen and (max-width: 600px) {
+    html, body {
+      font-size: 10px;
+    }
+  }
 `;
