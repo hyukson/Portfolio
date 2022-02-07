@@ -10,9 +10,8 @@ import { ThemeProvider } from "styled-components";
 
 ReactDOM.render(
   <React.StrictMode>
+    <GlobalStyled />
     <ThemeProvider theme={defaultTheme}>
-      <GlobalStyled />
-
       <App />
     </ThemeProvider>
   </React.StrictMode>,

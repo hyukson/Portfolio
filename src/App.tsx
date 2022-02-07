@@ -229,7 +229,7 @@ function App() {
     },
     {
       icon: "/assets/icons/tistory_title.png",
-      link: "https://github.com/hyukson",
+      link: "https://gurtn.tistory.com",
       content: "코드와 관련된 지식 공유 목적의 블로그입니다.",
     },
   ];
