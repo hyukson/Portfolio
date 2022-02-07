@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { CircleChartStyled } from "./styled";
 
 import Image from "next/image";
@@ -10,10 +10,19 @@ interface CircleChartTypes {
 }
 
 const CircleChart = ({ title, skill, src }: CircleChartTypes) => {
+  const [reType, reRander] = useState("");
+
+  // 강제 렌더링
+  useEffect(() => {
+    reRander("none");
+
+    setTimeout(() => reRander(""), 300);
+  }, [title]);
+
   return (
     <CircleChartStyled>
       <svg
-        className="chart"
+        className={"chart " + reType}
         viewBox="0 0 32 32"
         xmlns="http://www.w3.org/2000/svg"
       >

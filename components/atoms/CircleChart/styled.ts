@@ -7,9 +7,19 @@ const chartKeyframes = keyframes`
 `;
 
 export const CircleChartStyled = styled.div`
-  svg {
+  .chart {
     width: 14rem;
     height: 14rem;
+    transition: opacity 0.5s;
+  }
+
+  .chart.none {
+    opacity: 0;
+    transition: none;
+
+    .chart_inner {
+      display: none;
+    }
   }
 
   .chart_outer {
@@ -26,9 +36,7 @@ export const CircleChartStyled = styled.div`
     transform: rotate(-90deg);
     transform-origin: center;
 
-    &.animate {
-      animation: ${chartKeyframes} 1.5s reverse;
-    }
+    animation: ${chartKeyframes} 1.2s reverse;
   }
 
   .chart_text > text {
