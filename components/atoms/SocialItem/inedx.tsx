@@ -11,9 +11,9 @@ interface SocialItemTypes {
 const SocialItem = ({ icon, link, content }: SocialItemTypes) => {
   return (
     <SocialItemStyled>
-      <div className="socialImage">
+      <a href={link} className="socialImage">
         <img src={icon} alt="#" />
-      </div>
+      </a>
       <p>{content}</p>
       <a href={link}>Link : {link}</a>
     </SocialItemStyled>

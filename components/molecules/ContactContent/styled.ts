@@ -1,11 +1,25 @@
 import styled from "styled-components";
 
 export const ContactContentStyled = styled.section`
-  min-height: 100vh;
+  min-height: 70vh;
   height: 100%;
   background: #061626;
 
-  .flex > div {
-    margin-bottom: 2rem;
+  .flex {
+    display: flex;
+
+    > div {
+      margin-right: 2rem;
+    }
+  }
+
+  .copyright {
+    font-size: 1rem;
+    margin-top: 9rem;
+    color: #eee;
+
+    p {
+      margin: 0.2rem 0;
+    }
   }
 `;

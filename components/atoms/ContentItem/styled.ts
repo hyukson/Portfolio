@@ -1,17 +1,24 @@
 import styled from "styled-components";
 
 export const ContentItemStyled = styled.div`
-  max-width: 30rem;
-  padding: 2rem 2rem 1rem 2rem;
+  min-width: 25rem;
+  padding: 2.5rem 2rem 1.5rem 2rem;
   border-radius: 10px;
   background: #fff;
 
   .box {
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
+
+    .title {
+      max-width: 7rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+    }
 
     p {
       font-size: 1.4rem;
-      margin-top: 0.4rem;
+      margin-top: 0.6rem;
     }
   }
 `;

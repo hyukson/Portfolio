@@ -11,8 +11,11 @@ const ContentItem = ({ data }: ContentItemTypes) => {
     <ContentItemStyled>
       {data.map((item: any) => (
         <div className="box">
-          <h2>{item.title}</h2>
-          <p>{item.content}</p>
+          <div className="title">
+            <img src={item.icon} alt="#" />
+            <h2>{item.title}</h2>
+          </div>
+          <p>- {item.content}</p>
         </div>
       ))}
     </ContentItemStyled>

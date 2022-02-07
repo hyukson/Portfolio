@@ -1,12 +1,13 @@
 import styled from "styled-components";
 
 export const SocialItemStyled = styled.div`
-  max-width: 30rem;
+  min-width: 28rem;
   padding: 1rem 2rem 3rem 2rem;
   border-radius: 10px;
   background: #fff;
 
   .socialImage {
+    display: inline-block;
     width: 14rem;
     height: 6rem;
 
