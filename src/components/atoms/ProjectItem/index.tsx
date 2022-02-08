@@ -1,5 +1,3 @@
-import react from "react";
-
 import { ProjectItemStyled } from "./styled";
 
 interface ProjectItemTypes {

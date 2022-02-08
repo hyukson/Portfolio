@@ -1,4 +1,3 @@
-import React from "react";
 import { NavItemStyled } from "./styled";
 
 interface NavItemTypes {
@@ -12,10 +11,10 @@ const NavItem = ({ title, moveScroll, idx }: NavItemTypes) => {
 
   return (
     <NavItemStyled onClick={() => moveScroll(idx)}>
-      <a>
+      <div>
         <span>{pad(idx + 1)}.</span>
         {title}
-      </a>
+      </div>
     </NavItemStyled>
   );
 };

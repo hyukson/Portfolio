@@ -1,5 +1,3 @@
-import react from "react";
-
 import Rap from "../../atoms/Rap";
 
 import SectionTitle from "../../atoms/SectionTitle";

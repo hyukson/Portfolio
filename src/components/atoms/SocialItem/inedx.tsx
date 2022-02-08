@@ -1,5 +1,3 @@
-import react from "react";
-
 import { SocialItemStyled } from "./styled";
 
 interface SocialItemTypes {

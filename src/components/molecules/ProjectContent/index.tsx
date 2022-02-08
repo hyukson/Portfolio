@@ -1,4 +1,3 @@
-import react from "react";
 import ProjectItem from "../../atoms/ProjectItem";
 
 import Rap from "../../atoms/Rap";

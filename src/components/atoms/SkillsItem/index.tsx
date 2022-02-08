@@ -1,5 +1,3 @@
-import react from "react";
-
 import { SkillsItemStyled } from "./styled";
 
 interface SkillsItemTypes {
@@ -19,7 +17,7 @@ const SkillsItem = ({ title, items, setSkill, skill }: SkillsItemTypes) => {
         {items.map((item: any, i: any) => (
           <div
             className={
-              "skillsBlock " + (skill.content == item.content && " active")
+              "skillsBlock " + (skill.content === item.content && " active")
             }
             onClick={() => setSkill(item)}
           >

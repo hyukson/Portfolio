@@ -1,6 +1,3 @@
-import React from "react";
-import { DefaultTheme } from "styled-components";
-
 import { SectionTitleStyled } from "./styled";
 
 interface SectionTitleTypes {

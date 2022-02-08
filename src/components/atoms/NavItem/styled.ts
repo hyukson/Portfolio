@@ -1,10 +1,9 @@
 import styled from "styled-components";
 
 export const NavItemStyled = styled.div`
-  @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap");
   cursor: pointer;
 
-  a {
+  div {
     display: inline-block;
     position: relative;
     margin-bottom: 1rem;

@@ -1,6 +1,8 @@
 import { createGlobalStyle } from "styled-components";
 
 export const GlobalStyled = createGlobalStyle`
+  @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap");
+
   @font-face {
     font-family: "NotoReg";
     src: url("/Portfolio/fonts/NotoSansKR/NotoSansKR-Regular.otf");
