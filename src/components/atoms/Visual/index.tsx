@@ -12,7 +12,7 @@ interface VisualTypes {
 const Visual = ({ isLineAni }: VisualTypes) => {
   return (
     <VisualStyled>
-      {isLineAni ? <LineAni /> : ""}
+      {isLineAni && <LineAni />}
       <Rap>
         <div className="visual_wrap">
           <div className="main_text">
@@ -29,7 +29,7 @@ const Visual = ({ isLineAni }: VisualTypes) => {
           </div>
 
           <div className="userImage">
-            <img src="/portfolio/assets/images/화면.png" alt="Alt Name" />
+            <img src="/Portfolio/assets/images/화면.png" alt="Alt Name" />
           </div>
         </div>
       </Rap>

@@ -3,13 +3,10 @@ import styled from "styled-components";
 export const VisualStyled = styled.section`
   min-height: 100vh;
   height: 100%;
-
   position: relative;
-
   display: flex;
   flex-direction: column;
   justify-content: center;
-
   overflow: hidden;
 
   .visual_wrap {

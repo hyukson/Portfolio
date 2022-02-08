@@ -17,7 +17,7 @@ function App() {
     PROFILE: {
       title: "PROFILE",
       icon: {
-        src: "/portfolio/assets/icons/profile.png",
+        src: "/Portfolio/assets/icons/profile.png",
       },
       list: [
         { title: "이름", content: "장혁수" },
@@ -34,7 +34,7 @@ function App() {
     CAREER: {
       title: "CAREER",
       icon: {
-        src: "/portfolio/assets/icons/career.png",
+        src: "/Portfolio/assets/icons/career.png",
       },
       list: [
         {
@@ -53,7 +53,7 @@ function App() {
     LICENCS: {
       title: "LICENCS",
       icon: {
-        src: "/portfolio/assets/icons/licencs.png",
+        src: "/Portfolio/assets/icons/licencs.png",
       },
       list: [
         { title: "정보처리 기능사" },
@@ -70,55 +70,55 @@ function App() {
       items: [
         {
           title: "HTML",
-          src: "/portfolio/assets/images/skills/html.png",
+          src: "/Portfolio/assets/images/skills/html.png",
           content:
             "기능경기대회를 준비하는 과정에서 HTML를 꾸준히 공부하였고, 반응형 웹사이트에 적합한 구조를 구성할 수 있습니다.",
           skill: 90,
         },
         {
           title: "CSS",
-          src: "/portfolio/assets/images/skills/css.png",
+          src: "/Portfolio/assets/images/skills/css.png",
           content:
             "CSS를 사용한 다양한 반응형 레이아웃 구현이 가능하며, 애니메이션 기능을 구현할 수 있습니다.",
           skill: 90,
         },
         {
           title: "JavaScript",
-          src: "/portfolio/assets/images/skills/js.png",
+          src: "/Portfolio/assets/images/skills/js.png",
           content:
             "ES6 문법을 사용하여 다양한 기능을 구현, 활용할 수 있으며 해당 언어를 통해 기능 경기대회에서 우수한 성적을 거둔 경험이 있습니다.",
           skill: 90,
         },
         {
           title: "TypeScript",
-          src: "/portfolio/assets/images/skills/typescript.png",
+          src: "/Portfolio/assets/images/skills/typescript.png",
           content:
             "상속과 인터페이스를 사용할 수 있으며, type을 다룰 수 있습니다. 다양한 React, Next.js 프로젝트에서 Typescript 기반으로 기능을 구현한 경험이 있습니다.",
           skill: 70,
         },
         {
           title: "JQUERY",
-          src: "/portfolio/assets/images/skills/jquery.png",
+          src: "/Portfolio/assets/images/skills/jquery.png",
           content:
             "Jquery를 이용한 다양한 기능, DOM 객체 활용과 이벤트 속성을 관리할 수 있습니다.",
           skill: 90,
         },
         {
           title: "SASS",
-          src: "/portfolio/assets/images/skills/sass.png",
+          src: "/Portfolio/assets/images/skills/sass.png",
           content: "변수 선언과 연산, 상속 등에 대해 이해, 활용할 수 있습니다.",
           skill: 60,
         },
         {
           title: "React",
-          src: "/portfolio/assets/images/skills/react.png",
+          src: "/Portfolio/assets/images/skills/react.png",
           content:
             "React Hooks, 컴포넌트, state에 대해 이해와 사용한 경험이 있습니다. ",
           skill: 80,
         },
         {
           title: "Next.js",
-          src: "/portfolio/assets/images/skills/next_js.png",
+          src: "/Portfolio/assets/images/skills/next_js.png",
           content:
             "Next.js를 활용하여 다양한 페이지를 개발한 경험이 있으며, React로 제작한 프로젝트를 Next.js로 리펙토링한 경험이 있습니다.",
           skill: 50,
@@ -130,14 +130,14 @@ function App() {
       items: [
         {
           title: "PHP",
-          src: "/portfolio/assets/images/skills/php.png",
+          src: "/Portfolio/assets/images/skills/php.png",
           content:
             "PHP를 사용하여 Back-end의 기능(데이터베이스 연동, 로그인, 회원가입)등의 기능 구현과 API와 연동, 제작 할 수 있습니다.",
           skill: 80,
         },
         {
           title: "MySQL",
-          src: "/portfolio/assets/images/skills/mysql.png",
+          src: "/Portfolio/assets/images/skills/mysql.png",
           content:
             "MYSQL 활용하여 데이터베이스와 SQL에 대한 이해를 가지고 있으며, SQL를 활용하여 다양한 백엔드 기능을 개발한 경험이 있습니다.",
           skill: 80,
@@ -149,14 +149,14 @@ function App() {
       items: [
         {
           title: "Kotlin",
-          src: "/portfolio/assets/images/skills/kotlin.png",
+          src: "/Portfolio/assets/images/skills/kotlin.png",
           content:
             "kotlin을 사용하여 리스트 형식의 액티비티를 구성할 수 있으며, API와 연결, 호출이 가능합니다. 라이브러리를 사용하여 다양한 기능 구현을 경험해보았습니다.",
           skill: 40,
         },
         {
           title: "Flutter",
-          src: "/portfolio/assets/images/skills/flutter.png",
+          src: "/Portfolio/assets/images/skills/flutter.png",
           content:
             "flutter을 사용하여 리스트 형식의 액티비티를 구성할 수 있으며, 라이브러리를 사용하여 다양한 기능 구현을 경험해보았습니다.",
           skill: 40,
@@ -170,7 +170,7 @@ function App() {
     {
       title: "포트폴리오",
       description: "저를 소개하기 위해 제작한 포트폴리오용 사이트입니다.",
-      image: "/portfolio/assets/images/portfolio.png",
+      image: "/Portfolio/assets/images/Portfolio.png",
       mainSkills: [
         "간단한 인적사항과 자기소개",
         "진행한 프로젝트 github 링크",
@@ -179,8 +179,8 @@ function App() {
       social: [
         {
           name: "github",
-          icon: "/portfolio/assets/icons/github.png",
-          link: "https://github.com/hyukson/portfolio",
+          icon: "/Portfolio/assets/icons/github.png",
+          link: "https://github.com/hyukson/Portfolio",
         },
       ],
       link: "/",
@@ -189,7 +189,7 @@ function App() {
     {
       title: "카드 짝 맞추기",
       description: "카드를 뒤집어 같은 뒷면을 찾아 맞추는 게임입니다.",
-      image: "/portfolio/assets/images/card-match.png",
+      image: "/Portfolio/assets/images/card-match.png",
       mainSkills: [
         "카드를 클릭해 뒷면을 확인",
         "같은 짝을 맞추는 게임",
@@ -198,7 +198,7 @@ function App() {
       social: [
         {
           name: "github",
-          icon: "/portfolio/assets/icons/github.png",
+          icon: "/Portfolio/assets/icons/github.png",
           link: "https://github.com/hyukson/match-card",
         },
       ],
@@ -211,24 +211,24 @@ function App() {
   const ContactData = [
     {
       title: "연락처",
-      icon: "/portfolio/assets/icons/phone.png",
+      icon: "/Portfolio/assets/icons/phone.png",
       content: "010-7255-8076",
     },
     {
       title: "이메일",
-      icon: "/portfolio/assets/icons/email.png",
+      icon: "/Portfolio/assets/icons/email.png",
       content: "hyuksoo128@gmail.com",
     },
   ];
 
   const socialData = [
     {
-      icon: "/portfolio/assets/icons/github_title.png",
+      icon: "/Portfolio/assets/icons/github_title.png",
       link: "https://github.com/hyukson",
       content: "제작한 소스 코드를 저장하는 주 공간입니다.",
     },
     {
-      icon: "/portfolio/assets/icons/tistory_title.png",
+      icon: "/Portfolio/assets/icons/tistory_title.png",
       link: "https://gurtn.tistory.com",
       content: "코드와 관련된 지식 공유 목적의 블로그입니다.",
     },
