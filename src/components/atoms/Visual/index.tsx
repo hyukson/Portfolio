@@ -29,7 +29,7 @@ const Visual = ({ isLineAni }: VisualTypes) => {
           </div>
 
           <div className="userImage">
-            <img src="./portfolio/assets/images/화면.png" alt="Alt Name" />
+            <img src="/portfolio/assets/images/화면.png" alt="Alt Name" />
           </div>
         </div>
       </Rap>
