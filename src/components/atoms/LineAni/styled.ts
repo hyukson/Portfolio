@@ -1,4 +1,13 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
+
+const dash = keyframes`
+  from {
+    stroke-dashoffset: 500;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+`;
 
 export const LineAniStyled = styled.div`
   .lineSvg {
@@ -18,22 +27,13 @@ export const LineAniStyled = styled.div`
   }
 
   .rect1 {
-    animation: dash 3s linear forwards;
+    animation: ${dash} 3s linear forwards;
     animation-delay: 0.3s;
   }
 
   .rect2 {
-    animation: dash 3s linear forwards;
+    animation: ${dash} 3s linear forwards;
     animation-delay: 0.3s;
-  }
-
-  @keyframes dash {
-    from {
-      stroke-dashoffset: 500;
-    }
-    to {
-      stroke-dashoffset: 0;
-    }
   }
 
   // 920px 반응형

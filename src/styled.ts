@@ -3,32 +3,32 @@ import { createGlobalStyle } from "styled-components";
 export const GlobalStyled = createGlobalStyle`
   @font-face {
     font-family: "NotoReg";
-    src: url("./portfolio/fonts/NotoSansKR/NotoSansKR-Regular.otf");
+    src: url("/portfolio/fonts/NotoSansKR/NotoSansKR-Regular.otf");
   }
 
   @font-face {
     font-family: "NotoBold";
-    src: url("./portfolio/fonts/NotoSansKR/NotoSansKR-Bold.otf");
+    src: url("/portfolio/fonts/NotoSansKR/NotoSansKR-Bold.otf");
   }
 
   @font-face {
     font-family: "GMarketReg";
-    src: url("./portfolio/fonts/GmarketSans/GmarketSansMedium.otf");
+    src: url("/portfolio/fonts/GmarketSans/GmarketSansMedium.otf");
   }
 
   @font-face {
     font-family: "GMarketBold";
-    src: url("./portfolio/fonts/GmarketSans/GmarketSansBold.otf");
+    src: url("/portfolio/fonts/GmarketSans/GmarketSansBold.otf");
   }
 
   @font-face {
     font-family: "PretendardBold";
-    src: url("./portfolio/fonts/Pretendard/Pretendard-Bold.otf");
+    src: url("/portfolio/fonts/Pretendard/Pretendard-Bold.otf");
   }
 
   @font-face {
     font-family: "PretendardReg";
-    src: url("./portfolio/fonts/Pretendard/Pretendard-Regular.otf");
+    src: url("/portfolio/fonts/Pretendard/Pretendard-Regular.otf");
   }
 
   * {
