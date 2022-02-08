@@ -1,2 +1,2 @@
-## 나는 안공 장혁수이다. 
+## 나는 프론트엔드의 신이다.
 > I am a god for frontend developers.
