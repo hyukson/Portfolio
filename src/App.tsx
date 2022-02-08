@@ -170,7 +170,7 @@ function App() {
     {
       title: "포트폴리오",
       description: "저를 소개하기 위해 제작한 포트폴리오용 사이트입니다.",
-      image: "/Portfolio/assets/images/Portfolio.png",
+      image: "/Portfolio/assets/images/portfolio.png",
       mainSkills: [
         "간단한 인적사항과 자기소개",
         "진행한 프로젝트 github 링크",
@@ -226,6 +226,11 @@ function App() {
       icon: "/Portfolio/assets/icons/github_title.png",
       link: "https://github.com/hyukson",
       content: "제작한 소스 코드를 저장하는 주 공간입니다.",
+    },
+    {
+      icon: "/Portfolio/assets/icons/tistory_title.png",
+      link: "https://gurtn.tistory.com",
+      content: "코드와 관련된 지식 공유 목적의 블로그입니다.",
     },
   ];
 
