@@ -19,7 +19,7 @@ const AboutMe = ({ AboutData }: AboutMeTypes) => {
 
         <div className="aboutWrap">
           <div className="userImage">
-            <img src="/assets/images/화면.png" alt="Alt Name" />
+            <img src="./portfolio/assets/images/화면.png" alt="Alt Name" />
           </div>
 
           <div className="subAbout">
