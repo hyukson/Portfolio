@@ -25,7 +25,7 @@ const HeaderNav = ({ NavList }: HeaderNavTypes) => {
       </nav>
 
       <div className="logo">
-        <a href="/">
+        <a href="/Portfolio">
           <h2>HYUKSON</h2>
         </a>
       </div>

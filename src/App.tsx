@@ -51,7 +51,7 @@ function App() {
     },
 
     LICENCS: {
-      title: "LICENCS",
+      title: "LICENSES",
       icon: {
         src: "/Portfolio/assets/icons/licencs.png",
       },
