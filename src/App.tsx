@@ -187,23 +187,24 @@ function App() {
       useSkills: ["react", "TypeScript", "SCSS", "JavaScript", "HTML", "CSS"],
     },
     {
-      title: "카드 짝 맞추기",
-      description: "카드를 뒤집어 같은 뒷면을 찾아 맞추는 게임입니다.",
-      image: "/Portfolio/assets/images/card-match.png",
+      title: "영화 추천 사이트",
+      description:
+        "영화 추천을 받고 싶은 분들을 위해 제작한 Next.js를 사용한 추천사이트입니다.",
+      image: "/Portfolio/assets/images/movieInfo.png",
       mainSkills: [
-        "카드를 클릭해 뒷면을 확인",
-        "같은 짝을 맞추는 게임",
-        "난이도를 선택 가능",
+        "다양한 최신 영화의 추천 기능",
+        "검색을 통한 정보 찾기",
+        "명작 영화를 소개",
       ],
       social: [
         {
           name: "github",
           icon: "/Portfolio/assets/icons/github.png",
-          link: "https://github.com/hyukson/match-card",
+          link: "https://github.com/hyukson/MovieInfo",
         },
       ],
-      link: "/",
-      useSkills: ["JavaScript", "HTML", "CSS"],
+      link: "https://main.d5d7mrdnguzvo.amplifyapp.com/",
+      useSkills: ["Next.js", "TypeScript", "SCSS", "JavaScript", "HTML", "CSS"],
     },
   ];
 
