@@ -2,8 +2,9 @@ import { useState } from "react";
 
 import Rap from "../../atoms/Rap";
 import SectionTitle from "../../atoms/SectionTitle";
-import SkillsItem from "../../atoms/SkillsItem";
 import CircleChart from "../../atoms/CircleChart";
+
+import TagList from "../TagList";
 
 import { SkillsContentStyled } from "./styled";
 
@@ -12,7 +13,11 @@ interface SkillsContentTypes {
 }
 
 const SkillsContent = ({ SkillsData }: SkillsContentTypes) => {
-  const [skill, setSkill] = useState(SkillsData.front.items[0]);
+  const types = Object.keys(SkillsData);
+
+  const [category, setCategory] = useState(types[0]);
+
+  const skill = SkillsData[category].items;
 
   return (
     <SkillsContentStyled>
@@ -20,32 +25,14 @@ const SkillsContent = ({ SkillsData }: SkillsContentTypes) => {
         <SectionTitle title="SKILLS" />
 
         <div className="flex">
-          <SkillsItem skill={skill} setSkill={setSkill} {...SkillsData.front} />
+          <TagList list={types} category={category} setTag={setCategory} />
 
-          <div className="sb">
-            <SkillsItem
-              skill={skill}
-              setSkill={setSkill}
-              {...SkillsData.back}
-            />
-            <SkillsItem
-              skill={skill}
-              setSkill={setSkill}
-              {...SkillsData.moblie}
-            />
-          </div>
-
-          {/* 클릭 시 상세보기 */}
-          <div className="infoView">
-            <div className="title">
-              <h3>저의 SKILL은...</h3>
-            </div>
-
-            <div className="chart">
-              <CircleChart {...skill} />
-            </div>
-
-            <p>{skill.content}</p>
+          <div className="chartList">
+            {skill.map((v: any, i: number) => (
+              <div className="chart">
+                <CircleChart {...v} key={i} />
+              </div>
+            ))}
           </div>
         </div>
       </Rap>

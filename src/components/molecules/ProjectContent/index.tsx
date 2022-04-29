@@ -13,7 +13,7 @@ const ProjectContent = ({ projectData }: ProjectContentTypes) => {
   return (
     <ProjectContentStyled>
       <Rap>
-        <SectionTitle title="PROJECT" color="#444" />
+        <SectionTitle title="PROJECT" color="#333" />
 
         {projectData.map((item: any, i: any) => (
           <ProjectItem {...item} key={i} />

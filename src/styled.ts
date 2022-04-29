@@ -4,6 +4,13 @@ export const GlobalStyled = createGlobalStyle`
   @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap");
 
   @font-face {
+    font-family: 'CookieRunBold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.0/CookieRunOTF-Bold00.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face {
     font-family: "NotoReg";
     src: url("/Portfolio/fonts/NotoSansKR/NotoSansKR-Regular.otf");
   }
@@ -60,7 +67,7 @@ export const GlobalStyled = createGlobalStyle`
   }
 
   b {
-    font-family: "NotoBold";
+    font-family: "CookieRunBold";
   }
 
   b.G {

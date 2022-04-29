@@ -8,8 +8,8 @@ const chartKeyframes = keyframes`
 
 export const CircleChartStyled = styled.div`
   .chart {
-    width: 14rem;
-    height: 14rem;
+    width: 15rem;
+    height: 15rem;
     transition: opacity 0.5s;
   }
 
@@ -42,11 +42,11 @@ export const CircleChartStyled = styled.div`
   .chart_text > text {
     text-anchor: middle;
     letter-spacing: 0px;
-    font-size: 0.2rem;
+    font-size: 0.18rem;
 
     :last-child {
       font-weight: 700;
-      font-size: 0.22rem;
+      font-size: 0.2rem;
     }
   }
 `;

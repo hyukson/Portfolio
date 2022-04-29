@@ -15,7 +15,7 @@ const AboutMe = ({ AboutData }: AboutMeTypes) => {
   return (
     <AboutMeStyled>
       <Rap>
-        <SectionTitle title="ABOUT ME" color="#444" />
+        <SectionTitle title="ABOUT ME" color="#333" />
 
         <div className="aboutWrap">
           <div className="userImage">
