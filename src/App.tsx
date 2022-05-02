@@ -65,7 +65,7 @@ function App() {
 
   // skills
   const SkillsData = {
-    front: {
+    Front: {
       title: "Front-end",
       items: [
         {
@@ -125,7 +125,7 @@ function App() {
         },
       ],
     },
-    back: {
+    Back: {
       title: "Back-end",
       items: [
         {
@@ -144,7 +144,7 @@ function App() {
         },
       ],
     },
-    moblie: {
+    Moblie: {
       title: "Mobile Application",
       items: [
         {

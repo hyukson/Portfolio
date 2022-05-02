@@ -11,14 +11,17 @@ interface AboutDetailTypes {
 const AboutDetail = ({ item }: AboutDetailTypes) => {
   return (
     <AboutDetailStyled>
-      <div className="aboutHeader">
-        <img alt="aboutIcon" {...item.icon} />
-        <h2>{item.title}</h2>
+      <div className="card">
+        <div className="front">
+          <img alt="aboutIcon" {...item.icon} />
+          <h2>{item.title}</h2>
+        </div>
+        <div className="back">
+          {item.list.map((item: any, i: any) => (
+            <AboutItem key={i} {...item} />
+          ))}
+        </div>
       </div>
-
-      {item.list.map((item: any, i: any) => (
-        <AboutItem key={i} {...item} />
-      ))}
     </AboutDetailStyled>
   );
 };

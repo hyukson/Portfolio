@@ -18,18 +18,13 @@ const AboutMe = ({ AboutData }: AboutMeTypes) => {
         <SectionTitle title="ABOUT ME" color="#333" />
 
         <div className="aboutWrap">
-          <div className="userImage">
+          {/* <div className="userImage">
             <img src="/Portfolio/assets/images/화면2.png" alt="Alt Name" />
-          </div>
+          </div> */}
 
-          <div className="subAbout">
-            <AboutDetail item={AboutData.PROFILE} />
-
-            <div className="VerticalAbout">
-              <AboutDetail item={AboutData.CAREER} />
-              <AboutDetail item={AboutData.LICENCS} />
-            </div>
-          </div>
+          <AboutDetail item={AboutData.PROFILE} />
+          <AboutDetail item={AboutData.CAREER} />
+          <AboutDetail item={AboutData.LICENCS} />
         </div>
       </Rap>
     </AboutMeStyled>

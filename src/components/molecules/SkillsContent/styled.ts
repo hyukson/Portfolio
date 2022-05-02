@@ -3,18 +3,18 @@ import styled from "styled-components";
 export const SkillsContentStyled = styled.section`
   min-height: 100vh;
   height: 100%;
-  background: #f5f5fa;
 
   .flex {
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
   }
 
   .chartList {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-gap: 1rem;
-    margin-left: 1rem;
+    grid-gap: 3rem;
+    margin-top: 2rem;
   }
 
   .chart {

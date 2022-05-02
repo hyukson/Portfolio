@@ -8,8 +8,11 @@ interface TagTypes {
 
 const Tag = ({ title, isActive, setTag }: TagTypes) => {
   return (
-    <TagStyled className={isActive ? "active" : ""}>
-      <div onClick={() => setTag(title)}>{title}</div>
+    <TagStyled
+      onClick={() => setTag(title)}
+      className={isActive ? "active" : ""}
+    >
+      <div>{title}</div>
     </TagStyled>
   );
 };
