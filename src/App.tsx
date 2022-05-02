@@ -190,7 +190,7 @@ function App() {
           link: "https://github.com/hyukson/Portfolio",
         },
       ],
-      link: "/",
+      link: "https://hyukson.github.io/Portfolio/",
       useSkills: ["react", "TypeScript", "SCSS", "JavaScript", "HTML", "CSS"],
     },
     {
