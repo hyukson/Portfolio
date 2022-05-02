@@ -22,7 +22,7 @@ export const AboutDetailStyled = styled.div`
     width: 100%;
     height: 100%;
     backface-visibility: hidden;
-    padding: 1rem 2rem;
+    padding: 2rem 3rem 1rem 2rem;
     border-radius: 0.6rem;
     display: flex;
     justify-content: center;
@@ -33,14 +33,14 @@ export const AboutDetailStyled = styled.div`
   }
 
   .front {
-    box-shadow: 2rem 2rem 0.6rem rgba(0 0 0 / 3%);
+    box-shadow: 2.2rem 2.2rem 0.6rem rgba(0 0 0 / 3%);
   }
 
   .back {
     flex-direction: column;
     align-items: initial;
     transform: rotateY(180deg);
-    background-color: #f1f1fa;
+    background-color: #f0f0fa;
   }
 
   &:hover .card {

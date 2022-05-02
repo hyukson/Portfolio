@@ -11,7 +11,7 @@ export const AboutMeStyled = styled.section`
 
     > h2 {
       opacity: 0.8;
-      margin-top: 5rem;
+      margin-top: 8rem;
     }
   }
 
