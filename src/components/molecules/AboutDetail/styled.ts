@@ -1,11 +1,12 @@
 import styled from "styled-components";
 
 export const AboutDetailStyled = styled.div`
-  width: 400px;
+  width: 380px;
   height: 500px;
   position: relative;
   perspective: 1100px;
-  margin: 2rem;
+  margin-right: 4rem;
+  margin-top: 4rem;
 
   .card {
     width: 100%;
@@ -21,19 +22,25 @@ export const AboutDetailStyled = styled.div`
     width: 100%;
     height: 100%;
     backface-visibility: hidden;
-    box-shadow: 0 0 1rem rgba(0 0 0 / 15%);
     padding: 1rem 2rem;
-    border-radius: 1rem;
-  }
-
-  .front {
+    border-radius: 0.6rem;
     display: flex;
     justify-content: center;
     align-items: center;
+    color: #000;
+    background-color: #f5f5fa;
+    border-bottom-left-radius: 3rem;
+  }
+
+  .front {
+    box-shadow: 2rem 2rem 0.6rem rgba(0 0 0 / 3%);
   }
 
   .back {
+    flex-direction: column;
+    align-items: initial;
     transform: rotateY(180deg);
+    background-color: #f1f1fa;
   }
 
   &:hover .card {
@@ -44,15 +51,14 @@ export const AboutDetailStyled = styled.div`
     height: 0;
   }
 
-  .aboutHeader {
-    margin-bottom: 2rem;
+  .front {
+    flex-direction: column;
+  }
 
-    h2 {
-      margin-left: 1.2rem;
-      font-family: "Impact";
-      font-weight: 500;
-      font-size: 2.2rem;
-      color: ${(props) => props.theme.lineColor};
-    }
+  .front h2 {
+    margin-top: 0.6rem;
+    font-family: "Impact";
+    font-weight: 500;
+    font-size: 2.2rem;
   }
 `;

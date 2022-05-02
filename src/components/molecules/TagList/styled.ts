@@ -7,6 +7,6 @@ export const TagListStyled = styled.div`
   justify-content: space-between;
   align-items: start;
   margin: 1rem 0;
-  background-color: #383840;
+  background-color: #061626;
   border-radius: 5rem;
 `;

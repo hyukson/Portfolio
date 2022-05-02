@@ -10,7 +10,7 @@ export const ProjectItemStyled = styled.div`
   overflow: hidden;
 
   .projectImage {
-    width: 50%;
+    width: 40%;
     height: 70vh;
     position: relative;
     transition: 0.5s;

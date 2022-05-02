@@ -25,6 +25,8 @@ const AboutMe = ({ AboutData }: AboutMeTypes) => {
           <AboutDetail item={AboutData.PROFILE} />
           <AboutDetail item={AboutData.CAREER} />
           <AboutDetail item={AboutData.LICENCS} />
+
+          <h2>마우스를 올려 자세한 내용을 확인해보세요!</h2>
         </div>
       </Rap>
     </AboutMeStyled>

@@ -3,10 +3,16 @@ import styled from "styled-components";
 export const AboutMeStyled = styled.section`
   min-height: 100vh;
   height: 100%;
+  background: #fff;
 
   .aboutWrap {
     display: flex;
     flex-wrap: wrap;
+
+    > h2 {
+      opacity: 0.8;
+      margin-top: 5rem;
+    }
   }
 
   .userImage {

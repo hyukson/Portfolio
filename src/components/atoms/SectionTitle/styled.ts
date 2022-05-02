@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const SectionTitleStyled = styled.div`
-  padding: 5rem 0 2rem 0;
+  padding: 3rem 0 1rem 0;
 
   h1 {
     font-family: "CookieRunBold";

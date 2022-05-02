@@ -142,6 +142,13 @@ function App() {
             "MYSQL 활용하여 데이터베이스와 SQL에 대한 이해를 가지고 있으며, SQL를 활용하여 다양한 백엔드 기능을 개발한 경험이 있습니다.",
           skill: 80,
         },
+        {
+          title: "Node.js",
+          src: "/Portfolio/assets/images/skills/node.png",
+          content:
+            "MYSQL 활용하여 데이터베이스와 SQL에 대한 이해를 가지고 있으며, SQL를 활용하여 다양한 백엔드 기능을 개발한 경험이 있습니다.",
+          skill: 40,
+        },
       ],
     },
     Moblie: {
@@ -205,6 +212,51 @@ function App() {
       ],
       link: "https://main.d5d7mrdnguzvo.amplifyapp.com/",
       useSkills: ["Next.js", "TypeScript", "SCSS", "JavaScript", "HTML", "CSS"],
+    },
+    {
+      title: "동물 달리기 내기 게임",
+      description: "동물들이 달리며 내기의 순위를 정해주는 사이트입니다.",
+      image: "/Portfolio/assets/images/runGame.png",
+      mainSkills: [
+        "직접 제작한 귀여운 동물과 함께 즐기는 내기 게임",
+        "최대 4명까지의 동물을 선택 가능",
+        "빠른 내기 진행이 가능",
+      ],
+      social: [
+        {
+          name: "github",
+          icon: "/Portfolio/assets/icons/github.png",
+          link: "https://github.com/hyukson/RunGame",
+        },
+      ],
+      link: "https://main.dff64qk22x1jb.amplifyapp.com/",
+      useSkills: [
+        "JavaScript",
+        "HTML",
+        "CSS",
+        "JQuery",
+        "Illustrator",
+        "PhotoShop",
+      ],
+    },
+    {
+      title: "테트리스 게임",
+      description: "테트리스 게임을 캔버스를 이용한 JS코드로 제작해보았습니다.",
+      image: "/Portfolio/assets/images/tetris.png",
+      mainSkills: [
+        "캔버스와 JS로 제작한 테트리스 게임",
+        "블럭을 최대한 많이 지워 점수 갱신하기",
+        "테트리스 조작키를 그대로 계승",
+      ],
+      social: [
+        {
+          name: "github",
+          icon: "/Portfolio/assets/icons/github.png",
+          link: "https://github.com/hyukson/Tetris",
+        },
+      ],
+      link: "https://main.d29a2g0rjiyzes.amplifyapp.com/",
+      useSkills: ["JavaScript", "HTML", "CSS"],
     },
   ];
 
