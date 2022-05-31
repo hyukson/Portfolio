@@ -40,7 +40,7 @@ function App() {
         {
           title: "2022",
           content:
-            "2022 상하이 국제올림픽 국가대표 선발전 모바일 앱 개발 출전 (2위)",
+            "2022 상하이 국제올림픽 국가대표 선발전 모바일 앱 개발 2위 \n 2022 제2회 모바일 앱 개발 민간기능경기대회 은상 (2위)",
         },
         {
           title: "2021",
@@ -158,8 +158,8 @@ function App() {
           title: "Kotlin",
           src: "/Portfolio/assets/images/skills/kotlin.png",
           content:
-            "kotlin을 사용하여 리스트 형식의 액티비티를 구성할 수 있으며, API와 연결, 호출이 가능합니다. 라이브러리를 사용하여 다양한 기능 구현을 경험해보았습니다.",
-          skill: 40,
+            "kotlin을 사용하여 리스트 형식의 액티비티를 구성할 수 있으며, API와 연결, 호출이 가능합니다. 라이브러리를 사용하여 다양한 기능 구현을 경험했습니다.",
+          skill: 50,
         },
         {
           title: "Flutter",
