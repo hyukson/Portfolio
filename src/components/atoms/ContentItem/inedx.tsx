@@ -7,8 +7,8 @@ interface ContentItemTypes {
 const ContentItem = ({ data }: ContentItemTypes) => {
   return (
     <ContentItemStyled>
-      {data.map((item: any) => (
-        <div className="box">
+      {data.map((item: any, key: number) => (
+        <div className="box" key={key}>
           <div className="title">
             <img src={item.icon} alt="icon" />
             <h2>{item.title}</h2>

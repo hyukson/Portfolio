@@ -29,7 +29,7 @@ const CircleChart = ({ title, skill, src }: CircleChartTypes) => {
 
         <circle
           className="chart_inner"
-          stroke-dasharray={skill + ",100"}
+          strokeDasharray={skill + ",100"}
           cx="16"
           cy="16"
           r="15"
@@ -38,10 +38,10 @@ const CircleChart = ({ title, skill, src }: CircleChartTypes) => {
         <image x={10} y={5} width={12} height={12} href={src} />
 
         <g className="chart_text">
-          <text x="16" y="21" alignment-baseline="central">
+          <text x="16" y="21" alignmentBaseline="central">
             {title}
           </text>
-          <text x="16" y="25" alignment-baseline="central">
+          <text x="16" y="25" alignmentBaseline="central">
             {skill + "%"}
           </text>
         </g>

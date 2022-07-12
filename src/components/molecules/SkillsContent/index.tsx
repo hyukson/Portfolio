@@ -29,8 +29,8 @@ const SkillsContent = ({ SkillsData }: SkillsContentTypes) => {
 
           <div className="chartList">
             {skill.map((v: any, i: number) => (
-              <div className="chart">
-                <CircleChart {...v} key={i} />
+              <div className="chart" key={i}>
+                <CircleChart {...v} />
               </div>
             ))}
           </div>

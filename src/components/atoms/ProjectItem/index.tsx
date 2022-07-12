@@ -31,16 +31,16 @@ const ProjectItem = ({
         <div className="mainSkills">
           <div className="title">주요 기능</div>
 
-          {mainSkills.map((item: any) => (
-            <p>{item}</p>
+          {mainSkills.map((item: any, key: number) => (
+            <p key={key}>{item}</p>
           ))}
         </div>
         <div className="useSkills">
           <div className="title">사용한 기술</div>
 
           <div className="box">
-            {useSkills.map((item: any) => (
-              <span>{item}</span>
+            {useSkills.map((item: any, key: number) => (
+              <span key={key}>{item}</span>
             ))}
           </div>
         </div>
@@ -49,8 +49,8 @@ const ProjectItem = ({
             웹 사이트 바로가기
           </a>
 
-          {social.map((item: any) => (
-            <a href={item.link} target="_blank" className="btn">
+          {social.map((item: any, key: number) => (
+            <a key={key} href={item.link} target="_blank" className="btn">
               {item.icon && <img src={item.icon} alt="icon" />}
               {item.name}
             </a>

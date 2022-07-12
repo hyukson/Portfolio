@@ -16,8 +16,8 @@ const AboutItem = ({ title, content }: AboutItemTypes) => {
       </div>
 
       <div className="aboutItemContent">
-        {content?.split("\n").map((item) => (
-          <p>- {item}</p>
+        {content?.split("\n").map((item, key) => (
+          <p key={key}>- {item}</p>
         ))}
       </div>
     </AboutItemStyled>

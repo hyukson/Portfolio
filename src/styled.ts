@@ -10,42 +10,15 @@ export const GlobalStyled = createGlobalStyle`
     font-style: normal;
   }
 
-  @font-face {
-    font-family: "NotoReg";
-    src: url("/Portfolio/fonts/NotoSansKR/NotoSansKR-Regular.otf");
-  }
-
-  @font-face {
-    font-family: "NotoBold";
-    src: url("/Portfolio/fonts/NotoSansKR/NotoSansKR-Bold.otf");
-  }
-
-  @font-face {
-    font-family: "GMarketReg";
-    src: url("/Portfolio/fonts/GmarketSans/GmarketSansMedium.otf");
-  }
-
-  @font-face {
-    font-family: "GMarketBold";
-    src: url("/Portfolio/fonts/GmarketSans/GmarketSansBold.otf");
-  }
-
-  @font-face {
-    font-family: "PretendardBold";
-    src: url("/Portfolio/fonts/Pretendard/Pretendard-Bold.otf");
-  }
-
-  @font-face {
-    font-family: "PretendardReg";
-    src: url("/Portfolio/fonts/Pretendard/Pretendard-Regular.otf");
-  }
+  // Pretendard font
+  @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css");
 
   * {
     margin: 0;
     padding: 0;
     list-style: none;
     box-sizing: border-box;
-    font-family: "PretendardReg";
+    font-family: Pretendard;
 
     outline: none;
     letter-spacing: -1px;
@@ -57,21 +30,8 @@ export const GlobalStyled = createGlobalStyle`
     color: inherit;
   }
 
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    font-family: "GMarketBold";
-  }
-
   b {
     font-family: "CookieRunBold";
-  }
-
-  b.G {
-    font-family: "GMarketBold";
   }
 
   // 1150px 반응형

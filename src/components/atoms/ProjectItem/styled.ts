@@ -32,7 +32,7 @@ export const ProjectItemStyled = styled.div`
 
     .name {
       font-size: 3rem;
-      font-family: "GmarketBold";
+      font-weight: bold;
     }
 
     .description {
@@ -117,7 +117,7 @@ export const ProjectItemStyled = styled.div`
       margin-top: 2.5rem;
       padding: 0.6rem 0;
       font-size: 1rem;
-      font-family: "GmarketBold";
+      font-weight: bold;
       color: ${(props) => props.theme.lineColor};
     }
   }

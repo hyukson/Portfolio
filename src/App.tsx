@@ -1,6 +1,6 @@
 import React from "react";
 
-import Visual from "./components/atoms/Visual";
+import Introduce from "./components/molecules/Introduce";
 import HeaderNav from "./components/molecules/HeaderNav";
 
 import AboutMe from "./components/organisms/AboutMe";
@@ -8,6 +8,7 @@ import AboutMe from "./components/organisms/AboutMe";
 import SkillsContent from "./components/molecules/SkillsContent";
 import ProjectContent from "./components/molecules/ProjectContent";
 import ContactContent from "./components/molecules/ContactContent";
+import Visual from "./components/organisms/Visual";
 
 function App() {
   const NavList = ["intro", "about me", "skills", "project", "Contact"];
@@ -56,8 +57,9 @@ function App() {
         src: "/Portfolio/assets/icons/licencs.png",
       },
       list: [
-        { title: "정보처리 기능사" },
-        { title: "웹디자인 기능사" },
+        { title: "정보처리기능사" },
+        { title: "정보기기운용기능사" },
+        { title: "웹디자인기능사" },
         { title: "그래픽기술자격(GTQ) 1급" },
       ],
     },
@@ -291,7 +293,9 @@ function App() {
     <div className="wrap">
       <HeaderNav NavList={NavList} />
 
-      <Visual isLineAni={true} />
+      <Visual />
+
+      <Introduce />
 
       <AboutMe AboutData={AboutData} />
 
