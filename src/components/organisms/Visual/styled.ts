@@ -14,7 +14,7 @@ export const VisualStyled = styled.section`
     color: rgba(0, 0, 0, .1);
     font-weight: bold;
 
-    top: 25vh;
+    top: 22vh;
     width: 100%;
     position: absolute;
 
@@ -37,11 +37,13 @@ export const VisualStyled = styled.section`
   img {
     width: 25rem;
     position: relative;
+    pointer-events: none;
+    user-select: none;
   }
 
   .circle {
-    width: 600px;
-    height: 600px;
+    width: 38rem;
+    height: 38rem;
     position: absolute;
     left: 50%;
     top: 50%;
@@ -51,6 +53,4 @@ export const VisualStyled = styled.section`
     box-shadow: .6rem .6rem 3px rgba(0 0 0 / 10%);
     overflow: hidden;
   }
-
-
 `
