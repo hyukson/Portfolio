@@ -1,15 +1,17 @@
 import styled from "styled-components";
 
 export const VisualStyled = styled.section`
-  width: 100vw;
   height: 100vh;
   position: relative;
-  background: linear-gradient(to right, #111, #0e0f19);
+  background-color: #fff;
   overflow: hidden;
 
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+
   .text {
-    /* color: #febf00; */
-    color: #111;
+    color: rgba(0, 0, 0, .1);
     font-weight: bold;
 
     top: 25vh;
@@ -19,9 +21,36 @@ export const VisualStyled = styled.section`
     text-align: center;
 
     font-weight: 900;
-    font-size: 6rem;
+    font-size: 3.8rem;
 
-    -webkit-text-stroke: 4px #febf00;
+    -webkit-text-stroke: 3px #febf00;
+
+    h2 {
+      transition: transform .3s ease-out;
+    }
+
+    h2:first-child {
+      -webkit-text-stroke: 3px #9dbfff;
+    }
   }
+
+  img {
+    width: 25rem;
+    position: relative;
+  }
+
+  .circle {
+    width: 600px;
+    height: 600px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    background-color: #222;
+    box-shadow: .6rem .6rem 3px rgba(0 0 0 / 10%);
+    overflow: hidden;
+  }
+
 
 `

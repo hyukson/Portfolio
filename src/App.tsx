@@ -1,6 +1,6 @@
 import React from "react";
 
-import Introduce from "./components/molecules/Introduce";
+import Introduction from "./components/molecules/Introduction";
 import HeaderNav from "./components/molecules/HeaderNav";
 
 import AboutMe from "./components/organisms/AboutMe";
@@ -295,7 +295,7 @@ function App() {
 
       <Visual />
 
-      <Introduce />
+      <Introduction />
 
       <AboutMe AboutData={AboutData} />
 

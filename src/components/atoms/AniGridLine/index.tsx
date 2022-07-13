@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useRef } from "react";
+import { useEffect, useRef } from "react";
 import { AniGridLineStyled } from "./styled";
 
 interface AniGridLineTypes {
@@ -96,7 +96,7 @@ const AniGridLine = ({width, height}: AniGridLineTypes) => {
         stack.push([x, y]);
       }
       
-      if (dirY == 0) { 
+      if (dirY === 0) { 
         continue;
       }
   
@@ -125,7 +125,7 @@ const AniGridLine = ({width, height}: AniGridLineTypes) => {
   }
 
   const makeLine = (e: any) => {    
-    if (stacks.filter(v => v.stack.length).length > 40) {
+    if (stacks.filter(v => v.stack.length).length > 50) {
       return;
     }
 
@@ -147,7 +147,7 @@ const AniGridLine = ({width, height}: AniGridLineTypes) => {
 
 AniGridLine.defaultProps = {
   width: 1920,
-  height: 360
+  height: 360,
 };
 
 export default AniGridLine;
