@@ -15,12 +15,9 @@ const AboutMe = ({ AboutData }: AboutMeTypes) => {
   return (
     <AboutMeStyled>
       <Rap>
-        <SectionTitle title="ABOUT ME" color="#333" />
+        <SectionTitle title="ABOUT ME" color="#f0f0fa" />
 
         <div className="aboutWrap">
-          {/* <div className="userImage">
-            <img src="/Portfolio/assets/images/화면2.png" alt="Alt Name" />
-          </div> */}
 
           <AboutDetail item={AboutData.PROFILE} />
           <AboutDetail item={AboutData.CAREER} />

@@ -15,21 +15,6 @@ export const AboutMeStyled = styled.section`
     }
   }
 
-  .userImage {
-    width: 25rem;
-    height: 36rem;
-    overflow: hidden;
-    border-radius: 15px;
-    position: relative;
-    margin-right: 6rem;
-
-    img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-  }
-
   // 1400px
   @media only screen and (max-width: 1400px) {
     padding-left: 5rem;
