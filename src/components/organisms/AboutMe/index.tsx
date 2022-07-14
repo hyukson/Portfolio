@@ -4,7 +4,6 @@ import { AboutMeStyled } from "./styled";
 
 // components
 import SectionTitle from "../../atoms/SectionTitle";
-import AboutDetail from "../../molecules/AboutDetail";
 import Rap from "../../atoms/Rap";
 
 interface AboutMeTypes {
@@ -17,12 +16,16 @@ const AboutMe = ({ AboutData }: AboutMeTypes) => {
       <Rap>
         <SectionTitle title="ABOUT ME" color="#f0f0fa" />
 
+        <div className="cards_inner">
+          <div className="wrap">
+            <div className="card_inner"></div>
+            <div className="card_inner"></div>
+            <div className="card_inner"></div>
+            <div className="card_inner"></div>
+          </div>
+        </div>
+
         <div className="aboutWrap">
-
-          <AboutDetail item={AboutData.PROFILE} />
-          <AboutDetail item={AboutData.CAREER} />
-          <AboutDetail item={AboutData.LICENCS} />
-
           <h2>마우스를 올려 자세한 내용을 확인해보세요!</h2>
         </div>
       </Rap>
