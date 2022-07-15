@@ -34,7 +34,7 @@ export const VisualStyled = styled.section`
     }
   }
 
-  img {
+  .userImage img {
     width: 25rem;
     position: relative;
     pointer-events: none;

@@ -12,7 +12,7 @@ export const IntroductionStyled = styled.section`
   background: linear-gradient(to right, #111, #0e0f19);
 
   .Introduction_wrap {
-    min-width: 60rem;
+    min-width: 62rem;
     min-height: 7rem;
     padding: 2rem 3rem;
     margin-bottom: 10rem;
@@ -44,7 +44,7 @@ export const IntroductionStyled = styled.section`
     opacity: 0;
     pointer-events: none;
     transform: scale(.3);
-    transition: .6s;
+    transition: .6s cubic-bezier(0.560, 2.150, 0.250, 0.715);
 
     &.show {
       opacity: 1;
@@ -144,7 +144,7 @@ export const IntroductionStyled = styled.section`
       border-radius: 2rem;
       background-color: #ffffff33;
       backdrop-filter: blur(20px);
-      transition: 250ms;
+      transition: 250ms cubic-bezier(0.560, 2.150, 0.250, 0.715);
       transform-style: preserve-3d;
       transform-origin: top left;
       overflow: hidden;

@@ -23,11 +23,15 @@ const Visual = () => {
     <VisualStyled>
       <AniGridLine height={window.innerHeight} />
       <div className="circle"></div>
+      
       <div className="text">
         <h2 ref={leftTextRef}>PORTFOLIO</h2>
         <h2 ref={rightTextRef}>JANG HYUK SOO!</h2>
       </div>
-      <img src="/Portfolio/assets/images/man2.png" alt="projectImage" />
+
+      <div className="userImage">
+        <img src="/Portfolio/assets/images/man2.png" alt="projectImage" />
+      </div>
     </VisualStyled>
   );
 }
