@@ -5,6 +5,7 @@ import { AboutMeStyled } from "./styled";
 // components
 import SectionTitle from "../../atoms/SectionTitle";
 import Rap from "../../atoms/Rap";
+import { couldStartTrivia } from "typescript";
 
 interface AboutMeTypes {
   AboutData: any;
@@ -38,8 +39,8 @@ const AboutMe = ({ AboutData }: AboutMeTypes) => {
 
       let left = ($target.offsetLeft - position);
 
-      if (Math.abs(left) > 250) {
-        left = 250 * (left > 0 ? 1 : -1);
+      if (Math.abs(left) > 300) {
+        left = 300 * (left > 0 ? 1 : -1);
       }
 
       $target.style.left = `${left}px`;
@@ -47,6 +48,10 @@ const AboutMe = ({ AboutData }: AboutMeTypes) => {
     }
 
     const end = () => {
+      if (!isPress) return;
+
+      isPress = false;
+
       const left = $target.offsetLeft;
 
       if (Math.abs(left) > 200) {
@@ -65,26 +70,28 @@ const AboutMe = ({ AboutData }: AboutMeTypes) => {
         }, 260);
       }
 
-      isPress = false;
-
       $target.style.left = "";
       $target.style.transform = "";
 
       $target.classList.remove('press');
     }
     
-    console.log($target);
-
     $target.addEventListener("mousedown", start);
     $target.addEventListener("mousemove", move);
 
-    $target.onmouseup = onmouseleave = end;
+    $target.addEventListener("mouseup", end);
+    $target.addEventListener("mouseleave", end);
 
     return () => {
       $target.removeEventListener("mousedown", start);
       $target.removeEventListener("mousemove", move);
+
+      $target.removeEventListener("mouseup", end);
+      $target.removeEventListener("mouseleave", end);
     }
   }, [about]);
+
+  console.log(about)
 
   return (
     <AboutMeStyled>
@@ -95,7 +102,15 @@ const AboutMe = ({ AboutData }: AboutMeTypes) => {
           <div className="wrap" ref={cardWrapRef}>
             {about.map((v, k) => (
               <div className="card_inner" key={v} ref={el => cardRef.current[k] = el}>
-                <h2>{v}</h2>
+                <div className="leftCard">
+                  <img title="icon" alt='icon' src={AboutData[v].icon.src} />
+                  <h2>{AboutData[v].title}</h2>
+                </div>
+                <div className="rightCard">
+                  {AboutData[v].list.map((x: any) => (
+                    <div>{x.title} <div>{x.content}</div></div>
+                  ))}
+                </div>
               </div>)
             )}
           </div>

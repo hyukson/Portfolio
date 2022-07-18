@@ -8,7 +8,7 @@ interface SectionTitleTypes {
 const SectionTitle = ({ title, color }: SectionTitleTypes) => {
   return (
     <SectionTitleStyled color={color}>
-      <h1>{title}</h1>
+      <h2>{title}</h2>
     </SectionTitleStyled>
   );
 };

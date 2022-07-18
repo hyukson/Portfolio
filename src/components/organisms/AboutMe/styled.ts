@@ -20,8 +20,8 @@ export const AboutMeStyled = styled.section`
   height: 100%;
   background: linear-gradient(to right, #111, #0e0f19);
 
-  text-align: center;
   user-select: none;
+
 
   .cards_inner {
     position: relative;
@@ -29,14 +29,14 @@ export const AboutMeStyled = styled.section`
 
     .wrap {
       margin: 0 auto;
-      width: 40rem;
+      width: 50rem;
       position: relative;
       transform-style: preserve-3d;
     }
     
     .card_inner {
       width: 100%;
-      height: 20rem;
+      height: 25rem;
       
       position: absolute;
 
@@ -45,12 +45,12 @@ export const AboutMeStyled = styled.section`
       border-radius: .6rem;
       transition: transform .2s cubic-bezier(0.560, 2.150, 0.250, 0.715), top .4s cubic-bezier(0.560, 2.150, 0.250, 0.715);;
 
+      padding: 3rem 5rem;
+
       display: flex;
-      justify-content: center;
+      justify-content: space-between;
       align-items: center;
       
-      cursor: grab;
-
       &.invalid {
         pointer-events: none;
         opacity: 0;
@@ -67,20 +67,32 @@ export const AboutMeStyled = styled.section`
         transform: rotate(3.5deg) !important;
       }
 
+      &.press {
+        transition: none;
+        transform: none;
+
+        & > * {
+          pointer-events: none;
+        }
+      }
+
+      cursor: grab;
+
       &:active {
         cursor: grabbing;
       }
 
-      ${createTranslate()}
-    }
+      & > div {
+        width: 50%;
+        height: 100%;
+        padding: 1rem 2rem;
 
-    .card_inner.press {
-      transition: none;
-      transform: none;
-
-      & > * {
-        pointer-events: none;
+        &:first-child {
+          border-right: 5px solid #c71616;
+        }
       }
+
+      ${createTranslate()}
     }
   }
 `;

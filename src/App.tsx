@@ -33,7 +33,7 @@ function App() {
     },
 
     CAREER: {
-      title: "CAREER",
+      title: "커리어(CAREER)",
       icon: {
         src: "/Portfolio/assets/icons/career.png",
       },

@@ -13,6 +13,21 @@ export const GlobalStyled = createGlobalStyle`
   // Pretendard font
   @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css");
 
+  body::-webkit-scrollbar {
+    width: 8px;  /* 스크롤바의 너비 */
+  }
+
+  body::-webkit-scrollbar-thumb {
+    height: 30%; /* 스크롤바의 길이 */
+    background: #febf00; /* 스크롤바의 색상 */
+    
+    border-radius: 10px;
+  }
+
+  body::-webkit-scrollbar-track {
+    background: #fff;  /*스크롤바 뒷 배경 색상*/
+  }
+
   * {
     margin: 0;
     padding: 0;
