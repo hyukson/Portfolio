@@ -2,9 +2,6 @@ import { useState } from "react";
 
 import Rap from "../../atoms/Rap";
 import SectionTitle from "../../atoms/SectionTitle";
-import CircleChart from "../../atoms/CircleChart";
-
-import TagList from "../TagList";
 
 import { SkillsContentStyled } from "./styled";
 
@@ -23,18 +20,6 @@ const SkillsContent = ({ SkillsData }: SkillsContentTypes) => {
     <SkillsContentStyled>
       <Rap>
         <SectionTitle title="SKILLS" />
-
-        <div className="flex">
-          <TagList list={types} category={category} setTag={setCategory} />
-
-          <div className="chartList">
-            {skill.map((v: any, i: number) => (
-              <div className="chart" key={i}>
-                <CircleChart {...v} />
-              </div>
-            ))}
-          </div>
-        </div>
       </Rap>
     </SkillsContentStyled>
   );

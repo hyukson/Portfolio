@@ -75,55 +75,47 @@ function App() {
           src: "/Portfolio/assets/images/skills/html.png",
           content:
             "기능경기대회를 준비하는 과정에서 HTML를 꾸준히 공부하였고, 반응형 웹사이트에 적합한 구조를 구성할 수 있습니다.",
-          skill: 90,
         },
         {
           title: "CSS",
           src: "/Portfolio/assets/images/skills/css.png",
           content:
             "CSS를 사용한 다양한 반응형 레이아웃 구현이 가능하며, 애니메이션 기능을 구현할 수 있습니다.",
-          skill: 90,
         },
         {
           title: "JavaScript",
           src: "/Portfolio/assets/images/skills/js.png",
           content:
             "ES6 문법을 사용하여 다양한 기능을 구현, 활용할 수 있으며 해당 언어를 통해 기능 경기대회에서 우수한 성적을 거둔 경험이 있습니다.",
-          skill: 90,
         },
         {
           title: "TypeScript",
           src: "/Portfolio/assets/images/skills/typescript.png",
           content:
             "상속과 인터페이스를 사용할 수 있으며, type을 다룰 수 있습니다. 다양한 React, Next.js 프로젝트에서 Typescript 기반으로 기능을 구현한 경험이 있습니다.",
-          skill: 70,
         },
         {
           title: "JQUERY",
           src: "/Portfolio/assets/images/skills/jquery.png",
           content:
             "Jquery를 이용한 다양한 기능, DOM 객체 활용과 이벤트 속성을 관리할 수 있습니다.",
-          skill: 90,
         },
         {
           title: "SASS",
           src: "/Portfolio/assets/images/skills/sass.png",
           content: "변수 선언과 연산, 상속 등에 대해 이해, 활용할 수 있습니다.",
-          skill: 60,
         },
         {
           title: "React",
           src: "/Portfolio/assets/images/skills/react.png",
           content:
             "React Hooks, 컴포넌트, state에 대해 이해와 사용한 경험이 있습니다. ",
-          skill: 80,
         },
         {
           title: "Next.js",
           src: "/Portfolio/assets/images/skills/next_js.png",
           content:
             "Next.js를 활용하여 다양한 페이지를 개발한 경험이 있으며, React로 제작한 프로젝트를 Next.js로 리펙토링한 경험이 있습니다.",
-          skill: 50,
         },
       ],
     },
@@ -135,21 +127,18 @@ function App() {
           src: "/Portfolio/assets/images/skills/php.png",
           content:
             "PHP를 사용하여 Back-end의 기능(데이터베이스 연동, 로그인, 회원가입)등의 기능 구현과 API와 연동, 제작 할 수 있습니다.",
-          skill: 80,
         },
         {
           title: "MySQL",
           src: "/Portfolio/assets/images/skills/mysql.png",
           content:
             "MYSQL 활용하여 데이터베이스와 SQL에 대한 이해를 가지고 있으며, SQL를 활용하여 다양한 백엔드 기능을 개발한 경험이 있습니다.",
-          skill: 80,
         },
         {
           title: "Node.js",
           src: "/Portfolio/assets/images/skills/node.png",
           content:
             "MYSQL 활용하여 데이터베이스와 SQL에 대한 이해를 가지고 있으며, SQL를 활용하여 다양한 백엔드 기능을 개발한 경험이 있습니다.",
-          skill: 40,
         },
       ],
     },
@@ -161,14 +150,12 @@ function App() {
           src: "/Portfolio/assets/images/skills/kotlin.png",
           content:
             "kotlin을 사용하여 리스트 형식의 액티비티를 구성할 수 있으며, API와 연결, 호출이 가능합니다. 라이브러리를 사용하여 다양한 기능 구현을 경험했습니다.",
-          skill: 50,
         },
         {
           title: "Flutter",
           src: "/Portfolio/assets/images/skills/flutter.png",
           content:
             "flutter을 사용하여 리스트 형식의 액티비티를 구성할 수 있으며, 라이브러리를 사용하여 다양한 기능 구현을 경험해보았습니다.",
-          skill: 40,
         },
       ],
     },
