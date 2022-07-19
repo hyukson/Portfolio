@@ -7,7 +7,7 @@ const createTranslate = () => {
     style += `
       &:nth-child(${i}) {
         top: ${i}rem;
-        width: ${70 + (i * 10)}%
+        width: ${82 + (i * 6)}%
       }
     `;
   }

@@ -61,23 +61,22 @@ export const SlideCardStyled = styled.div`
 
   .bottomCard {
     height: 45%;
-    padding: 1rem 2rem;
     background: linear-gradient(140deg, #8310e6, #0026e6, #10bbe6);
-    color: #eee;
-    font-size: 1.2rem;
+    color: #fff;
+    font-size: 1.05rem;
 
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
 
     & > div { 
-      margin-bottom: .5rem;
+      margin: 0 1.6rem .5rem 0;
 
       & > p {
         display: flex;
         align-items: center;
         font-size: 1.2rem;
+        color: #eee;
 
         &::before {
           content: "";
@@ -89,11 +88,6 @@ export const SlideCardStyled = styled.div`
           background: #eee;
         }
       }
-    } 
-    
-    .list {
-      display: flex;
-      flex-wrap: wrap;
-    }
+    }  
   }
 `;
