@@ -20,6 +20,14 @@ const SkillsContent = ({ SkillsData }: SkillsContentTypes) => {
     <SkillsContentStyled>
       <Rap>
         <SectionTitle title="SKILLS" />
+        
+        <div className="bookshelf">
+          <div className="book"></div>
+
+          <div className="book"></div>
+          <div className="book"></div>
+          <div className="book"></div>
+        </div>
       </Rap>
     </SkillsContentStyled>
   );
