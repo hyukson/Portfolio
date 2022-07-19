@@ -7,6 +7,7 @@ export const SectionTitleStyled = styled.div`
     font-family: "CookieRunBold";
     font-weight: 500;
     font-size: 4.3rem;
+    text-align: center;
     color: ${(props) => props.color || props.theme.subColor};
   }
 `;

@@ -15,25 +15,21 @@ function App() {
 
   // about
   const AboutData = {
-    PROFILE: {
-      title: "PROFILE",
+    LICENCS: {
+      title: "LICENSES",
       icon: {
-        src: "/Portfolio/assets/icons/profile.png",
+        src: "/Portfolio/assets/icons/licencs.png",
       },
       list: [
-        { title: "이름", content: "장혁수" },
-        {
-          title: "나이",
-          content: `${new Date().getFullYear() - 2003}세`,
-        },
-        { title: "주소지", content: "경기도 안산시" },
-        { title: "연락처", content: "010-7255-8076" },
-        { title: "E-mail", content: "hyuksoo128@gmail.com" },
+        { title: "정보처리기능사" },
+        { title: "정보기기운용기능사" },
+        { title: "웹디자인기능사" },
+        { title: "그래픽기술자격(GTQ) 1급" },
       ],
     },
 
     CAREER: {
-      title: "커리어(CAREER)",
+      title: "CAREER",
       icon: {
         src: "/Portfolio/assets/icons/career.png",
       },
@@ -51,16 +47,20 @@ function App() {
       ],
     },
 
-    LICENCS: {
-      title: "LICENSES",
+    PROFILE: {
+      title: "PROFILE",
       icon: {
-        src: "/Portfolio/assets/icons/licencs.png",
+        src: "/Portfolio/assets/icons/profile.png",
       },
       list: [
-        { title: "정보처리기능사" },
-        { title: "정보기기운용기능사" },
-        { title: "웹디자인기능사" },
-        { title: "그래픽기술자격(GTQ) 1급" },
+        { title: "이름", content: "장혁수" },
+        {
+          title: "나이",
+          content: `${new Date().getFullYear() - 2003}세`,
+        },
+        { title: "주소지", content: "경기도 안산시" },
+        { title: "연락처", content: "010-7255-8076" },
+        { title: "E-mail", content: "hyuksoo128@gmail.com" },
       ],
     },
   };
