@@ -1,7 +1,7 @@
 import { useState } from "react";
-
 import Rap from "../../atoms/Rap";
 import SectionTitle from "../../atoms/SectionTitle";
+import SkillBook from "../../atoms/SkillBook";
 
 import { SkillsContentStyled } from "./styled";
 
@@ -10,11 +10,7 @@ interface SkillsContentTypes {
 }
 
 const SkillsContent = ({ SkillsData }: SkillsContentTypes) => {
-  const types = Object.keys(SkillsData);
-
-  const [category, setCategory] = useState(types[0]);
-
-  const skill = SkillsData[category].items;
+  const [skills, setSkills] = useState([...SkillsData.Front.items, ...SkillsData.Back.items]);
 
   return (
     <SkillsContentStyled>
@@ -22,11 +18,9 @@ const SkillsContent = ({ SkillsData }: SkillsContentTypes) => {
         <SectionTitle title="SKILLS" />
         
         <div className="bookshelf">
-          <div className="book"></div>
-
-          <div className="book"></div>
-          <div className="book"></div>
-          <div className="book"></div>
+          {skills.map((v: any, key: number) => (
+            <SkillBook key={key} item={v}></SkillBook>
+          ))}
         </div>
       </Rap>
     </SkillsContentStyled>

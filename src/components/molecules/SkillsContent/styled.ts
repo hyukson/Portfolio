@@ -7,43 +7,66 @@ export const SkillsContentStyled = styled.section`
 
   .bookshelf {
     width: 100%;
-    height: 500px;
+    height: 30rem;
+    margin-top: 7rem;
 
     display: flex;
+    /* justify-content: space-between; */
     align-items: flex-end;
 
-    & > div:nth-child(2) {
+    & > div:nth-child(1) {
       height: 80%;
       background-color: #f03d3d;
     }
 
+    & > div:nth-child(2) {
+      height: 70%;
+      background-color: #febf00;
+    }
+
     & > div:nth-child(3) {
-      height: 50%;
+      height: 100%;
       background-color: #5013d2;
     }
 
     & > div:nth-child(4) {
-      height: 70%;
+      height: 75%;
       background-color: #47e8e5;
     }
 
-    .book {
-      width: 60px;
-      height: 100%;
-      background: #febf00;
-      border-radius: 5px;
+    & > div:nth-child(5) {
+      height: 90%;
+      background-color: #673ab7;
+    }
 
-      margin: 0 .3rem;
-      
-      padding-top: 2rem;
+    & > div:nth-child(6) {
+      height: 60%;
+      background-color: #8bc34a;
+    }
 
-      &::before {
-        content: "";
-        display: inline-block;
-        width: 100%;
-        height: 2rem;
-        background-color: #fff;
-      }
+    & > div:nth-child(7) {
+      height: 75%;
+      background-color: #009688;
+    }
+
+    & > div:nth-child(8) {
+      height: 60%;
+      background-color: #ff9800;
+    }
+
+    & > div:nth-child(9) {
+      height: 70%;
+      background-color: #d05bb3;
+    }
+
+    & > div:nth-child(10) {
+      height: 55%;
+      background-color: #b3ff00;
+    }
+
+    & > div:nth-child(11) {
+      height: 40%;
+      background-color: #fab;
     }
   }
 `;

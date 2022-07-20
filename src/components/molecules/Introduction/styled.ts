@@ -12,7 +12,8 @@ export const IntroductionStyled = styled.section`
   background: linear-gradient(to right, #111, #0e0f19);
 
   .Introduction_wrap {
-    min-width: 62rem;
+    max-width: 62rem;
+    width: 100%;
     min-height: 7rem;
     padding: 2rem 3rem;
     margin-bottom: 10rem;
@@ -28,6 +29,10 @@ export const IntroductionStyled = styled.section`
     display: flex;
     justify-content: center;
     align-items: center;
+
+    @media only screen and (max-width: 800px) {
+      max-width: 45rem;
+    }
 
     p { 
       font-size: 1.8rem;

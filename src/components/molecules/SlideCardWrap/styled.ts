@@ -28,6 +28,11 @@ export const SlideCardWrapStyled = styled.div`
     display: flex;
     justify-content: center; 
 
+    
+    @media only screen and (max-width: 800px) {
+      max-width: 45rem;
+    }
+
     ${createTranslate()}
   }
 `

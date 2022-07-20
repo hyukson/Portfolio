@@ -142,23 +142,23 @@ function App() {
         },
       ],
     },
-    Moblie: {
-      title: "Mobile Application",
-      items: [
-        {
-          title: "Kotlin",
-          src: "/Portfolio/assets/images/skills/kotlin.png",
-          content:
-            "kotlin을 사용하여 리스트 형식의 액티비티를 구성할 수 있으며, API와 연결, 호출이 가능합니다. 라이브러리를 사용하여 다양한 기능 구현을 경험했습니다.",
-        },
-        {
-          title: "Flutter",
-          src: "/Portfolio/assets/images/skills/flutter.png",
-          content:
-            "flutter을 사용하여 리스트 형식의 액티비티를 구성할 수 있으며, 라이브러리를 사용하여 다양한 기능 구현을 경험해보았습니다.",
-        },
-      ],
-    },
+    // Moblie: {
+    //   title: "Mobile Application",
+    //   items: [
+    //     {
+    //       title: "Kotlin",
+    //       src: "/Portfolio/assets/images/skills/kotlin.png",
+    //       content:
+    //         "kotlin을 사용하여 리스트 형식의 액티비티를 구성할 수 있으며, API와 연결, 호출이 가능합니다. 라이브러리를 사용하여 다양한 기능 구현을 경험했습니다.",
+    //     },
+    //     {
+    //       title: "Flutter",
+    //       src: "/Portfolio/assets/images/skills/flutter.png",
+    //       content:
+    //         "flutter을 사용하여 리스트 형식의 액티비티를 구성할 수 있으며, 라이브러리를 사용하여 다양한 기능 구현을 경험해보았습니다.",
+    //     },
+    //   ],
+    // },
   };
 
   // Project
