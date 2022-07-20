@@ -7,66 +7,103 @@ export const SkillsContentStyled = styled.section`
 
   .bookshelf {
     width: 100%;
-    height: 30rem;
-    margin-top: 7rem;
+    height: 26rem;
+    margin-top: 10rem;
 
     display: flex;
-    /* justify-content: space-between; */
+    justify-content: center;
     align-items: flex-end;
 
+    &.view .book {
+      margin: 0 1rem;
+    }
+
     & > div:nth-child(1) {
-      height: 80%;
-      background-color: #f03d3d;
+      .book,
+      .book::after {
+        background-color: #f03d3d;
+        z-index: 11;
+      }
     }
 
     & > div:nth-child(2) {
-      height: 70%;
-      background-color: #febf00;
+      .book,
+      .book::after {
+        background-color: #2862e9;
+        z-index: 10;
+      }
     }
 
     & > div:nth-child(3) {
-      height: 100%;
-      background-color: #5013d2;
+      .book,
+      .book::after {
+        background-color: #febf00;
+        z-index: 9;
+      }
     }
 
     & > div:nth-child(4) {
-      height: 75%;
-      background-color: #47e8e5;
+      .book,
+      .book::after {
+        background-color: #2f74c0;
+        z-index: 8;
+      }
     }
 
     & > div:nth-child(5) {
-      height: 90%;
-      background-color: #673ab7;
+      .book,
+      .book::after {
+        background-color: #b22b7c;
+        z-index: 7;
+      }
     }
 
     & > div:nth-child(6) {
-      height: 60%;
-      background-color: #8bc34a;
+      .book,
+      .book::after {
+        background-color: #c96195;
+        z-index: 6;
+      }
     }
 
     & > div:nth-child(7) {
-      height: 75%;
-      background-color: #009688;
+      .book,
+      .book::after {
+        background-color: #5cd3f3;
+        z-index: 5;
+      }
     }
 
     & > div:nth-child(8) {
-      height: 60%;
-      background-color: #ff9800;
+      .book,
+      .book::after {
+        background-color: #655c5e;
+        z-index: 4;
+      }
     }
 
     & > div:nth-child(9) {
-      height: 70%;
-      background-color: #d05bb3;
+      .book,
+      .book::after {
+        background-color: #7377ad;
+        z-index: 3;
+      }
     }
 
     & > div:nth-child(10) {
-      height: 55%;
-      background-color: #b3ff00;
+      .book,
+      .book::after {
+        background-color: #dd8a00;
+        z-index: 2;
+      }
     }
 
     & > div:nth-child(11) {
-      height: 40%;
-      background-color: #fab;
+      .book,
+      .book::after {
+        background-color: #7fc728;
+        z-index: 1;
+      }
     }
   }
 `;
