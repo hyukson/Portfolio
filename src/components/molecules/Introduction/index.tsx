@@ -1,11 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { IntroductionStyled } from "./styled";
 
-interface observerOptionTypes {
-  root: Element | Document | null,
-  rootMargin: string,
-  threshold: number
-};
+import { ObserverOptionTypes } from "../../../interfaces/observerOptionTypes";
 
 const Introduction = () => {
   const colors: number[][] = [
@@ -107,7 +103,7 @@ const Introduction = () => {
   }, [lights]);
 
   useEffect(() => {
-    const options: observerOptionTypes  = {
+    const options: ObserverOptionTypes  = {
       root: null,
       rootMargin: "10px",
       threshold: .5,
@@ -142,6 +138,12 @@ const Introduction = () => {
 
       <div className="block-list">
         <div className="block-container">
+          <div className="btn-back btn-back-3"></div>
+          <div className="btn-front">
+            <i className="fas fa-moon"></i>
+          </div>
+        </div>
+        <div className="block-container">
           <div className="btn-back btn-back-1"></div>
           <div className="btn-front">
             <i className="fas fa-cloud-showers-heavy"></i>
@@ -151,12 +153,6 @@ const Introduction = () => {
           <div className="btn-back btn-back-2"></div>
           <div className="btn-front">
             <i className="fas fa-snowflake"></i>
-          </div>
-        </div>
-        <div className="block-container">
-          <div className="btn-back btn-back-3"></div>
-          <div className="btn-front">
-            <i className="fas fa-moon"></i>
           </div>
         </div>
       </div>
