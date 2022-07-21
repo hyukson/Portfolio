@@ -20,7 +20,7 @@ const SkillsContent = ({ SkillsData }: SkillsContentTypes) => {
     const options: ObserverOptionTypes  = {
       root: null,
       rootMargin: "10px",
-      threshold: .5,
+      threshold: .1,
     };
       
     const observer = new IntersectionObserver((entries) => {

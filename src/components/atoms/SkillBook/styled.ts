@@ -4,7 +4,7 @@ export const SkillBookStyled = styled.div`
   height: 100%;
 
   &:hover .book {
-    transform: rotateX(-15deg) rotateY(-75deg) rotateZ(-15deg) translateY(.8rem) translateX(-2rem);
+    transform: rotateX(-25deg) rotateY(-80deg) rotateZ(-15deg) translateY(.8rem) translateX(-2rem);
   }
 
   .book {
@@ -22,9 +22,9 @@ export const SkillBookStyled = styled.div`
     margin: 0 -1.2rem;
 
     border-left: 1px solid rgba(255, 255, 255, .2);
+
+    transform: rotateY(30deg) rotateX(-10deg) rotateZ(-10deg); 
     
-    transform: rotateY(30deg) rotateX(-10deg) rotateZ(-10deg);
-        
     & > div {
       position: absolute;
       transform-origin: center left;
@@ -46,11 +46,12 @@ export const SkillBookStyled = styled.div`
     
     .top,
     .bottom {
-      width: 100%;
-      height: calc(20rem - 10px);
-      top: 0;
+      width: calc(100% - .1rem);
+      height: calc(22rem - 10px);
+      top: 3px;
+      left: .1rem;
       background: #eee;
-      transform: rotateX(90deg) translateZ(calc(10rem - 5px)) translateY(calc(-10rem + 5px));
+      transform: rotateX(90deg) translateZ(calc(11rem - 5px)) translateY(calc(-11rem + 5px));
       pointer-events: none;
     }
 
@@ -61,7 +62,7 @@ export const SkillBookStyled = styled.div`
     // cover
     .cover,
     &:after {
-      width: 20rem;
+      width: 22rem;
       height: 100%;
       top: 0;
       left: 100%;
@@ -72,9 +73,42 @@ export const SkillBookStyled = styled.div`
     }
 
     .cover {
+      padding: 1rem 2rem;
+
+      h2 {
+        display: inline-block;
+
+        &::after {
+          content: "";
+          display: block;
+          width: 100%;
+          height: 6px;
+          margin-top: -9px;
+
+          background-color: #febf00;
+        }
+      }
+      
+      .list {
+        margin: 1rem 0;
+        font-size: 1.1rem;
+
+        & > div {
+          margin-bottom: .7rem;
+
+          &::before {
+            content: "[✦]";
+            display: inline-block;
+            color: #3452f6;
+            font-size: .9rem;
+            margin-right: .4rem;
+          }
+        }
+      }
+
       p {
-        padding: 1rem 2rem;
-        font-size: 1.2rem;
+        margin-top: 2rem;
+        font-size: 1.1rem;
       }
     }
 

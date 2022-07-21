@@ -8,6 +8,12 @@ const SkillBook = ({item}: any) => {
           <p>{item.title}</p>
         </div>
         <div className="cover">
+          <h2>{item.title}</h2>
+          <div className="list">
+            {item?.useSkill.map((v: string, i: number) => (
+              <div key={i}>{v}</div>
+            ))}
+          </div>
           <p>{item.content}</p>
         </div>
         <div className="top"></div>
