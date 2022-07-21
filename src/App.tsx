@@ -11,7 +11,7 @@ import ContactContent from "./components/molecules/ContactContent";
 import Visual from "./components/organisms/Visual";
 
 function App() {
-  const NavList = ["intro", "about me", "skills", "project", "Contact"];
+  const NavList = ["visual", "intro", "about me", "skills", "project", "Contact"];
 
   // about
   const AboutData = {
@@ -282,11 +282,11 @@ function App() {
       link: "https://github.com/hyukson",
       content: "제작한 소스 코드를 저장하는 주 공간입니다.",
     },
-    // {
-    //   icon: "/Portfolio/assets/icons/tistory_title.png",
-    //   link: "https://gurtn.tistory.com",
-    //   content: "코드와 관련된 지식 공유 목적의 블로그입니다.",
-    // },
+    {
+      icon: "/Portfolio/assets/icons/tistory_title.png",
+      link: "https://gurtn.tistory.com",
+      content: "기록과 지식 공유 목적의 블로그입니다.",
+    },
   ];
 
   return (

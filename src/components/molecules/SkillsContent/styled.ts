@@ -20,7 +20,7 @@ export const SkillsContentStyled = styled.section`
 
     & > div:nth-child(1) {
       .book,
-      .book::after {
+      .cover {
         background-color: #f03d3d;
         z-index: 11;
       }
@@ -28,7 +28,7 @@ export const SkillsContentStyled = styled.section`
 
     & > div:nth-child(2) {
       .book,
-      .book::after {
+      .cover {
         background-color: #2862e9;
         z-index: 10;
       }
@@ -36,7 +36,7 @@ export const SkillsContentStyled = styled.section`
 
     & > div:nth-child(3) {
       .book,
-      .book::after {
+      .cover {
         background-color: #febf00;
         z-index: 9;
       }
@@ -44,7 +44,7 @@ export const SkillsContentStyled = styled.section`
 
     & > div:nth-child(4) {
       .book,
-      .book::after {
+      .cover {
         background-color: #2f74c0;
         z-index: 8;
       }
@@ -52,7 +52,7 @@ export const SkillsContentStyled = styled.section`
 
     & > div:nth-child(5) {
       .book,
-      .book::after {
+      .cover {
         background-color: #b22b7c;
         z-index: 7;
       }
@@ -60,7 +60,7 @@ export const SkillsContentStyled = styled.section`
 
     & > div:nth-child(6) {
       .book,
-      .book::after {
+      .cover {
         background-color: #c96195;
         z-index: 6;
       }
@@ -68,7 +68,7 @@ export const SkillsContentStyled = styled.section`
 
     & > div:nth-child(7) {
       .book,
-      .book::after {
+      .cover {
         background-color: #5cd3f3;
         z-index: 5;
       }
@@ -76,7 +76,7 @@ export const SkillsContentStyled = styled.section`
 
     & > div:nth-child(8) {
       .book,
-      .book::after {
+      .cover {
         background-color: #655c5e;
         z-index: 4;
       }
@@ -84,7 +84,7 @@ export const SkillsContentStyled = styled.section`
 
     & > div:nth-child(9) {
       .book,
-      .book::after {
+      .cover {
         background-color: #7377ad;
         z-index: 3;
       }
@@ -92,7 +92,7 @@ export const SkillsContentStyled = styled.section`
 
     & > div:nth-child(10) {
       .book,
-      .book::after {
+      .cover {
         background-color: #dd8a00;
         z-index: 2;
       }
@@ -100,7 +100,7 @@ export const SkillsContentStyled = styled.section`
 
     & > div:nth-child(11) {
       .book,
-      .book::after {
+      .cover {
         background-color: #7fc728;
         z-index: 1;
       }
