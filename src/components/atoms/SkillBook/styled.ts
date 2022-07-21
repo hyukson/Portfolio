@@ -12,7 +12,7 @@ export const SkillBookStyled = styled.div`
 
     // back cover
     .coverBack {
-      transition: transform 1.2s cubic-bezier(0.560, 2.150, 0.250, 0.715);
+      transition: transform 1s cubic-bezier(0.560, 2.150, 0.250, 0.715);
       transition-delay: .2s;
       transform: rotateY(-55deg);
     }
@@ -24,7 +24,7 @@ export const SkillBookStyled = styled.div`
 
     position: relative;
     transform-style: preserve-3d;
-    transition: transform 1.2s cubic-bezier(0.560, 2.150, 0.250, 0.715), margin .6s cubic-bezier(0.560, 2.150, 0.250, 0.715);
+    transition: transform 1s cubic-bezier(0.560, 2.150, 0.250, 0.715), margin .6s cubic-bezier(0.560, 2.150, 0.250, 0.715);
     
     background: #febf00;
     border-radius: 3px;
