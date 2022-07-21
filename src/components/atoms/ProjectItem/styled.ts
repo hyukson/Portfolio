@@ -4,8 +4,9 @@ export const ProjectItemStyled = styled.div`
   width: 75vw;
   min-height: 70vh;
   display: flex;
-  margin-bottom: 5rem;
-  box-shadow: 0 0 15px rgba(0 0 0 / 10%);
+  margin-top: 5rem;
+  background-color: #fff;
+  box-shadow: 0 0 15px rgba(255 255 255 / 10%);
   border-radius: 20px;
   overflow: hidden;
 
