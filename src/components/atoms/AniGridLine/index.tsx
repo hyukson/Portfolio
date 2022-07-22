@@ -14,7 +14,6 @@ interface lineDataTypes {
 
 const AniGridLine = ({width, height}: AniGridLineTypes) => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
-  // const [stacks, setStacks] = useState<lineDataTypes[]>([]);
   let stacks = [] as lineDataTypes[];
 
   const speed: number = 4;

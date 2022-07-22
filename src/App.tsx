@@ -80,23 +80,23 @@ function App() {
         {
           title: "CSS",
           src: "/Portfolio/assets/images/skills/css.png",
-          useSkill: [],
+          useSkill: ["반응형 레이아웃에 맞는 적절한 스타일을 적용할 수 있습니다.", "HTML와 같이 활용하여 효율적인 구조를 사용할 수 있습니다."],
           content:
-            "CSS를 사용한 다양한 반응형 레이아웃 구현이 가능하며, 애니메이션 기능을 구현할 수 있습니다.",
+            "다양한 웹사이트를 구현하는데 CSS를 사용하였고, CSS를 사용한 다양한 반응형 레이아웃 구현이 가능하며, 애니메이션 기능을 구현할 수 있습니다.",
         },
         {
           title: "JavaScript",
           src: "/Portfolio/assets/images/skills/js.png",
-          useSkill: [],
+          useSkill: ["ES6 문법을 사용한 다양한 기능을 구현할 수 있습니다.", "Promise문을 이용하여 데이터 처리를 할 수 있습니다."],
           content:
-            "ES6 문법을 사용하여 다양한 기능을 구현, 활용할 수 있으며 해당 언어를 통해 기능 경기대회에서 우수한 성적을 거둔 경험이 있습니다.",
+            "기능경기대회를 준비하며 구현한 다양한 기능과 백엔드와의 연결, React를 활용한 다양한 작품을 만들 수 있습니다. ",
         },
         {
           title: "TypeScript",
           src: "/Portfolio/assets/images/skills/typescript.png",
-          useSkill: [],
+          useSkill: ["상속과 인터페이스를 사용할 수 있습니다."],
           content:
-            "상속과 인터페이스를 사용할 수 있으며, type을 다룰 수 있습니다. 다양한 React, Next.js 프로젝트에서 Typescript 기반으로 기능을 구현한 경험이 있습니다.",
+            "기존에 지니고 있던 JavaScript 지식에 더해 다양한 타입을 지정할 수 있으며 React, Next.js 프로젝트에서 Typescript 기반으로 기능을 구현한 경험이 있습니다.",
         },
         {
           title: "JQUERY",
@@ -108,13 +108,13 @@ function App() {
         {
           title: "SASS",
           src: "/Portfolio/assets/images/skills/sass.png",
-          useSkill: [],
+          useSkill: ["SASS를 활용해 페이지를 디자인 할 수 있습니다."],
           content: "변수 선언과 연산, 상속 등에 대해 이해, 활용할 수 있습니다.",
         },
         {
           title: "React",
           src: "/Portfolio/assets/images/skills/react.png",
-          useSkill: [],
+          useSkill: ["다양한 디자인 패턴을 활용해 React를 사용할 수 있습니다."],
           content:
             "React Hooks, 컴포넌트, state에 대해 이해와 사용한 경험이 있습니다. ",
         },
@@ -133,21 +133,21 @@ function App() {
         {
           title: "PHP",
           src: "/Portfolio/assets/images/skills/php.png",
-          useSkill: [],
+          useSkill: ["페이지 구현 및 백엔드 기능을 구현할 수 있습니다."],
           content:
             "PHP를 사용하여 Back-end의 기능(데이터베이스 연동, 로그인, 회원가입)등의 기능 구현과 API와 연동, 제작 할 수 있습니다.",
         },
         {
           title: "MySQL",
           src: "/Portfolio/assets/images/skills/mysql.png",
-          useSkill: [],
+          useSkill: ["데이터베이스를 구축하여 백엔드와 연결한 경험이 있습니다."],
           content:
             "MYSQL 활용하여 데이터베이스와 SQL에 대한 이해를 가지고 있으며, SQL를 활용하여 다양한 백엔드 기능을 개발한 경험이 있습니다.",
         },
         {
           title: "Node.js",
           src: "/Portfolio/assets/images/skills/node.png",
-          useSkill: [],
+          useSkill: ["API를 제작하고 다양한 라이브러리를 활용하여 개발을 할 수 있습니다."],
           content:
             "MYSQL 활용하여 데이터베이스와 SQL에 대한 이해를 가지고 있으며, SQL를 활용하여 다양한 백엔드 기능을 개발한 경험이 있습니다.",
         },
