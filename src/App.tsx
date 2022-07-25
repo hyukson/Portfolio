@@ -1,5 +1,3 @@
-import React from "react";
-
 import Introduction from "./components/molecules/Introduction";
 import HeaderNav from "./components/molecules/HeaderNav";
 
@@ -9,6 +7,7 @@ import SkillsContent from "./components/molecules/SkillsContent";
 import ProjectContent from "./components/molecules/ProjectContent";
 import ContactContent from "./components/molecules/ContactContent";
 import Visual from "./components/organisms/Visual";
+import WeatherBox from "./components/molecules/WeatherBox";
 
 function App() {
   const NavList = ["visual", "intro", "about me", "skills", "project", "Contact"];
@@ -292,6 +291,7 @@ function App() {
   return (
     <div className="wrap">
       <HeaderNav NavList={NavList} />
+      <WeatherBox />
 
       <Visual />
 

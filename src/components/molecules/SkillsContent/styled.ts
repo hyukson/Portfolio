@@ -5,6 +5,7 @@ export const SkillsContentStyled = styled.section`
   height: 100%;
   background: linear-gradient(to right, #111, #0e0f19);
 
+
   .bookshelf {
     width: 100%;
     height: 26rem;
@@ -13,6 +14,7 @@ export const SkillsContentStyled = styled.section`
     display: flex;
     justify-content: center;
     align-items: flex-end;
+    flex-wrap: wrap;
 
     &.view .book {
       margin: 0 1rem;

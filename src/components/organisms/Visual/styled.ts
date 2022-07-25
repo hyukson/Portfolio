@@ -3,6 +3,7 @@ import styled from "styled-components";
 export const VisualStyled = styled.section`
   height: 100vh;
   position: relative;
+  z-index: 222;
   background-color: #fff;
   overflow: hidden;
 

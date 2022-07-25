@@ -135,27 +135,6 @@ const Introduction = () => {
           ))}
         </div>
       </div>
-
-      <div className="block-list">
-        <div className="block-container">
-          <div className="btn-back btn-back-3"></div>
-          <div className="btn-front">
-            <i className="fas fa-moon"></i>
-          </div>
-        </div>
-        <div className="block-container">
-          <div className="btn-back btn-back-1"></div>
-          <div className="btn-front">
-            <i className="fas fa-cloud-showers-heavy"></i>
-          </div>
-        </div>
-        <div className="block-container">
-          <div className="btn-back btn-back-2"></div>
-          <div className="btn-front">
-            <i className="fas fa-snowflake"></i>
-          </div>
-        </div>
-      </div>
     </IntroductionStyled>
   );
 };
