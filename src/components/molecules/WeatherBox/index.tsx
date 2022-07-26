@@ -10,13 +10,14 @@ const WeatherBox = () => {
     setNowWeather(weather);
   }
 
+  const weathers = ["star", "snow", "rain"];
   const icons = ["fas fa-moon", "fas fa-snowflake", "fas fa-cloud-showers-heavy"];
 
   return <WeatherBoxStyled>
     <WeatherAni nowWeather={nowWeather} />
  
     <div className="block-list">
-      {["star", "snow", "rain"].map((v: string, i: number) => (
+      {weathers.map((v: string, i: number) => (
         <div key={i} className="block-container" onClick={() => click(v)}>
           <div className="btn-back"></div>
           <div className="btn-front">

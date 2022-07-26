@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 export const WeatherBoxStyled = styled.div`
   position: fixed;
+  top: 50px;
 
   .block-list {
 
@@ -61,6 +62,7 @@ export const WeatherBoxStyled = styled.div`
       }
     }
 
+    &.active,
     &:hover {
       & > .btn-back {
         transform: translateZ(20px) rotateZ(15deg) rotateX(-20deg) rotateY(-20deg);

@@ -1,4 +1,4 @@
-import { useEffect, useRef} from "react";
+import { useEffect, useRef, useState} from "react";
 import { WeatherAniStyled } from "./styled";
 
 interface WeatherAniTypes {
@@ -9,25 +9,85 @@ const WeatherAni = ({nowWeather}: WeatherAniTypes) => {
   const canvas = useRef() as any;
   const handle = useRef([]) as any;
 
+  const [[width, height], setSize] = useState<number[]>([window.innerWidth, window.innerHeight]);
+
   const data = [] as any;
 
-  const randomRadius = (defaultSize = 1) => Math.random() * defaultSize + 0.5;
+  const randomRadius = (defaultSize = 0.5) => Math.random() * 1 + defaultSize;
 
-  useEffect(() => {
+  useEffect(() => {    
     const showWeather = () => {
       handle?.current?.map((v: number) => clearInterval(v));
-
-      [makeSnow, makeStar][["snow", "star", "rain"].indexOf(nowWeather)]();
+      
+      [makeSnow, makeStar, makeRain][["snow", "star", "rain"].indexOf(nowWeather)]();
     }
 
+    const resizeing = () => {
+      setSize([window.innerWidth, window.innerHeight]);
+    }
+    
     showWeather();
-
-    window.addEventListener("resize", showWeather);
+    
+    window.addEventListener("resize", resizeing);
 
     return () => {
-      window.removeEventListener("resize", showWeather);
+      window.removeEventListener("resize", resizeing);
     }
-  }, [nowWeather]);
+    
+  }, [nowWeather, width, height]);
+
+  const makeRain = () => {
+    data.length = 0;
+
+    while(data.length < 200) {
+      const x = Math.random() * width;
+      const y = Math.random() * height;
+
+      const size = randomRadius(50);
+      const speed = Math.random() * 5 + 5;
+      
+      data.push({x, y, size, speed});
+    }
+
+    handle.current.push(setInterval(moveRain, 30));
+  }
+
+  const moveRain = () => {
+    for (let i = 0; i < data.length; i++) {
+      data[i].x += Math.random() * 0.5;
+      data[i].y += data[i].speed;
+
+      if (data[i].x > width) {
+        data[i].x = 0;
+      }
+ 
+      if (data[i].y > height) {
+        data[i].y = 0;
+      }
+    }
+
+    drawRain();
+  };
+
+  const drawRain = () => {
+    const ctx = canvas?.current?.getContext("2d");  
+
+    ctx.globalCompositeOperation = `source-over`;
+    
+    ctx.clearRect(0, 0, width, height);
+    
+    data.forEach((v: any) => {
+      ctx.beginPath();
+      
+      const gradient = ctx.createLinearGradient(v.x, v.y, v.x + 3, v.y + v.size);
+      gradient.addColorStop(1, `rgba(255, 255, 255, .2)`);
+      gradient.addColorStop(0, `transparent`);
+      
+      ctx.fillStyle = gradient;
+      ctx.fillRect(v.x, v.y, 3, v.size);
+      ctx.closePath();
+    });
+  };
 
   const makeSnow = () => {
     data.length = 0;
@@ -53,12 +113,12 @@ const WeatherAni = ({nowWeather}: WeatherAniTypes) => {
       data[i].x += data[i].dir * speed;
       data[i].y += speed;
       
-      if (Math.floor(Math.random() * 100) == 1) {
+      if (Math.floor(Math.random() * 100) === 1) {
         data[i].dir *= -1;
       }
 
       if (data[i].y > height) {
-        data[i].y = 0;
+        data[i].y = -data[i].size;
       }
     }
 
@@ -78,7 +138,6 @@ const WeatherAni = ({nowWeather}: WeatherAniTypes) => {
       ctx.closePath();
     });
   };
-
 
   const makeStar = () => {
     data.length = 0;
@@ -105,8 +164,8 @@ const WeatherAni = ({nowWeather}: WeatherAniTypes) => {
     }
 
     drawStar();
-  }
-
+  };
+  
   const drawStar = () => {
     const ctx = canvas?.current?.getContext("2d");  
 
@@ -127,13 +186,11 @@ const WeatherAni = ({nowWeather}: WeatherAniTypes) => {
     const radian = Math.PI / 180 * deg
 
     return [
+      // 반지름 길이, 각도 
       r * Math.cos(radian) + width/2,
       r * Math.sin(radian) + height/2
     ];
   }
-
-  const width = window.innerWidth;
-  const height = window.innerHeight;
 
   return <WeatherAniStyled>
     <canvas width={width} height={height} ref={canvas}></canvas>
