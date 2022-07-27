@@ -1,4 +1,5 @@
 import { useEffect, useRef } from "react";
+import { collapseTextChangeRangesAcrossMultipleVersions } from "typescript";
 import { ObserverOptionTypes } from "../../../interfaces/observerOptionTypes";
 
 import Rap from "../../atoms/Rap";
@@ -27,9 +28,11 @@ const SkillsContent = ({ SkillsData }: SkillsContentTypes) => {
       entries.forEach((entry) => {
         entry.target.classList[entry.isIntersecting ? "add" : "remove"]("view");
       });
-    }, options);  
+    }, options);
 
     observer.observe(bookshelfRef.current);
+
+    [...bookshelfRef.current.children].map(el => observer.observe(el));
   }, []);
 
   return (

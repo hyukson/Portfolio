@@ -1,10 +1,12 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import AniGridLine from "../../atoms/AniGridLine";
 import { VisualStyled } from "./styled";
 
 const Visual = () => {
   const leftTextRef = useRef() as any;
   const rightTextRef = useRef() as any;
+
+  const [height, setHeight] = useState(window.innerHeight);
 
   useEffect(() => {
     const scroll = () => {
@@ -15,13 +17,13 @@ const Visual = () => {
     window.addEventListener("scroll", scroll);
 
     return () => {
-      window.removeEventListener("scroll", scroll)
+      window.removeEventListener("scroll", scroll);
     }
   }, []);
 
   return (
     <VisualStyled>
-      <AniGridLine height={window.innerHeight} />
+      <AniGridLine height={height} />
       <div className="circle"></div>
       
       <div className="text">

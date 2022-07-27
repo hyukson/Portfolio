@@ -37,7 +37,11 @@ export const GlobalStyled = createGlobalStyle`
 
     outline: none;
     letter-spacing: -1px;
-    word-break: break-all;
+    word-break: break-all;    
+  }
+
+  body {
+    overflow-x: hidden;
   }
 
   a {

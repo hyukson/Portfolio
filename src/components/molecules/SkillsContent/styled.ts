@@ -10,11 +10,26 @@ export const SkillsContentStyled = styled.section`
 
     & .bookshelf {
       align-items: center;
-      height: auto;
+      height: auto !important;
+
+      // 모바일 환경에서는 보이기만 해도 됨
+      & > div.view .book {
+        transform: rotateX(-25deg) rotateY(-80deg) rotateZ(-15deg) translateY(.8rem) translateX(5rem);
+
+        // back cover
+        .coverBack {
+          transition: transform 1s cubic-bezier(0.560, 2.150, 0.250, 0.715);
+          transition-delay: .2s;
+          transform: rotateY(-55deg);
+        }
+      }
 
       & > div {
         width: 100%;
-        display: block;
+        height: 26rem;
+        display: flex;
+        justify-content: center;
+        margin-top: 3rem;
       }
     }
   }

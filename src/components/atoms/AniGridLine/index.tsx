@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { AniGridLineStyled } from "./styled";
 
 interface AniGridLineTypes {
@@ -19,7 +19,7 @@ const AniGridLine = ({width, height}: AniGridLineTypes) => {
   const speed: number = 4;
   const line: number = 80;
   
-  const [cw, ch]: number[] = [width, height];
+  const [[cw, ch], setCanvasSize] = useState<number[]>([width, height]);
   const rowSize: number = cw / line;
 
   useEffect(() => draw(), []);
