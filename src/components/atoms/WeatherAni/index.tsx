@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState} from "react";
+import { isJSDocDeprecatedTag } from "typescript";
 import { WeatherAniStyled } from "./styled";
 
 interface WeatherAniTypes {

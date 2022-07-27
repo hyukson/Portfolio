@@ -5,6 +5,13 @@ export const WeatherBoxStyled = styled.div`
   top: 50px;
 
   .block-list {
+    @media only screen and (max-width: 600px) {
+      z-index: 222222; 
+
+      & > div {
+        z-index: 222222; 
+      }
+    }
 
     .block-container:nth-child(1) .btn-back {
       background: linear-gradient(135deg, #ebe046 -20%, #ffac01 120%);

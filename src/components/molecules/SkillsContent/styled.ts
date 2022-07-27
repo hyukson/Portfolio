@@ -5,6 +5,19 @@ export const SkillsContentStyled = styled.section`
   height: 100%;
   background: linear-gradient(to right, #111, #0e0f19);
 
+  @media only screen and (max-width: 600px) {
+    height: auto; 
+
+    & .bookshelf {
+      align-items: center;
+      height: auto;
+
+      & > div {
+        width: 100%;
+        display: block;
+      }
+    }
+  }
 
   .bookshelf {
     width: 100%;

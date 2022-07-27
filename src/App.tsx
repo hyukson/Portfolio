@@ -291,9 +291,10 @@ function App() {
   return (
     <div className="wrap">
       <HeaderNav NavList={NavList} />
-      <WeatherBox />
 
       <Visual />
+
+      <WeatherBox />
 
       <Introduction />
 
