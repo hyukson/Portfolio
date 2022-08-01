@@ -13,7 +13,7 @@ export const SlideCardStyled = styled.div`
   overflow: hidden;
   transition: 
     transform .2s cubic-bezier(0.560, 2.150, 0.250, 0.715), 
-    width .4s cubic-bezier(0.560, 2.150, 0.250, 0.715), 
+    width .2s cubic-bezier(0.560, 2.150, 0.250, 0.715), 
     top .4s cubic-bezier(0.560, 2.150, 0.250, 0.715);
 
   cursor: grab;
@@ -67,28 +67,26 @@ export const SlideCardStyled = styled.div`
     font-size: 1.05rem;
 
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
 
-    & > div { 
-      margin: 0 1.6rem .5rem 0;
+    padding: 0 2rem;
 
-      & > p {
-        display: flex;
-        align-items: center;
-        font-size: 1.2rem;
-        color: #eee;
+    & > div > p {
+      display: flex;
+      align-items: center;
+      font-size: 1.2rem;
+      color: #eee;
 
-        &::before {
-          content: "";
-          display: inline-block;
-          width: 5px;
-          height: 5px;
-          margin-right: .3rem;
-          border-radius: 50%;
-          background: #eee;
-        }
+      &::before {
+        content: "";
+        display: inline-block;
+        width: 5px;
+        height: 5px;
+        margin-right: .3rem;
+        border-radius: 50%;
+        background: #eee;
       }
-    }  
-  }
+    }
+  } 
 `;

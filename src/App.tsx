@@ -259,22 +259,24 @@ function App() {
       link: "https://main.d29a2g0rjiyzes.amplifyapp.com/",
       useSkills: ["JavaScript", "HTML", "CSS"],
     },
+    {
+      title: "다른 색깔 찾기 게임",
+      description: "색깔이 다른 박스를 찾아 최대한 오래 버티는 게임입니다.",
+      image: "/Portfolio/assets/images/color_diff.png",
+      mainSkills: [],
+      social: [
+        {
+          name: "github",
+          icon: "/Portfolio/assets/icons/github.png",
+          link: "https://github.com/hyukson/Tetris",
+        },
+      ],
+      link: "https://main.d29a2g0rjiyzes.amplifyapp.com/",
+      useSkills: ["React", "TypeScript", "SCSS", "JavaScript", "HTML", "CSS"],
+    }
   ];
 
-  // Conatct
-  const ContactData = [
-    {
-      title: "연락처",
-      icon: "/Portfolio/assets/icons/phone.png",
-      content: "010-7255-8076",
-    },
-    {
-      title: "이메일",
-      icon: "/Portfolio/assets/icons/email.png",
-      content: "hyuksoo128@gmail.com",
-    },
-  ];
-
+  // contact
   const socialData = [
     {
       icon: "/Portfolio/assets/icons/github_title.png",
@@ -304,7 +306,7 @@ function App() {
 
       <ProjectContent projectData={projectData} />
 
-      <ContactContent ContactData={ContactData} socialData={socialData} />
+      <ContactContent socialData={socialData} />
     </div>
   );
 }

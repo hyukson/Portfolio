@@ -1,15 +1,25 @@
 import styled from "styled-components"
 
+const colors = [
+  ["#8310e6", "#0026e6", "#10bbe6"],
+  ["#febf00", "#dd2c00", "#e610bf"],
+  ["#8310e6", "#0026e6", "#10bbe6"],
+];
+
 const createTranslate = () => {
   let style = "";
 
   for (let i = 1; i <= 4; i++) {
     style += `
       & > div:nth-child(${i}) {
-        top: ${i}rem;
-        width: ${70 + (i * 10)}%
+        top: ${(i * 2.2) - 2}rem;
+        transform: scale(${70 + (i * 10)}%);
       }
     `;
+
+    // & .bottomCard {
+    //   background: linear-gradient(140deg, ${(colors.shift() || []).join(",")});
+    // }
   }
 
   return style;
