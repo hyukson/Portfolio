@@ -1,6 +1,7 @@
 import { useEffect, useRef } from "react";
-import NavItem from "../../atoms/NavItem";
 import { HeaderNavStyled } from "./styled";
+
+import NavItem from "../../atoms/NavItem";
 
 interface HeaderNavTypes {
   NavList: String[];
