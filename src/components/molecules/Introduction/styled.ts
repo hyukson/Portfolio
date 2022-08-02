@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const IntroductionStyled = styled.section`
-  min-height: 100vh;
+  min-height: ${props => props.theme.height};
   height: 100%;
   display: flex;
   flex-direction: column;

@@ -1,10 +1,11 @@
 import styled from "styled-components";
 
 export const WeatherBoxStyled = styled.div`
-  position: fixed;
-  top: 60px;
-
   .block-list {
+    position: fixed;
+    top: 60px;
+    z-index: 22;
+
     .block-container:nth-child(1) .btn-back {
       background: linear-gradient(135deg, #ebe046 -20%, #ffac01 120%);
     }

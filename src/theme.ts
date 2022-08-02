@@ -10,4 +10,6 @@ export const defaultTheme = {
 
   // 어두운 버전의 배경ㅍㅍ
   backDark: "#061626",
+
+  height: "960px",
 };

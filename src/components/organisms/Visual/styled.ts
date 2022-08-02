@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const VisualStyled = styled.section`
+  min-height: 700px;
   height: 100vh;
   position: relative;
   z-index: 222;
