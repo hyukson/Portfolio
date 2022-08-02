@@ -1,6 +1,6 @@
 import { useEffect, useRef } from "react";
-import { collapseTextChangeRangesAcrossMultipleVersions } from "typescript";
 import { ObserverOptionTypes } from "../../../interfaces/observerOptionTypes";
+import { SkillItemTypes, SkillsDataTypes } from "../../../interfaces/SkillsTypes";
 
 import Rap from "../../atoms/Rap";
 import SectionTitle from "../../atoms/SectionTitle";
@@ -9,13 +9,13 @@ import SkillBook from "../../atoms/SkillBook";
 import { SkillsContentStyled } from "./styled";
 
 interface SkillsContentTypes {
-  SkillsData: any;
+  SkillsData: SkillsDataTypes[];
 }
 
 const SkillsContent = ({ SkillsData }: SkillsContentTypes) => {
   const bookshelfRef = useRef() as any;
   
-  const skills = [...SkillsData.Front.items, ...SkillsData.Back.items];
+  const skills = SkillsData.reduce<SkillItemTypes[]>((acc, v) => [...acc, ...v.items], []);
  
   useEffect(() => {
     const options: ObserverOptionTypes  = {

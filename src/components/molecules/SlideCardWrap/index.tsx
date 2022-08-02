@@ -1,13 +1,14 @@
 import { useEffect, useRef, useState } from "react";
+import { AboutMeTypes } from "../../../interfaces/AboutMeTypes";
 import SlideCard from "../../atoms/SlideCard";
 
 import { SlideCardWrapStyled } from "./styled";
 
-interface SlideCardWrapTypes {
-  AboutData: any;
+interface AboutDataTypes {
+  AboutData: AboutMeTypes;
 }
 
-const SlideCardWrap = ({ AboutData }: SlideCardWrapTypes) => {
+const SlideCardWrap = ({ AboutData }: AboutDataTypes) => {
   const SlideCardWrapRef = useRef() as any;
   const cardRef = useRef([]) as any;
 

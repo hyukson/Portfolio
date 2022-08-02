@@ -1,6 +1,11 @@
+import { SkillItemTypes } from "../../../interfaces/SkillsTypes";
 import { SkillBookStyled } from "./styled";
 
-const SkillBook = ({item}: any) => {
+interface SkillsBookTypes {
+  item: SkillItemTypes;
+}
+
+const SkillBook = ({item}: SkillsBookTypes) => {
   return (
     <SkillBookStyled>
       <div className="book">

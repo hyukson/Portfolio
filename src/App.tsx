@@ -9,11 +9,16 @@ import ContactContent from "./components/molecules/ContactContent";
 import Visual from "./components/organisms/Visual";
 import WeatherBox from "./components/molecules/WeatherBox";
 
+import { AboutMeTypes } from "./interfaces/AboutMeTypes";
+import { SkillsDataTypes } from "./interfaces/SkillsTypes";
+import { SocialTypes } from "./interfaces/SocialTypes";
+import { ProjectItemTypes } from "./interfaces/ProjectTypes";
+
 function App() {
-  const NavList = ["visual", "intro", "about me", "skills", "project", "Contact"];
+  const NavList: string[] = ["visual", "intro", "about me", "skills", "project", "Contact"];
 
   // about
-  const AboutData = {
+  const AboutData: AboutMeTypes = {
     LICENCS: {
       title: "LICENSES",
       icon: {
@@ -65,8 +70,8 @@ function App() {
   };
 
   // skills
-  const SkillsData = {
-    Front: {
+  const SkillsData: SkillsDataTypes[] = [
+    {
       title: "Front-end",
       items: [
         {
@@ -126,7 +131,7 @@ function App() {
         },
       ],
     },
-    Back: {
+    {
       title: "Back-end",
       items: [
         {
@@ -152,37 +157,18 @@ function App() {
         },
       ],
     },
-    // Moblie: {
-    //   title: "Mobile Application",
-    //   items: [
-    //     {
-    //       title: "Kotlin",
-    //       src: "/Portfolio/assets/images/skills/kotlin.png",
-            // useSkill: [],
-    //       content:
-    //         "kotlin을 사용하여 리스트 형식의 액티비티를 구성할 수 있으며, API와 연결, 호출이 가능합니다. 라이브러리를 사용하여 다양한 기능 구현을 경험했습니다.",
-    //     },
-    //     {
-    //       title: "Flutter",
-    //       src: "/Portfolio/assets/images/skills/flutter.png",
-              // useSkill: [],
-    //       content:
-    //         "flutter을 사용하여 리스트 형식의 액티비티를 구성할 수 있으며, 라이브러리를 사용하여 다양한 기능 구현을 경험해보았습니다.",
-    //     },
-    //   ],
-    // },
-  };
+  ];
 
   // Project
-  const projectData = [
+  const projectData: ProjectItemTypes[] = [
     {
       title: "포트폴리오",
       description: "저를 소개하기 위해 제작한 포트폴리오용 사이트입니다.",
       image: "/Portfolio/assets/images/portfolio.png",
       mainSkills: [
-        "간단한 인적사항과 자기소개",
-        "진행한 프로젝트 github 링크",
-        "활용 가능한 기술 소개",
+        "React와 Typescript를 활용하여 구현하였습니다.",
+        "styled-components와 router-dom 라이브러리를 활용하였습니다.",
+        "SCSS를 활용하여 반응형 페이지를 구현하였습니다.",
       ],
       social: [
         {
@@ -200,9 +186,8 @@ function App() {
         "영화 추천을 받고 싶은 분들을 위해 제작한 Next.js를 사용한 추천사이트입니다.",
       image: "/Portfolio/assets/images/movieInfo.png",
       mainSkills: [
-        "다양한 최신 영화의 추천 기능",
-        "검색을 통한 정보 찾기",
-        "명작 영화를 소개",
+        "Next.JS의 Pages 기능을 이용한 페이지를 구현하였습니다.",
+        "Movie API와 Axios를 응용하여 구현하였습니다.",
       ],
       social: [
         {
@@ -211,17 +196,33 @@ function App() {
           link: "https://github.com/hyukson/MovieInfo",
         },
       ],
-      link: "https://main.d5d7mrdnguzvo.amplifyapp.com/",
+      link: "https://main.d3alpqfqshgdtz.amplifyapp.com/",
       useSkills: ["Next.js", "TypeScript", "SCSS", "JavaScript", "HTML", "CSS"],
+    },
+    {
+      title: "다른 색깔 찾기 게임",
+      description: "색깔이 다른 박스를 찾아 최대한 오래 버티는 게임입니다.",
+      image: "/Portfolio/assets/images/color_diff.png",
+      mainSkills: [
+        "JS로 구현한 기능을 React로 리펙토리 하였습니다.",
+        "useEffect, useCallback, useMemo로 렌더링을 최적화 하였습니다.",
+      ],
+      social: [
+        {
+          name: "github",
+          icon: "/Portfolio/assets/icons/github.png",
+          link: "https://github.com/hyukson/color_diff",
+        },
+      ],
+      link: "https://main.d18xumb8hyzm93.amplifyapp.com/",
+      useSkills: ["React", "TypeScript", "SCSS", "JavaScript", "HTML", "CSS"],
     },
     {
       title: "동물 달리기 내기 게임",
       description: "동물들이 달리며 내기의 순위를 정해주는 사이트입니다.",
       image: "/Portfolio/assets/images/runGame.png",
       mainSkills: [
-        "직접 제작한 귀여운 동물과 함께 즐기는 내기 게임",
-        "최대 4명까지의 동물을 선택 가능",
-        "빠른 내기 진행이 가능",
+        "Jquery를 이용한 DOM을 활용할 수 있습니다.",
       ],
       social: [
         {
@@ -230,7 +231,7 @@ function App() {
           link: "https://github.com/hyukson/RunGame",
         },
       ],
-      link: "https://main.dff64qk22x1jb.amplifyapp.com/",
+      link: "https://main.d20gbq82ups5ju.amplifyapp.com/",
       useSkills: [
         "JavaScript",
         "HTML",
@@ -245,9 +246,7 @@ function App() {
       description: "테트리스 게임을 캔버스를 이용한 JS코드로 제작해보았습니다.",
       image: "/Portfolio/assets/images/tetris.png",
       mainSkills: [
-        "캔버스와 JS로 제작한 테트리스 게임",
-        "블럭을 최대한 많이 지워 점수 갱신하기",
-        "테트리스 조작키를 그대로 계승",
+        "Canavs를 베이스로 JavaScript를 이용하여 제작하였습니다.",
       ],
       social: [
         {
@@ -256,28 +255,13 @@ function App() {
           link: "https://github.com/hyukson/Tetris",
         },
       ],
-      link: "https://main.d29a2g0rjiyzes.amplifyapp.com/",
+      link: "https://main.d3ghfd65sa1mqc.amplifyapp.com/",
       useSkills: ["JavaScript", "HTML", "CSS"],
     },
-    {
-      title: "다른 색깔 찾기 게임",
-      description: "색깔이 다른 박스를 찾아 최대한 오래 버티는 게임입니다.",
-      image: "/Portfolio/assets/images/color_diff.png",
-      mainSkills: [],
-      social: [
-        {
-          name: "github",
-          icon: "/Portfolio/assets/icons/github.png",
-          link: "https://github.com/hyukson/Tetris",
-        },
-      ],
-      link: "https://main.d29a2g0rjiyzes.amplifyapp.com/",
-      useSkills: ["React", "TypeScript", "SCSS", "JavaScript", "HTML", "CSS"],
-    }
   ];
 
   // contact
-  const socialData = [
+  const socialData: SocialTypes[] = [
     {
       icon: "/Portfolio/assets/icons/github_title.png",
       link: "https://github.com/hyukson",

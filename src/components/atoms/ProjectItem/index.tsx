@@ -1,14 +1,5 @@
+import { ProjectItemTypes } from "../../../interfaces/ProjectTypes";
 import { ProjectItemStyled } from "./styled";
-
-interface ProjectItemTypes {
-  title: string;
-  description: string;
-  image: string;
-  mainSkills: Array<string>;
-  social: any;
-  link: string;
-  useSkills: Array<string>;
-}
 
 const ProjectItem = ({
   title,
@@ -45,12 +36,12 @@ const ProjectItem = ({
           </div>
         </div>
         <div className="social">
-          <a href={link} target="_blank" className="btn">
+          <a href={link} rel="noopener noreferrer" target="_blank" className="btn">
             웹 사이트 바로가기
           </a>
 
           {social.map((item: any, key: number) => (
-            <a key={key} href={item.link} target="_blank" className="btn">
+            <a key={key} href={item.link} rel="noopener noreferrer" target="_blank" className="btn">
               {item.icon && <img src={item.icon} alt="icon" />}
               {item.name}
             </a>

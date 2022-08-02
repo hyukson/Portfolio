@@ -6,11 +6,13 @@ import Rap from "../../atoms/Rap";
 
 import SlideCardWrap from "../../molecules/SlideCardWrap";
 
-interface AboutMeTypes {
-  AboutData: any;
+import { AboutMeTypes } from "../../../interfaces/AboutMeTypes";
+
+interface AboutDataTypes {
+  AboutData: AboutMeTypes;
 }
 
-const AboutMe = ({ AboutData }: AboutMeTypes) => {
+const AboutMe = ({ AboutData }: AboutDataTypes) => {
   return (
     <AboutMeStyled>
       <Rap>

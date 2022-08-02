@@ -1,7 +1,8 @@
+import { AboutMeItemTypes } from "../../../interfaces/AboutMeTypes";
 import { SlideCardStyled } from "./styled"
 
 interface SlideCardTypes {
-  item: any;
+  item: AboutMeItemTypes;
   cardRef: any;
   idx: number; 
 }
@@ -14,7 +15,7 @@ const SlideCard = ({item, cardRef, idx}: SlideCardTypes) => {
         <h2>{item.title}</h2>
       </div>
       <div className="bottomCard">
-        {item.list.map((x: any) => (
+        {item.list.map((x) => (
           <div>
             <p>{x.title}</p>
             <div className="list">

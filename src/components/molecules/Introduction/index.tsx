@@ -19,7 +19,7 @@ const Introduction = () => {
 
   const lightRef = useRef() as any;
 
-  const [lights, setLights] = useState(new Array(colors.length).fill(false));
+  const [lights, setLights] = useState<boolean[]>(new Array(colors.length).fill(false));
 
   // 글자 모음
   const letters: string[] = [

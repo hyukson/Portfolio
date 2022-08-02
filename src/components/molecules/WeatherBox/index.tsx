@@ -10,8 +10,8 @@ const WeatherBox = () => {
     setNowWeather(weather);
   }
 
-  const weathers = ["star", "snow", "rain"];
-  const icons = ["fas fa-moon", "fas fa-snowflake", "fas fa-cloud-showers-heavy"];
+  const weathers = ["star", "snow", "rain"] as string[];
+  const icons = ["fas fa-moon", "fas fa-snowflake", "fas fa-cloud-showers-heavy"] as string[];
 
   return <WeatherBoxStyled>
     <WeatherAni nowWeather={nowWeather} />
