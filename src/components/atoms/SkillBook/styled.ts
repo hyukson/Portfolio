@@ -1,10 +1,11 @@
 import styled from "styled-components";
 
 export const SkillBookStyled = styled.div`  
-  height: 100%;
+  height: 26rem;
+  margin-bottom: 4rem;
 
   &:hover {
-    z-index: 22222;
+    z-index: 22;
   }
 
   &:hover .book {
@@ -30,7 +31,7 @@ export const SkillBookStyled = styled.div`
     border-radius: 3px;
     
     padding-top: 2rem;
-    margin: 0 -1.2rem;
+    margin: 0 1rem;
 
     border-left: 1px solid rgba(255, 255, 255, .2);
 

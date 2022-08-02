@@ -4,13 +4,11 @@ export const SkillsContentStyled = styled.section`
   min-height: ${props => props.theme.height};
   height: 100%;
   background: linear-gradient(to right, #111, #0e0f19);
+  padding: 0 140px;
 
   @media only screen and (max-width: 600px) {
-    height: auto; 
-
     & .bookshelf {
       align-items: center;
-      height: auto !important;
 
       // 모바일 환경에서는 보이기만 해도 됨
       & > div.view .book {
@@ -36,17 +34,12 @@ export const SkillsContentStyled = styled.section`
 
   .bookshelf {
     width: 100%;
-    height: 26rem;
-    margin-top: 10rem;
+    margin-top: 6rem;
 
     display: flex;
     justify-content: center;
     align-items: flex-end;
     flex-wrap: wrap;
-
-    &.view .book {
-      margin: 0 1rem;
-    }
 
     & > div:nth-child(1) {
       .book,

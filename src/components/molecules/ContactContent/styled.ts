@@ -8,6 +8,7 @@ export const ContactContentStyled = styled.section`
 
   .flex {
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
 
     > div {
@@ -20,14 +21,10 @@ export const ContactContentStyled = styled.section`
     font-size: 1rem;
     margin-top: 6rem;
     color: #eee;
+    text-align: center;
 
     p {
       margin: 0.2rem 0;
     }
-  }
-
-  // 1400px
-  @media only screen and (max-width: 1400px) {
-    padding-left: 5rem;
   }
 `;

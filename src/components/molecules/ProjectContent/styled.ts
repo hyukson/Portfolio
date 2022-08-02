@@ -6,8 +6,9 @@ export const ProjectContentStyled = styled.section`
   background: linear-gradient(to right, #111, #0e0f19);
   padding-bottom: 5rem;
 
-  // 1400px
-  @media only screen and (max-width: 1400px) {
-    padding-left: 5rem;
+  > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 `;

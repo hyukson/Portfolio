@@ -10,6 +10,10 @@ export const IntroductionStyled = styled.section`
   overflow: hidden;
   background: linear-gradient(to right, #111, #0e0f19);
 
+  @media only screen and (max-width: 600px) {
+    min-height: 600px;
+  }
+
   .Introduction_wrap {
     max-width: 62rem;
     width: 100%;
