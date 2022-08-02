@@ -10,34 +10,22 @@ export const GlobalStyled = createGlobalStyle`
     font-style: normal;
   }
 
-  @font-face {
-    font-family: "NotoReg";
-    src: url("/Portfolio/fonts/NotoSansKR/NotoSansKR-Regular.otf");
+  // Pretendard font
+  @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css");
+
+  body::-webkit-scrollbar {
+    width: 8px;  /* 스크롤바의 너비 */
   }
 
-  @font-face {
-    font-family: "NotoBold";
-    src: url("/Portfolio/fonts/NotoSansKR/NotoSansKR-Bold.otf");
+  body::-webkit-scrollbar-thumb {
+    height: 30%; /* 스크롤바의 길이 */
+    background: #febf00; /* 스크롤바의 색상 */
+    
+    border-radius: 10px;
   }
 
-  @font-face {
-    font-family: "GMarketReg";
-    src: url("/Portfolio/fonts/GmarketSans/GmarketSansMedium.otf");
-  }
-
-  @font-face {
-    font-family: "GMarketBold";
-    src: url("/Portfolio/fonts/GmarketSans/GmarketSansBold.otf");
-  }
-
-  @font-face {
-    font-family: "PretendardBold";
-    src: url("/Portfolio/fonts/Pretendard/Pretendard-Bold.otf");
-  }
-
-  @font-face {
-    font-family: "PretendardReg";
-    src: url("/Portfolio/fonts/Pretendard/Pretendard-Regular.otf");
+  body::-webkit-scrollbar-track {
+    background: #fff;  /*스크롤바 뒷 배경 색상*/
   }
 
   * {
@@ -45,11 +33,15 @@ export const GlobalStyled = createGlobalStyle`
     padding: 0;
     list-style: none;
     box-sizing: border-box;
-    font-family: "PretendardReg";
+    font-family: Pretendard;
 
     outline: none;
     letter-spacing: -1px;
-    word-break: break-all;
+    word-break: break-all;    
+  }
+
+  body {
+    overflow-x: hidden;
   }
 
   a {
@@ -57,21 +49,8 @@ export const GlobalStyled = createGlobalStyle`
     color: inherit;
   }
 
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    font-family: "GMarketBold";
-  }
-
   b {
     font-family: "CookieRunBold";
-  }
-
-  b.G {
-    font-family: "GMarketBold";
   }
 
   // 1150px 반응형

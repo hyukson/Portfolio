@@ -1,39 +1,49 @@
-import { useState } from "react";
+import { useEffect, useRef } from "react";
+import { ObserverOptionTypes } from "../../../interfaces/observerOptionTypes";
+import { SkillItemTypes, SkillsDataTypes } from "../../../interfaces/SkillsTypes";
 
 import Rap from "../../atoms/Rap";
 import SectionTitle from "../../atoms/SectionTitle";
-import CircleChart from "../../atoms/CircleChart";
-
-import TagList from "../TagList";
+import SkillBook from "../../atoms/SkillBook";
 
 import { SkillsContentStyled } from "./styled";
 
 interface SkillsContentTypes {
-  SkillsData: any;
+  SkillsData: SkillsDataTypes[];
 }
 
 const SkillsContent = ({ SkillsData }: SkillsContentTypes) => {
-  const types = Object.keys(SkillsData);
+  const bookshelfRef = useRef() as any;
+  
+  const skills = SkillsData.reduce<SkillItemTypes[]>((acc, v) => [...acc, ...v.items], []);
+ 
+  useEffect(() => {
+    const options: ObserverOptionTypes  = {
+      root: null,
+      rootMargin: "10px",
+      threshold: .1,
+    };
+      
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        entry.target.classList[entry.isIntersecting ? "add" : "remove"]("view");
+      });
+    }, options);
 
-  const [category, setCategory] = useState(types[0]);
+    observer.observe(bookshelfRef.current);
 
-  const skill = SkillsData[category].items;
+    [...bookshelfRef.current.children].map(el => observer.observe(el));
+  }, []);
 
   return (
     <SkillsContentStyled>
       <Rap>
         <SectionTitle title="SKILLS" />
-
-        <div className="flex">
-          <TagList list={types} category={category} setTag={setCategory} />
-
-          <div className="chartList">
-            {skill.map((v: any, i: number) => (
-              <div className="chart">
-                <CircleChart {...v} key={i} />
-              </div>
-            ))}
-          </div>
+        
+        <div className="bookshelf" ref={bookshelfRef}>
+          {skills.map((v: any, key: number) => (
+            <SkillBook key={key} item={v}></SkillBook>
+          ))}
         </div>
       </Rap>
     </SkillsContentStyled>

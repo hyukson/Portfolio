@@ -4,8 +4,9 @@ export const ProjectItemStyled = styled.div`
   width: 75vw;
   min-height: 70vh;
   display: flex;
-  margin-bottom: 5rem;
-  box-shadow: 0 0 15px rgba(0 0 0 / 10%);
+  margin-top: 5rem;
+  background-color: #fff;
+  box-shadow: 0 0 15px rgba(255 255 255 / 10%);
   border-radius: 20px;
   overflow: hidden;
 
@@ -32,7 +33,7 @@ export const ProjectItemStyled = styled.div`
 
     .name {
       font-size: 3rem;
-      font-family: "GmarketBold";
+      font-weight: bold;
     }
 
     .description {
@@ -117,7 +118,7 @@ export const ProjectItemStyled = styled.div`
       margin-top: 2.5rem;
       padding: 0.6rem 0;
       font-size: 1rem;
-      font-family: "GmarketBold";
+      font-weight: bold;
       color: ${(props) => props.theme.lineColor};
     }
   }

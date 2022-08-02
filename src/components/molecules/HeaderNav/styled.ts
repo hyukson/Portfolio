@@ -35,7 +35,7 @@ export const HeaderNavStyled = styled.header`
       right: -100%;
     }
     to {
-      right: 0;
+      right: 0%;
     }
   }
 

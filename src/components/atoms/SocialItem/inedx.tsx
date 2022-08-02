@@ -1,12 +1,7 @@
+import { SocialTypes } from "../../../interfaces/SocialTypes";
 import { SocialItemStyled } from "./styled";
 
-interface SocialItemTypes {
-  icon: string;
-  link: string;
-  content: string;
-}
-
-const SocialItem = ({ icon, link, content }: SocialItemTypes) => {
+const SocialItem = ({ icon, link, content }: SocialTypes) => {
   return (
     <SocialItemStyled>
       <a href={link} className="socialImage">

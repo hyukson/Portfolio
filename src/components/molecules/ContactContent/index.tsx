@@ -1,27 +1,23 @@
+import { SocialTypes } from "../../../interfaces/SocialTypes";
 import Rap from "../../atoms/Rap";
 
 import SectionTitle from "../../atoms/SectionTitle";
 
 import SocialItem from "../../atoms/SocialItem/inedx";
-import ContentItem from "../../atoms/ContentItem/inedx";
-
 import { ContactContentStyled } from "./styled";
 
-interface ContactContentTypes {
-  ContactData: any;
-  socialData: any;
+interface SocialListTypes {
+  socialData: SocialTypes[];
 }
 
-const ContactContent = ({ ContactData, socialData }: ContactContentTypes) => {
+const ContactContent = ({ socialData }: SocialListTypes) => {
   return (
     <ContactContentStyled>
       <Rap>
         <SectionTitle title="CONTACT" />
 
         <div className="flex">
-          <ContentItem data={ContactData} />
-
-          {socialData.map((item: any, i: number) => (
+          {socialData.map((item, i: number) => (
             <SocialItem {...item} key={i} />
           ))}
         </div>

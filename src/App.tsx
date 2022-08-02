@@ -1,33 +1,33 @@
-import React from "react";
-
-import Visual from "./components/atoms/Visual";
+import Introduction from "./components/molecules/Introduction";
 import HeaderNav from "./components/molecules/HeaderNav";
-
-import AboutMe from "./components/organisms/AboutMe";
-
 import SkillsContent from "./components/molecules/SkillsContent";
 import ProjectContent from "./components/molecules/ProjectContent";
 import ContactContent from "./components/molecules/ContactContent";
+import WeatherBox from "./components/molecules/WeatherBox";
+
+import AboutMe from "./components/organisms/AboutMe";
+import Visual from "./components/organisms/Visual";
+
+import { AboutMeTypes } from "./interfaces/AboutMeTypes";
+import { SkillsDataTypes } from "./interfaces/SkillsTypes";
+import { SocialTypes } from "./interfaces/SocialTypes";
+import { ProjectItemTypes } from "./interfaces/ProjectTypes";
 
 function App() {
-  const NavList = ["intro", "about me", "skills", "project", "Contact"];
+  const NavList: string[] = ["visual", "intro", "about me", "skills", "project", "Contact"];
 
   // about
-  const AboutData = {
-    PROFILE: {
-      title: "PROFILE",
+  const AboutData: AboutMeTypes = {
+    LICENCS: {
+      title: "LICENSES",
       icon: {
-        src: "/Portfolio/assets/icons/profile.png",
+        src: "/Portfolio/assets/icons/licencs.png",
       },
       list: [
-        { title: "이름", content: "장혁수" },
-        {
-          title: "나이",
-          content: `${new Date().getFullYear() - 2003}세`,
-        },
-        { title: "주소지", content: "경기도 안산시" },
-        { title: "연락처", content: "010-7255-8076" },
-        { title: "E-mail", content: "hyuksoo128@gmail.com" },
+        { title: "정보처리기능사" },
+        { title: "정보기기운용기능사" },
+        { title: "웹디자인기능사" },
+        { title: "그래픽기술자격(GTQ) 1급" },
       ],
     },
 
@@ -50,138 +50,124 @@ function App() {
       ],
     },
 
-    LICENCS: {
-      title: "LICENSES",
+    PROFILE: {
+      title: "PROFILE",
       icon: {
-        src: "/Portfolio/assets/icons/licencs.png",
+        src: "/Portfolio/assets/icons/profile.png",
       },
       list: [
-        { title: "정보처리 기능사" },
-        { title: "웹디자인 기능사" },
-        { title: "그래픽기술자격(GTQ) 1급" },
+        { title: "이름", content: "장혁수" },
+        {
+          title: "나이",
+          content: `${new Date().getFullYear() - 2003}세`,
+        },
+        { title: "주소지", content: "경기도 안산시" },
+        { title: "연락처", content: "010-7255-8076" },
+        { title: "E-mail", content: "hyuksoo128@gmail.com" },
       ],
     },
   };
 
   // skills
-  const SkillsData = {
-    Front: {
+  const SkillsData: SkillsDataTypes[] = [
+    {
       title: "Front-end",
       items: [
         {
           title: "HTML",
           src: "/Portfolio/assets/images/skills/html.png",
+          useSkill: ["INPUT, SELECT, FROM 등을 사용한 폼을 구현할 수 있습니다.", "반응형 웹사이트에 적합한 구조를 구성하고 구현할 수 있습니다."],
           content:
             "기능경기대회를 준비하는 과정에서 HTML를 꾸준히 공부하였고, 반응형 웹사이트에 적합한 구조를 구성할 수 있습니다.",
-          skill: 90,
         },
         {
           title: "CSS",
           src: "/Portfolio/assets/images/skills/css.png",
+          useSkill: ["반응형 레이아웃에 맞는 적절한 스타일을 적용할 수 있습니다.", "HTML와 같이 활용하여 효율적인 구조를 사용할 수 있습니다."],
           content:
-            "CSS를 사용한 다양한 반응형 레이아웃 구현이 가능하며, 애니메이션 기능을 구현할 수 있습니다.",
-          skill: 90,
+            "다양한 웹사이트를 구현하는데 CSS를 사용하였고, CSS를 사용한 다양한 반응형 레이아웃 구현이 가능하며, 애니메이션 기능을 구현할 수 있습니다.",
         },
         {
           title: "JavaScript",
           src: "/Portfolio/assets/images/skills/js.png",
+          useSkill: ["ES6 문법을 사용한 다양한 기능을 구현할 수 있습니다.", "Promise문을 이용하여 데이터 처리를 할 수 있습니다."],
           content:
-            "ES6 문법을 사용하여 다양한 기능을 구현, 활용할 수 있으며 해당 언어를 통해 기능 경기대회에서 우수한 성적을 거둔 경험이 있습니다.",
-          skill: 90,
+            "기능경기대회를 준비하며 구현한 다양한 기능과 백엔드와의 연결, React를 활용한 다양한 작품을 만들 수 있습니다. ",
         },
         {
           title: "TypeScript",
           src: "/Portfolio/assets/images/skills/typescript.png",
+          useSkill: ["상속과 인터페이스를 사용할 수 있습니다."],
           content:
-            "상속과 인터페이스를 사용할 수 있으며, type을 다룰 수 있습니다. 다양한 React, Next.js 프로젝트에서 Typescript 기반으로 기능을 구현한 경험이 있습니다.",
-          skill: 70,
+            "기존에 지니고 있던 JavaScript 지식에 더해 다양한 타입을 지정할 수 있으며 React, Next.js 프로젝트에서 Typescript 기반으로 기능을 구현한 경험이 있습니다.",
         },
         {
           title: "JQUERY",
           src: "/Portfolio/assets/images/skills/jquery.png",
+          useSkill: [],
           content:
             "Jquery를 이용한 다양한 기능, DOM 객체 활용과 이벤트 속성을 관리할 수 있습니다.",
-          skill: 90,
         },
         {
           title: "SASS",
           src: "/Portfolio/assets/images/skills/sass.png",
+          useSkill: ["SASS를 활용해 페이지를 디자인 할 수 있습니다."],
           content: "변수 선언과 연산, 상속 등에 대해 이해, 활용할 수 있습니다.",
-          skill: 60,
         },
         {
           title: "React",
           src: "/Portfolio/assets/images/skills/react.png",
+          useSkill: ["다양한 디자인 패턴을 활용해 React를 사용할 수 있습니다."],
           content:
             "React Hooks, 컴포넌트, state에 대해 이해와 사용한 경험이 있습니다. ",
-          skill: 80,
         },
         {
           title: "Next.js",
           src: "/Portfolio/assets/images/skills/next_js.png",
+          useSkill: [],
           content:
             "Next.js를 활용하여 다양한 페이지를 개발한 경험이 있으며, React로 제작한 프로젝트를 Next.js로 리펙토링한 경험이 있습니다.",
-          skill: 50,
         },
       ],
     },
-    Back: {
+    {
       title: "Back-end",
       items: [
         {
           title: "PHP",
           src: "/Portfolio/assets/images/skills/php.png",
+          useSkill: ["페이지 구현 및 백엔드 기능을 구현할 수 있습니다."],
           content:
             "PHP를 사용하여 Back-end의 기능(데이터베이스 연동, 로그인, 회원가입)등의 기능 구현과 API와 연동, 제작 할 수 있습니다.",
-          skill: 80,
         },
         {
           title: "MySQL",
           src: "/Portfolio/assets/images/skills/mysql.png",
+          useSkill: ["데이터베이스를 구축하여 백엔드와 연결한 경험이 있습니다."],
           content:
             "MYSQL 활용하여 데이터베이스와 SQL에 대한 이해를 가지고 있으며, SQL를 활용하여 다양한 백엔드 기능을 개발한 경험이 있습니다.",
-          skill: 80,
         },
         {
           title: "Node.js",
           src: "/Portfolio/assets/images/skills/node.png",
+          useSkill: ["API를 제작하고 다양한 라이브러리를 활용하여 개발을 할 수 있습니다."],
           content:
             "MYSQL 활용하여 데이터베이스와 SQL에 대한 이해를 가지고 있으며, SQL를 활용하여 다양한 백엔드 기능을 개발한 경험이 있습니다.",
-          skill: 40,
         },
       ],
     },
-    Moblie: {
-      title: "Mobile Application",
-      items: [
-        {
-          title: "Kotlin",
-          src: "/Portfolio/assets/images/skills/kotlin.png",
-          content:
-            "kotlin을 사용하여 리스트 형식의 액티비티를 구성할 수 있으며, API와 연결, 호출이 가능합니다. 라이브러리를 사용하여 다양한 기능 구현을 경험했습니다.",
-          skill: 50,
-        },
-        {
-          title: "Flutter",
-          src: "/Portfolio/assets/images/skills/flutter.png",
-          content:
-            "flutter을 사용하여 리스트 형식의 액티비티를 구성할 수 있으며, 라이브러리를 사용하여 다양한 기능 구현을 경험해보았습니다.",
-          skill: 40,
-        },
-      ],
-    },
-  };
+  ];
 
   // Project
-  const projectData = [
+  const projectData: ProjectItemTypes[] = [
     {
       title: "포트폴리오",
       description: "저를 소개하기 위해 제작한 포트폴리오용 사이트입니다.",
       image: "/Portfolio/assets/images/portfolio.png",
       mainSkills: [
-        "간단한 인적사항과 자기소개",
-        "진행한 프로젝트 github 링크",
-        "활용 가능한 기술 소개",
+        "React와 Typescript를 활용하여 구현하였습니다.",
+        "styled-components와 router-dom 라이브러리를 활용하였습니다.",
+        "SCSS를 활용하여 반응형 페이지를 구현하였습니다.",
       ],
       social: [
         {
@@ -199,9 +185,8 @@ function App() {
         "영화 추천을 받고 싶은 분들을 위해 제작한 Next.js를 사용한 추천사이트입니다.",
       image: "/Portfolio/assets/images/movieInfo.png",
       mainSkills: [
-        "다양한 최신 영화의 추천 기능",
-        "검색을 통한 정보 찾기",
-        "명작 영화를 소개",
+        "Next.JS의 Pages 기능을 이용한 페이지를 구현하였습니다.",
+        "Movie API와 Axios를 응용하여 구현하였습니다.",
       ],
       social: [
         {
@@ -210,17 +195,33 @@ function App() {
           link: "https://github.com/hyukson/MovieInfo",
         },
       ],
-      link: "https://main.d5d7mrdnguzvo.amplifyapp.com/",
+      link: "https://main.d3alpqfqshgdtz.amplifyapp.com/",
       useSkills: ["Next.js", "TypeScript", "SCSS", "JavaScript", "HTML", "CSS"],
+    },
+    {
+      title: "다른 색깔 찾기 게임",
+      description: "색깔이 다른 박스를 찾아 최대한 오래 버티는 게임입니다.",
+      image: "/Portfolio/assets/images/color_diff.png",
+      mainSkills: [
+        "JS로 구현한 기능을 React로 리펙토리 하였습니다.",
+        "useEffect, useCallback, useMemo로 렌더링을 최적화 하였습니다.",
+      ],
+      social: [
+        {
+          name: "github",
+          icon: "/Portfolio/assets/icons/github.png",
+          link: "https://github.com/hyukson/color_diff",
+        },
+      ],
+      link: "https://main.d18xumb8hyzm93.amplifyapp.com/",
+      useSkills: ["React", "TypeScript", "SCSS", "JavaScript", "HTML", "CSS"],
     },
     {
       title: "동물 달리기 내기 게임",
       description: "동물들이 달리며 내기의 순위를 정해주는 사이트입니다.",
       image: "/Portfolio/assets/images/runGame.png",
       mainSkills: [
-        "직접 제작한 귀여운 동물과 함께 즐기는 내기 게임",
-        "최대 4명까지의 동물을 선택 가능",
-        "빠른 내기 진행이 가능",
+        "Jquery를 이용한 DOM을 활용할 수 있습니다.",
       ],
       social: [
         {
@@ -229,7 +230,7 @@ function App() {
           link: "https://github.com/hyukson/RunGame",
         },
       ],
-      link: "https://main.dff64qk22x1jb.amplifyapp.com/",
+      link: "https://main.d20gbq82ups5ju.amplifyapp.com/",
       useSkills: [
         "JavaScript",
         "HTML",
@@ -244,9 +245,7 @@ function App() {
       description: "테트리스 게임을 캔버스를 이용한 JS코드로 제작해보았습니다.",
       image: "/Portfolio/assets/images/tetris.png",
       mainSkills: [
-        "캔버스와 JS로 제작한 테트리스 게임",
-        "블럭을 최대한 많이 지워 점수 갱신하기",
-        "테트리스 조작키를 그대로 계승",
+        "Canavs를 베이스로 JavaScript를 이용하여 제작하였습니다.",
       ],
       social: [
         {
@@ -255,43 +254,34 @@ function App() {
           link: "https://github.com/hyukson/Tetris",
         },
       ],
-      link: "https://main.d29a2g0rjiyzes.amplifyapp.com/",
+      link: "https://main.d3ghfd65sa1mqc.amplifyapp.com/",
       useSkills: ["JavaScript", "HTML", "CSS"],
     },
   ];
 
-  // Conatct
-  const ContactData = [
-    {
-      title: "연락처",
-      icon: "/Portfolio/assets/icons/phone.png",
-      content: "010-7255-8076",
-    },
-    {
-      title: "이메일",
-      icon: "/Portfolio/assets/icons/email.png",
-      content: "hyuksoo128@gmail.com",
-    },
-  ];
-
-  const socialData = [
+  // contact
+  const socialData: SocialTypes[] = [
     {
       icon: "/Portfolio/assets/icons/github_title.png",
       link: "https://github.com/hyukson",
       content: "제작한 소스 코드를 저장하는 주 공간입니다.",
     },
-    // {
-    //   icon: "/Portfolio/assets/icons/tistory_title.png",
-    //   link: "https://gurtn.tistory.com",
-    //   content: "코드와 관련된 지식 공유 목적의 블로그입니다.",
-    // },
+    {
+      icon: "/Portfolio/assets/icons/tistory_title.png",
+      link: "https://gurtn.tistory.com",
+      content: "기록과 지식 공유 목적의 블로그입니다.",
+    },
   ];
 
   return (
     <div className="wrap">
       <HeaderNav NavList={NavList} />
 
-      <Visual isLineAni={true} />
+      <Visual />
+
+      <WeatherBox />
+
+      <Introduction />
 
       <AboutMe AboutData={AboutData} />
 
@@ -299,7 +289,7 @@ function App() {
 
       <ProjectContent projectData={projectData} />
 
-      <ContactContent ContactData={ContactData} socialData={socialData} />
+      <ContactContent socialData={socialData} />
     </div>
   );
 }

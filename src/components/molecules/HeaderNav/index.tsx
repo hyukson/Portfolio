@@ -1,17 +1,23 @@
-import NavItem from "../../atoms/NavItem";
+import { useEffect, useRef } from "react";
 import { HeaderNavStyled } from "./styled";
+
+import NavItem from "../../atoms/NavItem";
 
 interface HeaderNavTypes {
   NavList: String[];
 }
 
 const HeaderNav = ({ NavList }: HeaderNavTypes) => {
-  const moveScroll = (idx: number) => {
-    const section = document.querySelectorAll("section");
+  const sectionRef = useRef([]) as any;
 
+  useEffect(() => {
+    sectionRef.current = document.querySelectorAll("section");
+  }, []);
+
+  const moveScroll = (idx: number) => {
     // 네비게이션 이동
     window.scrollTo({
-      top: section[idx].offsetTop,
+      top: sectionRef.current[idx].offsetTop,
       behavior: "smooth",
     });
   };
