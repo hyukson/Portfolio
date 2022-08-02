@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import { IntroductionStyled } from "./styled";
 
-import { ObserverOptionTypes } from "../../../interfaces/observerOptionTypes";
+import { ObserverOptionTypes } from "../../../interfaces/ObserverTypes";
 
 const Introduction = () => {
   const lightRef = useRef() as any;

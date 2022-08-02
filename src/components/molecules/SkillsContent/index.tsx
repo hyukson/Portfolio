@@ -1,5 +1,5 @@
 import { useEffect, useRef } from "react";
-import { ObserverOptionTypes } from "../../../interfaces/observerOptionTypes";
+import { ObserverOptionTypes } from "../../../interfaces/ObserverTypes";
 import { SkillItemTypes, SkillsDataTypes } from "../../../interfaces/SkillsTypes";
 
 import Rap from "../../atoms/Rap";
