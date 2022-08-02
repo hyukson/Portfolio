@@ -5,7 +5,7 @@ interface SkillsBookTypes {
   item: SkillItemTypes;
 }
 
-const SkillBook = ({item}: SkillsBookTypes) => {
+const SkillBook = ({ item }: SkillsBookTypes) => {
   return (
     <SkillBookStyled>
       <div className="book">
@@ -15,7 +15,7 @@ const SkillBook = ({item}: SkillsBookTypes) => {
 
         <div className="cover coverFront"></div>
         <div className="cover paper">
-          <img className="logo" src={item.src}></img>
+          <img className="logo" title="cover" alt="cover" src={item.src}></img>
 
           <h2>{item.title}</h2>
 

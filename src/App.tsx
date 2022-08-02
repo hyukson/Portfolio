@@ -1,13 +1,12 @@
 import Introduction from "./components/molecules/Introduction";
 import HeaderNav from "./components/molecules/HeaderNav";
-
-import AboutMe from "./components/organisms/AboutMe";
-
 import SkillsContent from "./components/molecules/SkillsContent";
 import ProjectContent from "./components/molecules/ProjectContent";
 import ContactContent from "./components/molecules/ContactContent";
-import Visual from "./components/organisms/Visual";
 import WeatherBox from "./components/molecules/WeatherBox";
+
+import AboutMe from "./components/organisms/AboutMe";
+import Visual from "./components/organisms/Visual";
 
 import { AboutMeTypes } from "./interfaces/AboutMeTypes";
 import { SkillsDataTypes } from "./interfaces/SkillsTypes";
