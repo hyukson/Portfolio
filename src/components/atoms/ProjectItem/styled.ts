@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const ProjectItemStyled = styled.div`
-  width: 75vw;
+  width: 70vw;
   min-height: 70vh;
   display: flex;
   margin-top: 5rem;
@@ -12,7 +12,6 @@ export const ProjectItemStyled = styled.div`
 
   .projectImage {
     width: 40%;
-    height: 70vh;
     position: relative;
     transition: 0.5s;
 
@@ -25,15 +24,13 @@ export const ProjectItemStyled = styled.div`
 
   .projectContent {
     padding: 2rem 4rem;
-    text-transform: capitalize;
-
     display: flex;
     flex-direction: column;
     justify-content: center;
 
     .name {
       font-size: 3rem;
-      font-weight: bold;
+      font-weight: 900;
     }
 
     .description {
@@ -42,6 +39,7 @@ export const ProjectItemStyled = styled.div`
 
     // 주요기능
     .mainSkills {
+      min-height: 10rem;
       font-size: 1.2rem;
 
       p {
@@ -64,15 +62,13 @@ export const ProjectItemStyled = styled.div`
 
     // 사용한 기술
     .useSkills {
-      .box span {
-        margin-right: 1rem;
-        margin-bottom: 1rem;
+      span {
+        margin-right: .4rem;
         display: inline-block;
-        font-size: 1.2rem;
-        color: #666;
+        text-transform: capitalize;
 
         :nth-child(-n + 3) {
-          color: #000;
+          font-size: 1.2rem;
 
           :after {
             content: "";

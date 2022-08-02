@@ -76,7 +76,7 @@ function App() {
         {
           title: "HTML",
           src: "/Portfolio/assets/images/skills/html.png",
-          useSkill: ["INPUT, SELECT, FROM 등을 사용한 폼을 구현할 수 있습니다.", "반응형 웹사이트에 적합한 구조를 구성하고 구현할 수 있습니다."],
+          useSkill: ["웹 표준과 웹 접근성을 준수하는 구조설계를 작성할 수 있습니다.", "반응형 웹사이트에 적합한 구조를 구성하고 구현할 수 있습니다."],
           content:
             "기능경기대회를 준비하는 과정에서 HTML를 꾸준히 공부하였고, 반응형 웹사이트에 적합한 구조를 구성할 수 있습니다.",
         },
