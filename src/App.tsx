@@ -104,7 +104,7 @@ function App() {
         {
           title: "JQUERY",
           src: "/Portfolio/assets/images/skills/jquery.png",
-          useSkill: [],
+          useSkill: ["Jquery-ui 기능을 구현 및 응용할 수 있습니다."],
           content:
             "Jquery를 이용한 다양한 기능, DOM 객체 활용과 이벤트 속성을 관리할 수 있습니다.",
         },

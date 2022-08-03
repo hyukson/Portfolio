@@ -3,9 +3,13 @@ import styled from "styled-components";
 export const SkillBookStyled = styled.div`  
   height: 26rem;
   margin-bottom: 4rem;
-
+  
   &:hover {
-    z-index: 22;
+    animation: zIndex .3s forwards;
+  }
+
+  @keyframes zIndex {
+    to { z-index: 22; }
   }
 
   &:hover .book {
@@ -85,6 +89,7 @@ export const SkillBookStyled = styled.div`
       background-color: #fff !important;
       padding: 1rem 2rem;
       backface-visibility: hidden;
+      pointer-events: none;
 
       .logo {
         object-fit: scale-down;

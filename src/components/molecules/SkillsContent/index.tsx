@@ -30,8 +30,6 @@ const SkillsContent = ({ SkillsData }: SkillsContentTypes) => {
       });
     }, options);
 
-    observer.observe(bookshelfRef.current);
-
     [...bookshelfRef.current.children].map(el => observer.observe(el));
   }, []);
 
