@@ -10,7 +10,7 @@ import WeatherBox from "./components/molecules/WeatherBox";
 import AboutMe from "./components/organisms/AboutMe";
 import Visual from "./components/organisms/Visual";
 
-import { AboutMeTypes } from "./interfaces/AboutMeTypes";
+import { AboutMeItemTypes } from "./interfaces/AboutMeTypes";
 import { SkillsDataTypes } from "./interfaces/SkillsTypes";
 import { SocialTypes } from "./interfaces/SocialTypes";
 import { ProjectItemTypes } from "./interfaces/ProjectTypes";
@@ -19,12 +19,9 @@ function App() {
   const NavList: string[] = ["visual", "intro", "about me", "skills", "project", "Contact"];
 
   // about
-  const AboutData: AboutMeTypes = {
-    LICENCS: {
+  const AboutData: AboutMeItemTypes[] = [
+    {
       title: "LICENSES",
-      icon: {
-        src: "/Portfolio/assets/icons/licencs.png",
-      },
       list: [
         { title: "정보처리기능사" },
         { title: "정보기기운용기능사" },
@@ -33,11 +30,8 @@ function App() {
       ],
     },
 
-    CAREER: {
+    {
       title: "CAREER",
-      icon: {
-        src: "/Portfolio/assets/icons/career.png",
-      },
       list: [
         {
           title: "2022",
@@ -52,11 +46,8 @@ function App() {
       ],
     },
 
-    PROFILE: {
+    {
       title: "PROFILE",
-      icon: {
-        src: "/Portfolio/assets/icons/profile.png",
-      },
       list: [
         { title: "이름", content: "장혁수" },
         {
@@ -68,7 +59,7 @@ function App() {
         { title: "E-mail", content: "hyuksoo128@gmail.com" },
       ],
     },
-  };
+  ];
 
   // skills
   const SkillsData: SkillsDataTypes[] = [
