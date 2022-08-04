@@ -1,3 +1,5 @@
+import Loader from "./components/atoms/Loader";
+
 import Introduction from "./components/molecules/Introduction";
 import HeaderNav from "./components/molecules/HeaderNav";
 import SkillsContent from "./components/molecules/SkillsContent";
@@ -275,6 +277,8 @@ function App() {
 
   return (
     <div className="wrap">
+      <Loader />
+
       <HeaderNav NavList={NavList} />
 
       <Visual />
