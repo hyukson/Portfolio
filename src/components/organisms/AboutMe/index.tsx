@@ -4,8 +4,6 @@ import { AboutMeStyled } from "./styled";
 import SectionTitle from "../../atoms/SectionTitle";
 import Rap from "../../atoms/Rap";
 
-import SlideCardWrap from "../../molecules/SlideCardWrap";
-
 import { AboutMeTypes } from "../../../interfaces/AboutMeTypes";
 
 interface AboutDataTypes {
@@ -18,7 +16,6 @@ const AboutMe = ({ AboutData }: AboutDataTypes) => {
       <Rap>
         <SectionTitle title="ABOUT ME" color="#f0f0fa" />
 
-        <SlideCardWrap AboutData={AboutData} />
       </Rap>
     </AboutMeStyled>
   );
