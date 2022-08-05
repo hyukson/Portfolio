@@ -1,4 +1,6 @@
 import { useEffect, useRef } from "react";
+import { ObserverOptionTypes } from "../../../interfaces/ObserverTypes";
+import observer from "../../../utils/observer";
 import { CodeBlockStyled } from "./styled";
 
 interface CodeBlockTypes {
@@ -7,6 +9,7 @@ interface CodeBlockTypes {
 
 const CodeBlock = ({codes}: CodeBlockTypes) => {
   const lineRef = useRef<(HTMLDivElement | null)[]>([]);
+  const codeBlockRef = useRef<any>();
 
   useEffect(() => {
     // 딜레이 기능 ( 마이크로초 )
@@ -56,10 +59,21 @@ const CodeBlock = ({codes}: CodeBlockTypes) => {
       codes.length && typing();
     };
 
-    setTimeout(typing, 2800);
+    const options: ObserverOptionTypes  = {
+      root: null,
+      rootMargin: "10px",
+      threshold: .1,
+    };
+
+    const show = (entry: IntersectionObserverEntry) => {
+      console.log(entry);
+      entry.isIntersecting && typing();
+    }
+    console.log(codeBlockRef.current);
+    observer({options, targets: codeBlockRef.current, callback: show});
   }, [codes]);
 
-  return <CodeBlockStyled>
+  return <CodeBlockStyled ref={codeBlockRef}>
     <div className="header">
       <div className="mac">
         <div></div><div></div><div></div>
