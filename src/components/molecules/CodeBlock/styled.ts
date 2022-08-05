@@ -39,34 +39,13 @@ export const CodeBlockStyled = styled.div`
         }
       }
     }
-
-    .tabList {
-      width: calc(100% - 8rem);
-      height: 100%;
-      color: #f9f9f9; 
-      display: flex;
-      
-      > div {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-        min-width: 10rem;
-        height: 100%;
-        border-radius: 1rem 1rem 0 0;
-        margin-right: .3rem;
-        background: #3e4257;
-
-        cursor: pointer;
-      }
-    }
   }
 
   .codeBlock {
     width: 100%;
     height: 40rem;
     background-color: #282a36; 
-    padding: 2rem;
+    padding: 1.5rem;
     border-radius: 0px 0px 10px 10px;
 
     white-space: pre;
@@ -76,23 +55,66 @@ export const CodeBlockStyled = styled.div`
       display: flex;
       font-size: 1.5rem;
 
+      @media only screen and (max-width: 800px) {
+        font-size: 1.4rem;
+      }
+
+      @media only screen and (max-width: 600px) {
+        font-size: 1.3rem;
+      }
+
       .num {
+        width: 2rem;
         text-align: center;
         color: rgb(170 170 170 / 40%);
       }
       
       .code {
         padding-left: 1.1rem;
-        color: #c0c0ca;
+        color: #eee;
 
+        b {
+          color: #ffcd34;
+          font-weight: 700;
+        }
+
+        /* color */
+        span.green {
+          color: #acf656;
+        }
+
+        span.lightGreen {
+          color: #e7db74;
+        }
+
+        span.red {
+          color: #89ddf1;
+        }
+
+        span.pink {
+          color: #ffb3f9;
+        }
+
+        span.gray {
+          color: #a0a1a7;
+        }
+
+        span.skyblue {
+          color: #89ddf1;
+        }
+
+        span.script {
+          color: #f92472;
+        }
+
+        /* cursor */
         &.cursor {
-          border-right: 2px solid #282a36;
           padding-right: .4rem;
-          animation: cursor .9s infinite steps(2);
+          animation: cursor .6s infinite steps(2);
 
           @keyframes cursor {
-            from { border-right: 2px solid #282a36; }
-            to { border-right: 2px solid #777; }
+            from { border-right: 1px solid #282a36; }
+            to { border-right: 1px solid #ddd; }
           }
         }
       }

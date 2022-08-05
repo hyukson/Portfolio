@@ -82,11 +82,12 @@ export const LoaderStyled = styled.div`
     animation: scale .4s forwards ease-in-out;
     margin-right: 2px;
     animation-delay: .4s;
+    opacity: 0;
   }
 
   @keyframes scale {
-    from {transform: scale(.1)}
-    to {transform: scale(1)}
+    from {transform: scale(.1); opacity: 0;}
+    to {transform: scale(1); opacity: 1;}
   }
 
   .blurBox > .pick::before,
