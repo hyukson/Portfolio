@@ -67,6 +67,7 @@ export const CodeBlockStyled = styled.div`
         width: 2rem;
         text-align: center;
         color: rgb(170 170 170 / 40%);
+        user-select: none;
       }
       
       .code {
