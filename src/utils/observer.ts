@@ -7,6 +7,8 @@ const observer = ({options, targets, callback}: ObserverTypes) => {
 
   if (targets.length) {  
     [...targets].map(el => observer.observe(el));
+  } else {
+    observer.observe(targets);
   }
 }
 
