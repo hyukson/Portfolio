@@ -49,10 +49,6 @@ export const GlobalStyled = createGlobalStyle`
     color: inherit;
   }
 
-  b {
-    font-family: "CookieRunBold";
-  }
-
   // 1150px 반응형
   @media only screen and (max-width: 1150px) {
     html, body {

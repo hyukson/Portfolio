@@ -5,8 +5,6 @@ export const AboutMeStyled = styled.section`
   height: 100%;
   background: linear-gradient(to right, #111, #0e0f19);
 
-  user-select: none;
-
   @media only screen and (max-width: 600px) {
     min-height: 500px;
   }

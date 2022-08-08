@@ -1,6 +1,7 @@
 import { useEffect, useRef } from "react";
 import { ObserverOptionTypes } from "../../../interfaces/ObserverTypes";
 import { SkillItemTypes, SkillsDataTypes } from "../../../interfaces/SkillsTypes";
+import observer from "../../../utils/observer";
 
 import Rap from "../../atoms/Rap";
 import SectionTitle from "../../atoms/SectionTitle";
@@ -23,14 +24,12 @@ const SkillsContent = ({ SkillsData }: SkillsContentTypes) => {
       rootMargin: "10px",
       threshold: .1,
     };
-      
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        entry.target.classList[entry.isIntersecting ? "add" : "remove"]("view");
-      });
-    }, options);
 
-    [...bookshelfRef.current.children].map(el => observer.observe(el));
+    const show = (entry: IntersectionObserverEntry) => {
+      entry.target.classList[entry.isIntersecting ? "add" : "remove"]("view");
+    }
+
+    observer({options, targets: [...bookshelfRef.current.children], callback: show});
   }, []);
 
   return (

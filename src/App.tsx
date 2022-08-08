@@ -1,6 +1,5 @@
 import Loader from "./components/atoms/Loader";
 
-import Introduction from "./components/molecules/Introduction";
 import HeaderNav from "./components/molecules/HeaderNav";
 import SkillsContent from "./components/molecules/SkillsContent";
 import ProjectContent from "./components/molecules/ProjectContent";
@@ -10,65 +9,12 @@ import WeatherBox from "./components/molecules/WeatherBox";
 import AboutMe from "./components/organisms/AboutMe";
 import Visual from "./components/organisms/Visual";
 
-import { AboutMeTypes } from "./interfaces/AboutMeTypes";
 import { SkillsDataTypes } from "./interfaces/SkillsTypes";
 import { SocialTypes } from "./interfaces/SocialTypes";
 import { ProjectItemTypes } from "./interfaces/ProjectTypes";
 
 function App() {
-  const NavList: string[] = ["visual", "intro", "about me", "skills", "project", "Contact"];
-
-  // about
-  const AboutData: AboutMeTypes = {
-    LICENCS: {
-      title: "LICENSES",
-      icon: {
-        src: "/Portfolio/assets/icons/licencs.png",
-      },
-      list: [
-        { title: "정보처리기능사" },
-        { title: "정보기기운용기능사" },
-        { title: "웹디자인기능사" },
-        { title: "그래픽기술자격(GTQ) 1급" },
-      ],
-    },
-
-    CAREER: {
-      title: "CAREER",
-      icon: {
-        src: "/Portfolio/assets/icons/career.png",
-      },
-      list: [
-        {
-          title: "2022",
-          content:
-            "2022 상하이 국제올림픽 국가대표 선발전 모바일 앱 개발 2위 \n 2022 제2회 모바일 앱 개발 민간기능경기대회 은상 (2위)",
-        },
-        {
-          title: "2021",
-          content:
-            "2021 경기도 기능경기대회 금상 (1위) \n 2021 전국 기능경기대회 은상 (2위)",
-        },
-      ],
-    },
-
-    PROFILE: {
-      title: "PROFILE",
-      icon: {
-        src: "/Portfolio/assets/icons/profile.png",
-      },
-      list: [
-        { title: "이름", content: "장혁수" },
-        {
-          title: "나이",
-          content: `${new Date().getFullYear() - 2003}세`,
-        },
-        { title: "주소지", content: "경기도 안산시" },
-        { title: "연락처", content: "010-7255-8076" },
-        { title: "E-mail", content: "hyuksoo128@gmail.com" },
-      ],
-    },
-  };
+  const NavList: string[] = ["visual", "about me", "skills", "project", "Contact"];
 
   // skills
   const SkillsData: SkillsDataTypes[] = [
@@ -285,9 +231,7 @@ function App() {
 
       <WeatherBox />
 
-      <Introduction />
-
-      <AboutMe AboutData={AboutData} />
+      <AboutMe />
 
       <SkillsContent SkillsData={SkillsData} />
 
