@@ -51,7 +51,7 @@ const CodeBlock = ({ codes }: CodeBlockTypes) => {
     }
   
     // 잠시 대기
-    await wait(600);
+    await wait(400);
 
     $text.classList.remove('cursor');
 
