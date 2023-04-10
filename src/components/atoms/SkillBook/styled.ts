@@ -145,7 +145,7 @@ export const SkillBookStyled = styled.div`
     .coverBack {
       bottom: 0;
       left: 100%;
-      transition: transform .4s ease-in-out; 
+      transition: transform .4s; 
       pointer-events: none;
 
       display: flex;

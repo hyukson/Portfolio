@@ -80,12 +80,12 @@ const WeatherAni = ({nowWeather}: WeatherAniTypes) => {
     data.forEach((v: any) => {
       ctx.beginPath();
       
-      const gradient = ctx.createLinearGradient(v.x, v.y, v.x + 3, v.y + v.size);
-      gradient.addColorStop(1, `rgba(255, 255, 255, .2)`);
+      const gradient = ctx.createLinearGradient(v.x, v.y, v.x + 1, v.y + v.size);
+      gradient.addColorStop(1, `rgba(255, 255, 255, .1)`);
       gradient.addColorStop(0, `transparent`);
       
       ctx.fillStyle = gradient;
-      ctx.fillRect(v.x, v.y, 3, v.size);
+      ctx.fillRect(v.x, v.y, 1, v.size);
       ctx.closePath();
     });
   };
@@ -93,7 +93,7 @@ const WeatherAni = ({nowWeather}: WeatherAniTypes) => {
   const makeSnow = () => {
     data.length = 0;
 
-    while(data.length < 200) {
+    while(data.length < 300) {
       const x = Math.random() * width;
       const y = Math.random() * height;
 
@@ -104,23 +104,32 @@ const WeatherAni = ({nowWeather}: WeatherAniTypes) => {
       data.push({x, y, size, speed, dir});
     }
 
-    handle.current.push(setInterval(moveSnow, 30));
+    handle.current.push(setInterval(moveSnow, 20));
   }
 
   const moveSnow = () => {
+
     for (let i = 0; i < data.length; i++) {
-      const speed = data[i].speed;
+      const item = data[i];
 
-      data[i].x += data[i].dir * speed;
-      data[i].y += speed;
-      
-      if (Math.floor(Math.random() * 100) === 1) {
-        data[i].dir *= -1;
-      }
+      // 방향에 맞게 이동
+      item.x += item.dir * item.speed;
+      item.y += item.speed;
 
-      if (data[i].y > height) {
-        data[i].y = -data[i].size;
+      // 캔버스를 벗어났는지 판단
+      const isMinOverPositionX = -item.size > item.x;
+      const isMaxOverPositionX = item.x > width;
+      const isOverPositionY = item.y > height;
+
+      // 벗어나면 반대방향, 맨 위로
+      if (isMinOverPositionX || isMaxOverPositionX) {
+        item.dir *= -1;
       }
+      if (isOverPositionY) {
+        item.y = -item.size;
+      }
+  
+      data[i] = item;
     }
 
     drawSnow();
@@ -133,7 +142,7 @@ const WeatherAni = ({nowWeather}: WeatherAniTypes) => {
 
     data.forEach((v: any) => {
       ctx.beginPath();
-      ctx.fillStyle = `rgba(255, 255, 255, .6)`;
+      ctx.fillStyle = `rgba(255, 255, 255, .4)`;
       ctx.arc(v.x, v.y, v.size, 0, Math.PI * 2);
       ctx.fill();
       ctx.closePath();
