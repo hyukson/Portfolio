@@ -13,10 +13,10 @@ export const VisualStyled = styled.section`
   align-items: flex-end;
 
   .text {
-    color: rgba(0, 0, 0, .1);
+    color: rgba(0, 0, 0, .4);
     font-weight: bold;
 
-    top: 22vh;
+    top: 25vh;
     width: 100%;
     position: absolute;
 
@@ -25,9 +25,8 @@ export const VisualStyled = styled.section`
     font-weight: 900;
     font-size: 3.8rem;
 
-    -webkit-text-stroke: 3px #febf00;
-
     h2 {
+      -webkit-text-stroke: 3px #febf00;
       transition: transform .3s ease-out;
     }
 
@@ -36,11 +35,9 @@ export const VisualStyled = styled.section`
     }
   }
 
-  .userImage img {
-    width: 25rem;
-    position: relative;
-    pointer-events: none;
-    user-select: none;
+  p {
+    color: #fff;
+    margin-top: 6.4rem;
   }
 
   .circle {
