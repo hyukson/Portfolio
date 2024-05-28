@@ -143,7 +143,7 @@ function App() {
           link: "https://github.com/hyukson/MovieInfo",
         },
       ],
-      link: "https://main.d3alpqfqshgdtz.amplifyapp.com/",
+      link: "https://movie-info-mu-roan.vercel.app/",
       useSkills: ["Next.js", "TypeScript", "SCSS", "JavaScript", "HTML", "CSS"],
     },
     {
