@@ -124,7 +124,7 @@ const AniGridLine = ({width, height}: AniGridLineTypes) => {
   }
 
   const makeLine = (e: any) => {    
-    if (stacks.filter(v => v.stack.length).length > 50) {
+    if (stacks.filter(v => v.stack.length).length > 120) {
       return;
     }
 
