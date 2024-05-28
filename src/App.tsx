@@ -134,7 +134,7 @@ function App() {
       image: "/Portfolio/assets/images/movieInfo.png",
       mainSkills: [
         "Next.JS의 Pages 기능을 이용한 페이지를 구현하였습니다.",
-        "Movie API와 Axios를 응용하여 구현하였습니다.",
+        "REST API와 Axios 라이브러리를 응용하였습니다.",
       ],
       social: [
         {
@@ -145,6 +145,28 @@ function App() {
       ],
       link: "https://movie-info-mu-roan.vercel.app/",
       useSkills: ["Next.js", "TypeScript", "SCSS", "JavaScript", "HTML", "CSS"],
+    },
+    {
+      title: "실시간 채팅",
+      description: "Socket.IO를 사용하여 제작한 간단한 실시간 채팅이 가능한 사이트입니다.",
+      image: "/Portfolio/assets/images/chat.png",
+      mainSkills: [
+        "Socket.Io 라이브러리를 사용하여 웹 소켓 방식의 양방향 통신 기능을 개발하였습니다.",
+      ],
+      social: [
+        {
+          name: "github",
+          icon: "/Portfolio/assets/icons/github.png",
+          link: "https://github.com/hyukson/Chat",
+        },
+      ],
+      link: "https://chat-hyukson.koyeb.app/",
+      useSkills: [
+        "JavaScript",
+        "Socket.Io",
+        "HTML",
+        "CSS",
+      ],
     },
     {
       title: "다른 색깔 찾기 게임",
@@ -163,30 +185,6 @@ function App() {
       ],
       link: "https://main.d18xumb8hyzm93.amplifyapp.com/",
       useSkills: ["React", "TypeScript", "SCSS", "JavaScript", "HTML", "CSS"],
-    },
-    {
-      title: "동물 달리기 내기 게임",
-      description: "동물들이 달리며 내기의 순위를 정해주는 사이트입니다.",
-      image: "/Portfolio/assets/images/runGame.png",
-      mainSkills: [
-        "Jquery를 이용한 DOM을 활용할 수 있습니다.",
-      ],
-      social: [
-        {
-          name: "github",
-          icon: "/Portfolio/assets/icons/github.png",
-          link: "https://github.com/hyukson/RunGame",
-        },
-      ],
-      link: "https://main.d20gbq82ups5ju.amplifyapp.com/",
-      useSkills: [
-        "JavaScript",
-        "HTML",
-        "CSS",
-        "JQuery",
-        "Illustrator",
-        "PhotoShop",
-      ],
     },
     {
       title: "테트리스 게임",
